@@ -6,4 +6,11 @@ const nextConfig = {
   basePath: `/${repoName}`,
   assetPrefix: `/${repoName}/`,
   images: {
-    uno
+    unoptimized: true,
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+    ],
+  },
+};
+
+export default nextConfig;
