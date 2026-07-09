@@ -1,6 +1,7 @@
 import Nav from './Nav';
 import Footer from './Footer';
 import { ScrollReveal, CounterAnimate, CardTilt, FloatingWhatsApp, BackToTop, MagneticButtons } from './PageClient';
+import { withBasePath } from '@/lib/basePath';
 
 interface Props {
   children: React.ReactNode;
@@ -27,7 +28,7 @@ export default function InnerPageLayout({ children }: Props) {
           playsInline
           aria-hidden="true"
         >
-          <source src="/videos/bg-tech.mp4" type="video/mp4" />
+          <source src={withBasePath("/videos/bg-tech.mp4")} type="video/mp4" />
         </video>
         {/* Overlay layers */}
         <div className="inner-bg-overlay" />

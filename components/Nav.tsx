@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { withBasePath } from '@/lib/basePath';
 
 export default function Nav() {
   const [scrolled, setScrolled]     = useState(false);
@@ -79,7 +80,7 @@ export default function Nav() {
           {/* Logo */}
           <Link href="/" className="flex items-center no-underline mr-3 flex-shrink-0">
             <Image
-              src="/images/logo-full.png"
+              src={withBasePath("/images/logo-full.png")}
               alt="The Aviator Training School"
               width={100} height={44}
               className="object-contain"

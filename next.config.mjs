@@ -5,6 +5,9 @@ const nextConfig = {
   output: 'export',
   basePath: `/${repoName}`,
   assetPrefix: `/${repoName}/`,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: `/${repoName}`,
+  },
   images: {
     unoptimized: true,
     remotePatterns: [

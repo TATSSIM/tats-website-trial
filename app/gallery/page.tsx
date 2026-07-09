@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import { withBasePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
   title: 'Gallery | Life at TATS | The Aviator Training School',
@@ -64,7 +65,7 @@ export default function Gallery() {
           {/* Hero batch photo */}
           <div className="rv d2" style={{ borderRadius: 12, overflow: 'hidden', marginTop: 32, marginBottom: 8, border: '1px solid rgba(255,255,255,.045)' }}>
             <Image
-              src="/images/batch1-dispatch.jpg"
+              src={withBasePath("/images/batch1-dispatch.jpg")}
               alt="Epaulette Ceremony of Winglet — TATS Trivandrum"
               width={1040}
               height={520}
@@ -113,7 +114,7 @@ export default function Gallery() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 32 }}>
             <div className="rv d2" style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
               <Image
-                src="/images/classroom-session.jpg"
+                src={withBasePath("/images/classroom-session.jpg")}
                 alt="Monthly MBCT session with Wing Cdr Dhanasree P V"
                 width={500}
                 height={360}
@@ -126,7 +127,7 @@ export default function Gallery() {
             </div>
             <div className="rv d3" style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
               <Image
-                src="/images/students-campus.jpg"
+                src={withBasePath("/images/students-campus.jpg")}
                 alt="TATS cadets at Mall of Travancore campus"
                 width={500}
                 height={360}
@@ -142,7 +143,7 @@ export default function Gallery() {
           {/* Staff team */}
           <div className="rv" style={{ marginTop: 14, borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
             <Image
-              src="/images/staff-team.jpg"
+              src={withBasePath("/images/staff-team.jpg")}
               alt="TATS faculty and staff team"
               width={1040}
               height={400}
@@ -252,7 +253,7 @@ export default function Gallery() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 36 }}>
             <div className="rv d1" style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
               <Image
-                src="/images/ft-grp.jpg"
+                src={withBasePath("/images/ft-grp.jpg")}
                 alt="TATS cadets — Flight Training Serbia"
                 width={500}
                 height={360}
@@ -266,7 +267,7 @@ export default function Gallery() {
             <div className="rv d2" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 14 }}>
               <div style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
                 <Image
-                  src="/images/serbia-grp.jpg"
+                  src={withBasePath("/images/serbia-grp.jpg")}
                   alt="TATS cadet group — international training"
                   width={500}
                   height={200}
@@ -278,7 +279,7 @@ export default function Gallery() {
               </div>
               <div style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
                 <Image
-                  src="/images/serbia.jpg"
+                  src={withBasePath("/images/serbia.jpg")}
                   alt="TATS cadets — flight training phase"
                   width={500}
                   height={200}
@@ -329,8 +330,4 @@ export default function Gallery() {
             </div>
           </div>
         </div>
-      </section>
-
-    </InnerPageLayout>
-  );
-}
+ 

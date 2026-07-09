@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import { withBasePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
   title: 'About | The Aviator Training School',
@@ -142,7 +143,7 @@ export default function About() {
             {/* Classroom photo */}
             <div style={{ borderRadius: 11, overflow: 'hidden', border: '1px solid rgba(255,255,255,.045)' }}>
               <Image
-                src="/images/classroom-session.jpg"
+                src={withBasePath("/images/classroom-session.jpg")}
                 alt="TATS classroom — Monthly MBCT session"
                 width={500}
                 height={280}
