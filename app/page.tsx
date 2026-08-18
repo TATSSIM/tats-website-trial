@@ -22,7 +22,7 @@ const NAV_SECTIONS = [
   { id: 'about',    label: 'About'    },
   { id: 'programs', label: 'Programs' },
   { id: 'why',      label: 'Why TATS' },
-  { id: 'results',  label: 'Results'  },
+  { id: 'journey',  label: 'Journey'  },
   { id: 'contact',  label: 'Contact'  },
 ];
 
@@ -210,7 +210,7 @@ export default function Home() {
                 Kerala had no shortage of aviation coaching institutes. Most competed on reputation. None disclosed their flying school upfront. We built TATS to be the opposite — transparent about everything, from fees to flying school to results.
               </p>
               <p className="section-body rv d4">
-                Our cadets clear DGCA theory with <strong>strong, consistent results</strong>, then proceed to flight training at Gold Wings Aviation, Poland — where we maintain direct weekly oversight via Flight Logger.
+                Our cadets clear DGCA theory with <strong>strong, consistent results</strong>, then proceed to flight training in Europe — Batch 1 at the National Aviation Academy, Vršac, Serbia, and upcoming batches at Gold Wings Aviation, Radom, Poland — where we maintain direct weekly oversight via Flight Logger.
               </p>
               <div className="rv d5" style={{ marginTop: 32 }}>
                 <Link href="/about" className="btn-ghost">Our Full Story →</Link>
@@ -366,27 +366,27 @@ export default function Home() {
 
         <div className="gold-divider" />
 
-        {/* ── RESULTS ── */}
-        <section id="results" className="page-section" style={{ flexDirection: 'column', alignItems: 'flex-start', position: 'relative', overflow: 'hidden', padding: '72px 5.5%' }}>
+        {/* ── JOURNEY ── */}
+        <section id="journey" className="page-section" style={{ flexDirection: 'column', alignItems: 'flex-start', position: 'relative', overflow: 'hidden', padding: '72px 5.5%' }}>
           <span className="section-num">04</span>
           <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', position: 'relative', zIndex: 2 }}>
-            <span className="eyebrow-pill rv">Verified Results</span>
+            <span className="eyebrow-pill rv">Our Journey</span>
             <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', marginBottom: 32 }}>
-              Strong Results.<br /><strong>Every Batch. On Record.</strong>
+              From Trivandrum.<br /><strong>To The Skies Over Europe.</strong>
             </h2>
             <div className="cta-banner rv-3d d2">
-              <span style={{ fontSize: '2.8rem', flexShrink: 0 }}>🏆</span>
+              <span style={{ fontSize: '2.8rem', flexShrink: 0 }}>✈️</span>
               <div>
                 <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.6rem', fontWeight: 700, color: 'var(--gold)', marginBottom: 8 }}>
-                  Verified DGCA Results — Every Attempt
+                  Every Milestone Since Nov 2023
                 </h3>
                 <p style={{ fontSize: '.84rem', color: 'rgba(255,255,255,.44)', lineHeight: 1.82, maxWidth: 500 }}>
-                  Since inception, our cadets have delivered strong results in every DGCA examination. Mark sheets available at our campus — no manufactured claims, no selective presentation.
+                  From founding the campus to Batch 1 flying in Vršac, Serbia — see the full timeline, current batch status, and life at TATS along the way.
                 </p>
               </div>
             </div>
             <div className="rv d3" style={{ marginTop: 28 }}>
-              <Link href="/results" className="btn-ghost" style={{ borderRadius: 6 }}>View Full Results →</Link>
+              <Link href="/journey" className="btn-ghost" style={{ borderRadius: 6 }}>View Our Journey →</Link>
             </div>
           </div>
         </section>

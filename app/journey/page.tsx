@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import { withBasePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
-  title: 'Results | Verified DGCA Performance | The Aviator Training School',
-  description: 'Verified DGCA exam results every attempt. Batch 1 flying in Poland. Batch 2 departing June 2026. Evidence-backed results from TATS since November 2023.',
+  title: 'Journey | Milestones | The Aviator Training School',
+  description: 'The TATS journey since November 2023 — milestones, batch status, and student life at The Aviator Training School, Trivandrum.',
 };
 
 const milestones = [
@@ -11,38 +14,31 @@ const milestones = [
   { date: 'Jan 2024', event: 'First Batch Enrolled', desc: 'Batch 1 cadets selected through our 3-layer aptitude and psychological screening. ~32% selection rate established.' },
   { date: '2024', event: 'DGCA Results — First Attempt', desc: 'Batch 1 cadets delivered strong results in their DGCA ground examinations. Mark sheets on file at campus.' },
   { date: '2024–25', event: 'Continued DGCA Performance', desc: 'Strong results maintained across all subsequent DGCA examination attempts. Every attempt on record.' },
-  { date: 'Early 2025', event: 'Batch 1 Departs for Poland', desc: 'First cohort deployed to Gold Wings Aviation. Direct partnership operational.' },
-  { date: '2025', event: 'Batch 1 Currently Flying', desc: 'Batch 1 cadets accumulating flight hours at Gold Wings Aviation, Poland.' },
-  { date: 'Q2 2026', event: 'Batch 2 Deploys — June 2026', desc: 'Second cohort prepared and deploying to Poland. ATPL Integrated pathway launching.' },
+  { date: 'Early 2025', event: 'Batch 1 Departs for Flight Training', desc: 'First cohort deployed to Vršac, Serbia. Direct partnership operational.' },
+  { date: '2025', event: 'Batch 1 — Solo Under 15 Hours', desc: 'All Batch 1 cadets completed their Solo in under 15 hours and are currently in flight training at Vršac, Serbia.' },
+  { date: 'Q2 2026', event: 'Batch 2 Deploys — June 2026', desc: 'Second cohort prepared and deploying for flight training. ATPL Integrated pathway launching.' },
 ];
 
-export default function Results() {
+const studentLifePhotos = [
+  { src: '/images/batch1-dispatch.jpg', caption: 'Epaulette Ceremony of Winglet' },
+  { src: '/images/classroom-session.jpg', caption: 'Monthly MBCT Session' },
+  { src: '/images/students-campus.jpg', caption: 'TATS Campus — Trivandrum' },
+  { src: '/images/ft-grp.jpg', caption: 'Flight Training — Serbia' },
+];
+
+export default function Journey() {
   return (
     <InnerPageLayout>
       <div className="page-hero">
         <div>
-          <span className="section-label">Verified Performance</span>
+          <span className="section-label">Our Journey</span>
           <h1 className="section-title" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4rem)', fontWeight: 300 }}>
-            Verified DGCA Results.<br />
-            <strong>Every Attempt. On Record.</strong>
+            From Trivandrum<br />
+            <strong>To The Skies Over Europe.</strong>
           </h1>
-        </div>
-      </div>
-
-      {/* Banner */}
-      <div style={{ padding: '0 5.5% 56px', position: 'relative', zIndex: 10 }}>
-        <div style={{ maxWidth: 1040, margin: '0 auto' }}>
-          <div className="cta-banner rv" style={{ marginBottom: 0 }}>
-            <span style={{ fontSize: '3rem' }}>🏆</span>
-            <div>
-              <h2 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.8rem', fontWeight: 600, color: 'var(--gold)', marginBottom: 8 }}>
-                Verified DGCA Results — Every Attempt
-              </h2>
-              <p style={{ fontSize: '.82rem', color: 'rgba(255,255,255,.5)', lineHeight: 1.8, maxWidth: 560 }}>
-                Since TATS&apos;s inception in November 2023, every cadet who has sat the DGCA ground examinations has delivered strong results. This is not a selected sample — this is every attempt. Mark sheets are available for inspection at our campus.
-              </p>
-            </div>
-          </div>
+          <p style={{ fontSize: '.82rem', color: 'rgba(255,255,255,.4)', marginTop: 8, maxWidth: 460 }}>
+            Every milestone since November 2023 — and the people who lived it.
+          </p>
         </div>
       </div>
 
@@ -57,16 +53,16 @@ export default function Results() {
             {[
               {
                 batch: 'Batch 1',
-                status: 'Flying in Poland',
+                status: 'Flying in Vršac, Serbia',
                 statusColor: 'rgba(0,220,80,.8)',
-                desc: 'Batch 1 cadets are currently accumulating flight hours at Gold Wings Aviation, Poland. TATS has weekly visibility through Flight Logger.',
+                desc: 'Batch 1 cadets are currently in flight training at Vršac, Serbia. All cadets have completed their Solo in under 15 hours. TATS has weekly visibility through Flight Logger.',
                 icon: '✈️',
               },
               {
                 batch: 'Batch 2',
                 status: 'Deploying — June 2026',
                 statusColor: 'var(--sky)',
-                desc: 'Batch 2 is completing ground training and simulator preparation. Departure for Poland scheduled for June 2026.',
+                desc: 'Batch 2 is completing ground training and simulator preparation. Departure for Gold Wings Aviation, Radom, Poland scheduled for June 2026.',
                 icon: '🛫',
               },
             ].map((b, i) => (
@@ -120,16 +116,50 @@ export default function Results() {
 
       <div className="gold-divider" />
 
+      {/* Student Life */}
+      <section className="page-section" style={{ minHeight: 'auto' }}>
+        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
+          <span className="section-label rv">Student Life</span>
+          <h2 className="section-title rv d1">Life Behind<br /><strong>The Journey.</strong></h2>
+          <p className="section-body rv d2" style={{ maxWidth: 480 }}>
+            The classroom in Trivandrum, the dispatch ceremonies, the flight line in Serbia — moments from the cadets living this journey.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginTop: 32 }}>
+            {studentLifePhotos.map((photo, i) => (
+              <div key={photo.src} className={`rv d${i + 1}`} style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
+                <Image
+                  src={withBasePath(photo.src)}
+                  alt={photo.caption}
+                  width={280}
+                  height={220}
+                  style={{ width: '100%', height: 180, objectFit: 'cover', display: 'block' }}
+                />
+                <div style={{ padding: '8px 10px', background: 'rgba(10,14,20,.85)' }}>
+                  <p style={{ fontSize: '.58rem', color: 'rgba(255,255,255,.3)', letterSpacing: '.5px' }}>{photo.caption}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="rv d5" style={{ marginTop: 28 }}>
+            <Link href="/gallery" className="btn-ghost">View Full Gallery →</Link>
+          </div>
+        </div>
+      </section>
+
+      <div className="gold-divider" />
+
       <section className="page-section" style={{ minHeight: 'auto', paddingBottom: 80 }}>
         <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
           <div className="cta-banner rv">
             <span style={{ fontSize: '2.4rem' }}>✈️</span>
             <div style={{ flex: 1 }}>
               <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.5rem', fontWeight: 600, color: 'var(--gold)', marginBottom: 5 }}>
-                See the Results in Person
+                See the Journey in Person
               </h3>
               <p style={{ fontSize: '.78rem', color: 'rgba(255,255,255,.43)', lineHeight: 1.7, maxWidth: 480 }}>
-                Mark sheets from every DGCA attempt are available for inspection at our campus. Attend the Friday webinar and verify the results yourself.
+                Mark sheets from every DGCA attempt are available for inspection at our campus. Attend the Friday webinar and see it for yourself.
               </p>
             </div>
             <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">

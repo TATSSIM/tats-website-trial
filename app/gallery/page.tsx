@@ -301,7 +301,7 @@ export default function Gallery() {
               fontSize: '.76rem', color: 'rgba(56,189,248,.7)',
             }}>
               <span style={{ fontSize: '1.1rem', flexShrink: 0 }}>ℹ️</span>
-              <span>Batch 1 cadets are currently flying in Poland. Live flight training updates are shared via <strong style={{ color: 'var(--sky)' }}>Flight Logger</strong> — accessible to enrolled families.</span>
+              <span>Batch 1 cadets are currently flying at the National Aviation Academy, Vršac, Serbia — all cadets soloed in under 15 hours. Live flight training updates are shared via <strong style={{ color: 'var(--sky)' }}>Flight Logger</strong> — accessible to enrolled families.</span>
             </div>
           </div>
         </div>
@@ -326,7 +326,7 @@ export default function Gallery() {
               <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book Webinar ↗
               </a>
-              <Link href="/results" className="btn-ghost">View Results →</Link>
+              <Link href="/journey" className="btn-ghost">View Our Journey →</Link>
             </div>
           </div>
         </div>

@@ -43,7 +43,7 @@ export default function Nav() {
     { href: '/',         label: 'Home'    },
     { href: '/about',    label: 'About'   },
     { href: '/why-tats', label: 'Why TATS'},
-    { href: '/results',  label: 'Results' },
+    { href: '/journey',  label: 'Journey' },
     { href: '/gallery',  label: 'Gallery' },
     { href: '/blog',     label: 'Blog'    },
     { href: '/contact',  label: 'Contact' },
