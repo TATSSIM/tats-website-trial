@@ -67,6 +67,8 @@ export default function Contact() {
                   { icon: '📞', label: 'Secondary', value: '+91 62825 85548', href: 'tel:+916282585548' },
                   { icon: '✉', label: 'General', value: 'info@theaviatortraining.com', href: 'mailto:info@theaviatortraining.com' },
                   { icon: '✉', label: 'Admissions', value: 'lekshmi@theaviatortraining.com', href: 'mailto:lekshmi@theaviatortraining.com' },
+                  { icon: '✉', label: 'Admissions', value: 'susan.a@theaviatortraining.com', href: 'mailto:susan.a@theaviatortraining.com' },
+                  { icon: '✉', label: 'Aerokrat Group', value: 'naveen.n@aerokrat.com', href: 'mailto:naveen.n@aerokrat.com' },
                 ].map(c => (
                   <a
                     key={c.value}
@@ -93,13 +95,27 @@ export default function Contact() {
 
               <div style={{ marginTop: 20, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,.06)' }}>
                 <div style={{ fontSize: '.52rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 10 }}>
-                  Campus
+                  Main Campus
                 </div>
                 <address style={{ fontStyle: 'normal', fontSize: '.76rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.9 }}>
                   3rd Floor, Mall of Travancore<br />
                   Opposite Trivandrum International Airport<br />
                   Thiruvananthapuram, Kerala 695024
                 </address>
+              </div>
+
+              <div style={{ marginTop: 20, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,.06)' }}>
+                <div style={{ fontSize: '.52rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 10 }}>
+                  TATS Command Center
+                </div>
+                <address style={{ fontStyle: 'normal', fontSize: '.76rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.9 }}>
+                  1st Floor, Terminal Plaza, Bypass Road<br />
+                  Opposite Airport Bridge Road, Chacka<br />
+                  Thiruvananthapuram, Kerala 695024
+                </address>
+                <a href="https://share.google/T135ouocIg1VerjCN" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.64rem', color: 'var(--gold)', fontWeight: 600, textDecoration: 'none', display: 'inline-block', marginTop: 8 }}>
+                  View on Map →
+                </a>
               </div>
             </div>
           </div>

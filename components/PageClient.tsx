@@ -133,52 +133,6 @@ export function ScrollProgressBar() {
 }
 
 /* ─────────────────────────────────────────
-   TYPOGRAPHY PARALLAX — each line at different Z depth
-   Elements with [data-parallax-speed] move at their own rate,
-   separating in Z-space as you scroll → genuine 3D depth
-───────────────────────────────────────── */
-export function TypographyParallax() {
-  useEffect(() => {
-    // Desktop only — mobile parallax feels wrong
-    if (window.innerWidth < 900) return;
-    const layers = document.querySelectorAll<HTMLElement>('[data-parallax-speed]');
-    const vh = window.innerHeight;
-    const update = () => {
-      const y = window.scrollY;
-      if (y > vh * 1.8) return; // only apply inside hero zone
-      layers.forEach(layer => {
-        const speed = parseFloat(layer.dataset.parallaxSpeed || '0');
-        layer.style.transform = `translateY(${y * speed}px)`;
-      });
-    };
-    window.addEventListener('scroll', update, { passive: true });
-    return () => window.removeEventListener('scroll', update);
-  }, []);
-  return null;
-}
-
-/* ─────────────────────────────────────────
-   PARALLAX HERO — background scroll offset
-───────────────────────────────────────── */
-export function ParallaxHero() {
-  useEffect(() => {
-    const bgPhoto = document.getElementById('bg-photo');
-    if (!bgPhoto) return;
-    const update = () => {
-      const y = window.scrollY;
-      const speed = 0.28;
-      // Only parallax while in viewport
-      if (y < window.innerHeight) {
-        bgPhoto.style.transform = `scale(1.08) translateY(${y * speed}px)`;
-      }
-    };
-    window.addEventListener('scroll', update, { passive: true });
-    return () => window.removeEventListener('scroll', update);
-  }, []);
-  return null;
-}
-
-/* ─────────────────────────────────────────
    CARD TILT (no translateY conflict)
 ───────────────────────────────────────── */
 export function CardTilt() {

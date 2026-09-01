@@ -7,9 +7,14 @@ import YouTubeFacade from '@/components/YouTubeFacade';
 import {
   ScrollReveal, CounterAnimate, CardTilt, NavDots,
   FloatingWhatsApp, BackToTop, MagneticButtons,
-  TextScramble, ScrollProgressBar, ParallaxHero, TypographyParallax,
+  TextScramble, ScrollProgressBar,
 } from '@/components/PageClient';
 import { withBasePath } from '@/lib/basePath';
+import {
+  Microscope, Ruler, Eye, Target, TestTube, BookOpen, PlaneTakeoff,
+  Handshake, Brain, Smartphone, GraduationCap, MessagesSquare, Plane,
+  Camera, Play, Check, ArrowUpRight,
+} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'The Aviator Training School | Beyond Pilots. Shaping Aviators. | Trivandrum',
@@ -29,20 +34,20 @@ const NAV_SECTIONS = [
 const TESTIMONIALS = [
   {
     name: 'Delbin Mathew',
-    role: 'Batch 1 — Currently Flying',
-    quote: 'TATS does not let you settle for approximations. Every question is answered with evidence. I cleared all 14 ATPL subjects before leaving India, and felt the difference from day one in the cockpit.',
+    role: 'Batch 1 — Currently Flying, Vršac, Serbia',
+    quote: 'TATS does not let you settle for approximations. Every question is answered with evidence. I have cleared all subjects before leaving India, and felt the difference from day one in the cockpit.',
     initial: 'D',
   },
   {
     name: 'Jebin Georgy Koshy',
-    role: 'Batch 2 — Departing June 2026',
-    quote: 'The selection process was tough — three rounds, a psychologist interview, an MD conversation. That rigour is exactly why I chose TATS. You trust people who scrutinised you that carefully.',
+    role: 'Batch 1 — Currently Flying, Vršac, Serbia',
+    quote: 'I am 35 years old, and the selection process was still tough — three rounds, a psychologist interview, an MD conversation. That rigour is exactly why I chose TATS. You trust people who scrutinised you that carefully.',
     initial: 'J',
   },
   {
     name: 'Shahana',
-    role: 'Batch 1 — DGCA Cleared',
-    quote: 'The simulator time before Poland changed everything. My first flight abroad was not overwhelming — it was familiar. The 20 hours on the FBS made all the difference.',
+    role: 'Batch 2 — Departing June 2026',
+    quote: 'I have completed my Flight Sim Training and I am fully confident as well as excited for my first flight in Poland.',
     initial: 'S',
   },
 ];
@@ -60,6 +65,7 @@ const VIDEOS = [
     desc: 'Deep dive into the EASA CPL pathway — Poland, fees, and timeline.',
     platform: 'instagram' as const,
     igUrl: 'https://www.instagram.com/reel/DSUE8OPATzD/',
+    thumb: '/images/tats120-reel-thumb.jpg',
   },
   {
     title: 'How TATS Chooses the Best Global Pathways',
@@ -89,8 +95,6 @@ export default function Home() {
       <BackToTop />
       <TextScramble />
       <ScrollProgressBar />
-      <ParallaxHero />
-      <TypographyParallax />
       <NavDots sections={NAV_SECTIONS} />
 
       <Nav />
@@ -123,21 +127,21 @@ export default function Home() {
             The Aviator Training School · Trivandrum
           </span>
 
-          <div data-parallax-speed="-0.09">
+          <div>
             <span className="hero-tagline-1 hero-el d1">BEYOND</span>
           </div>
 
-          <div data-parallax-speed="-0.15" style={{ marginTop: '-.04em' }}>
+          <div style={{ marginTop: '-.04em' }}>
             <span className="hero-tagline-1 hero-el d2">PILOTS</span>
           </div>
 
-          <div className="hero-rule hero-el d3" data-parallax-speed="-0.06" style={{ maxWidth: 520 }}>
+          <div className="hero-rule hero-el d3" style={{ maxWidth: 520 }}>
             <div className="hero-rule-line" />
             <span className="hero-rule-diamond">◆</span>
             <div style={{ flex: 1, height: 1, background: 'linear-gradient(to right, rgba(212,175,55,.55), rgba(212,175,55,.12))', maxWidth: 240 }} />
           </div>
 
-          <div data-parallax-speed="-0.22">
+          <div>
             <span className="hero-tagline-2 hero-el d4">Shaping Aviators</span>
           </div>
 
@@ -201,13 +205,13 @@ export default function Home() {
             <div>
               <span className="eyebrow-pill rv-left">Our Story</span>
               <h2 className="section-title rv-left d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)' }}>
-                Founded on Evidence.<br /><strong>Built on Results.</strong>
+                Can You Prove It?<br /><strong>We Can.</strong>
               </h2>
               <p className="section-body rv d2">
-                The Aviator Training School was founded in November 2023, opposite Trivandrum International Airport, Kerala. One conviction drove it: <strong>every claim made to a prospective cadet must be backed by verifiable evidence.</strong>
+                Every aviation academy claims to be the best. Ask them to prove it, and most fall back on reputation. At TATS, <strong>every claim we make is backed by evidence you can verify yourself</strong> — mark sheets on file at our campus, a 32% selection rate, and a flying school we&apos;ll name upfront.
               </p>
               <p className="section-body rv d3">
-                Kerala had no shortage of aviation coaching institutes. Most competed on reputation. None disclosed their flying school upfront. We built TATS to be the opposite — transparent about everything, from fees to flying school to results.
+                We were founded in November 2023, opposite Trivandrum International Airport, Kerala, on that one conviction. Kerala had no shortage of aviation coaching institutes — most competed on reputation, none disclosed their flying school upfront. We built TATS to be the opposite.
               </p>
               <p className="section-body rv d4">
                 Our cadets clear DGCA theory with <strong>strong, consistent results</strong>, then proceed to flight training in Europe — Batch 1 at the National Aviation Academy, Vršac, Serbia, and upcoming batches at Gold Wings Aviation, Radom, Poland — where we maintain direct weekly oversight via Flight Logger.
@@ -223,13 +227,13 @@ export default function Home() {
                   CORE IDEOLOGY
                 </p>
                 {[
-                  { icon: '🔬', title: 'Evidence Over Reputation',    desc: 'Mark sheets verifiable at campus. No manufactured claims.' },
-                  { icon: '📐', title: 'Depth Over Shortcuts',        desc: '3–4 hrs daily offline. In-person, every single day.' },
-                  { icon: '🪟', title: 'Transparency Over Marketing', desc: 'Fees, timeline, flying school — all disclosed upfront.' },
-                  { icon: '🎯', title: 'Mentorship, Not Instruction', desc: 'MD personally involved through the full cadet journey.' },
+                  { Icon: Microscope, title: 'Evidence Over Reputation',    desc: 'Our Aerocredit system tracks every cadet — class attendance, exam scores, even uniform compliance. Nothing goes unnoticed.' },
+                  { Icon: Ruler,      title: 'Depth Over Shortcuts',        desc: 'Daily lectures are just the start. Every class includes revision, exams, and doubt-clearing — built into the methodology itself.' },
+                  { Icon: Eye,        title: 'Transparency Over Marketing', desc: 'Fees, timeline, flying school — all disclosed upfront.' },
+                  { Icon: Target,     title: 'Mentorship, Not Instruction', desc: 'MD personally involved through the full cadet journey.' },
                 ].map((item, i) => (
                   <div key={item.title} style={{ display: 'flex', gap: 16, padding: '18px 0', borderBottom: i < 3 ? '1px solid rgba(255,255,255,.05)' : 'none' }}>
-                    <span style={{ fontSize: '1.15rem', flexShrink: 0, marginTop: 2 }}>{item.icon}</span>
+                    <span style={{ flexShrink: 0, marginTop: 2, color: 'var(--gold)' }}><item.Icon size={19} strokeWidth={1.5} /></span>
                     <div>
                       <div style={{ fontSize: '.82rem', fontWeight: 600, marginBottom: 4, color: 'rgba(255,255,255,.88)' }}>{item.title}</div>
                       <div style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.36)', lineHeight: 1.65 }}>{item.desc}</div>
@@ -264,7 +268,7 @@ export default function Home() {
                 },
                 {
                   id: 'atpl-integrated',
-                  badge: { text: '⭐ NEW — June 2026', sky: true },
+                  badge: { text: 'NEW — June 2026', sky: true },
                   name: 'TATS 120 ATPL Integrated',
                   tag: '23 months · Full ATPL theory in India',
                   bullets: ['Complete EASA ATPL theory in India', '745 hrs Evionica CBT platform', 'Arrive in Poland, fly immediately', 'June 2026 intake open'],
@@ -277,6 +281,7 @@ export default function Home() {
                   tag: '15–16 months · Skip the grind',
                   bullets: ['For DGCA ground-cleared cadets', 'Bridge prep + 20 hrs simulator', '200 hrs + 17 hrs Multi-Engine', 'DGCA to EASA conversion pathway'],
                   img: '/images/students-campus.jpg',
+                  imgPosition: 'center 18%',
                 },
                 {
                   id: 'tapp-50',
@@ -284,14 +289,15 @@ export default function Home() {
                   name: 'TAPP 50',
                   tag: 'Flight Instructor rating pathway',
                   bullets: ['240 total flight hours (2026)', 'FI Rating pathway', 'Airline interview preparation', 'Structured mentorship'],
-                  img: '/images/tapp50-cadets.jpg',
+                  img: '/images/batch2-dispatch.jpg',
+                  imgPosition: 'center 25%',
                 },
               ].map((prog, i) => (
                 <div key={prog.id} className={`program-card-outer rv-3d d${i + 1}`}>
                   <div className={`program-card ${prog.id === 'atpl-integrated' ? 'featured' : ''}`}>
                     <div className="program-card-img">
-                      <Image src={prog.img} alt={prog.name} fill style={{ objectFit: 'cover', opacity: .6 }} sizes="(max-width: 1040px) 100vw, 500px" />
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 40%, rgba(5,8,15,.92) 100%)' }} />
+                      <Image src={prog.img} alt={prog.name} fill style={{ objectFit: 'cover', objectPosition: 'imgPosition' in prog ? prog.imgPosition : 'center' }} sizes="(max-width: 1040px) 100vw, 500px" />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 32%, rgba(5,8,15,.94) 96%)' }} />
                       <span style={{
                         position: 'absolute', top: 12, left: 14,
                         fontSize: '.5rem', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase',
@@ -338,19 +344,19 @@ export default function Home() {
             </h2>
             <div className="diff-grid">
               {[
-                { icon: '🧪', title: 'Tailored Assessment',       desc: '~32% acceptance. Psychologist-designed 3-layer aptitude screening.' },
-                { icon: '📚', title: '3–4 hrs Daily Offline',     desc: 'In-person, every day at our campus. Never outsourced, never online-only.' },
-                { icon: '🛫', title: 'Cessna 172 FBS',            desc: '20 hrs procedure training before Poland. Cadets arrive genuinely ready.' },
-                { icon: '🤝', title: 'Direct Poland Partnership', desc: 'Gold Wings Aviation. No intermediary. Weekly oversight via Flight Logger.' },
-                { icon: '🧘', title: 'Monthly MBCT',              desc: 'Wing Cdr Dhanasree P V (Retd IAF). Unique in Kerala aviation training.' },
-                { icon: '📱', title: 'Flight Logger Access',      desc: 'Families receive regular updates on cadet training progress from Poland.' },
-                { icon: '🎓', title: 'Conversion Support',        desc: 'Airline Crew Orientation + post-training pathway guidance included.' },
-                { icon: '🗣', title: 'Aviation English',          desc: 'Twice-monthly ICAO Level 4 sessions. Communication is a license requirement.' },
+                { Icon: TestTube,      title: 'Tailored Assessment',       desc: '~32% acceptance. Psychologist-designed 3-layer aptitude screening.' },
+                { Icon: BookOpen,      title: '3–4 hrs Daily Offline',     desc: 'In-person, every day at our campus. Never outsourced, never online-only.' },
+                { Icon: PlaneTakeoff,  title: 'Cessna 172 FBS',            desc: '20 hrs procedure training before Poland. Cadets arrive genuinely ready.' },
+                { Icon: Handshake,     title: 'Direct Poland Partnership', desc: 'Gold Wings Aviation. No intermediary. Weekly oversight via Flight Logger.' },
+                { Icon: Brain,         title: 'Monthly MBCT',              desc: 'Wing Cdr Dhanasree P V (Retd IAF). Unique in Kerala aviation training.' },
+                { Icon: Smartphone,    title: 'Flight Logger Access',      desc: 'Families receive regular updates on cadet training progress from Poland.' },
+                { Icon: GraduationCap, title: 'Conversion Support',        desc: 'Airline Crew Orientation + post-training pathway guidance included.' },
+                { Icon: MessagesSquare,title: 'Aviation English',          desc: 'Twice-monthly ICAO Level 4 sessions. Communication is a license requirement.' },
               ].map((item, i) => (
                 <div key={item.title} className={`diff-card tilt-card rv d${(i % 4) + 1}`}>
                   <div className="diff-card-inner">
-                    <div style={{ width: 38, height: 38, borderRadius: 9, background: 'rgba(212,175,55,.055)', border: '1px solid rgba(212,175,55,.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', marginBottom: 14 }}>
-                      {item.icon}
+                    <div style={{ width: 38, height: 38, borderRadius: 9, background: 'rgba(212,175,55,.055)', border: '1px solid rgba(212,175,55,.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold)', marginBottom: 14 }}>
+                      <item.Icon size={18} strokeWidth={1.5} />
                     </div>
                     <h3 style={{ fontSize: '.86rem', fontWeight: 700, marginBottom: 8, color: 'rgba(255,255,255,.88)' }}>{item.title}</h3>
                     <p style={{ fontSize: '.74rem', color: 'rgba(255,255,255,.38)', lineHeight: 1.7 }}>{item.desc}</p>
@@ -375,7 +381,7 @@ export default function Home() {
               From Trivandrum.<br /><strong>To The Skies Over Europe.</strong>
             </h2>
             <div className="cta-banner rv-3d d2">
-              <span style={{ fontSize: '2.8rem', flexShrink: 0 }}>✈️</span>
+              <span style={{ flexShrink: 0, color: 'var(--gold)' }}><Plane size={44} strokeWidth={1.25} /></span>
               <div>
                 <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.6rem', fontWeight: 700, color: 'var(--gold)', marginBottom: 8 }}>
                   Every Milestone Since Nov 2023
@@ -459,23 +465,29 @@ export default function Home() {
                     {video.platform === 'youtube' && 'ytId' in video && video.ytId ? (
                       <YouTubeFacade ytId={video.ytId} title={video.title} thumb={'thumb' in video ? video.thumb as string : undefined} />
                     ) : video.platform === 'instagram' && 'igUrl' in video ? (
-                      <div style={{
-                        height: 210,
-                        background: 'linear-gradient(135deg, rgba(131,58,180,.09), rgba(253,29,29,.06), rgba(252,176,69,.07))',
-                        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                        gap: 14, borderBottom: '1px solid rgba(255,255,255,.04)',
-                      }}>
-                        <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                          <span style={{ color: '#fff', fontSize: '1.4rem' }}>📷</span>
+                      <a
+                        href={video.igUrl} target="_blank" rel="noopener noreferrer"
+                        style={{
+                          height: 210, position: 'relative', display: 'block',
+                          borderBottom: '1px solid rgba(255,255,255,.04)', overflow: 'hidden',
+                        }}
+                      >
+                        {'thumb' in video && video.thumb && (
+                          <Image src={video.thumb as string} alt={video.title} fill style={{ objectFit: 'cover', objectPosition: 'center 22%' }} sizes="500px" />
+                        )}
+                        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(5,8,15,.15), rgba(5,8,15,.65))', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14 }}>
+                          <div style={{ width: 52, height: 52, borderRadius: '50%', background: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 20px rgba(0,0,0,.4)' }}>
+                            <Camera size={22} color="#fff" strokeWidth={1.75} />
+                          </div>
+                          <span className="btn-ghost" style={{ fontSize: '.63rem', padding: '7px 18px', display: 'inline-flex', alignItems: 'center', gap: 6, background: 'rgba(5,8,15,.6)' }}>
+                            Watch on Instagram <ArrowUpRight size={13} strokeWidth={2} />
+                          </span>
                         </div>
-                        <a href={video.igUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost" style={{ fontSize: '.63rem', padding: '7px 18px' }}>
-                          Watch on Instagram ↗
-                        </a>
-                      </div>
+                      </a>
                     ) : (
                       <div style={{ height: 210, background: 'rgba(212,175,55,.02)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 10, borderBottom: '1px solid rgba(255,255,255,.04)' }}>
                         <div style={{ width: 56, height: 56, borderRadius: '50%', border: '1.5px solid rgba(212,175,55,.28)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                          <span style={{ color: 'var(--gold)', fontSize: '1.2rem', marginLeft: 4 }}>▶</span>
+                          <Play size={18} color="var(--gold)" strokeWidth={1.75} style={{ marginLeft: 3 }} fill="var(--gold)" />
                         </div>
                         <span style={{ fontSize: '.56rem', color: 'rgba(255,255,255,.18)', letterSpacing: '2.5px', textTransform: 'uppercase' }}>Coming Soon</span>
                       </div>
@@ -519,8 +531,9 @@ export default function Home() {
                   fontSize: '.6rem', color: 'rgba(255,255,255,.48)',
                   border: '1px solid rgba(255,255,255,.1)', padding: '4px 12px', borderRadius: 40,
                   background: 'rgba(255,255,255,.022)',
+                  display: 'inline-flex', alignItems: 'center', gap: 5,
                 }}>
-                  ✓ {feat}
+                  <Check size={11} strokeWidth={2.25} style={{ color: 'var(--gold)' }} /> {feat}
                 </span>
               ))}
             </div>

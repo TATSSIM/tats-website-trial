@@ -17,7 +17,9 @@
 /* ═══════════════════════════════════════
    BASE
 ═══════════════════════════════════════ */
-html { scroll-behavior: smooth; }
+html.lenis, html.lenis body { height: auto; }
+html.lenis.lenis-smooth { scroll-behavior: auto; }
+html.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 
 body {
   background: var(--bg);
@@ -30,7 +32,7 @@ body {
 body::after {
   content: '';
   position: fixed; inset: 0; z-index: 9998;
-  pointer-events: none; opacity: .024;
+  pointer-events: none; opacity: .035;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='280' height='280' filter='url(%23n)'/%3E%3C/svg%3E");
   mix-blend-mode: screen;
 }
@@ -63,57 +65,57 @@ body::after {
 ═══════════════════════════════════════ */
 .rv {
   opacity: 0;
-  transform: translateY(32px);
-  filter: blur(8px);
+  transform: translateY(20px) scale(.98);
+  filter: blur(4px);
   transition:
-    opacity  .85s cubic-bezier(0.32,0.72,0,1),
-    transform .85s cubic-bezier(0.32,0.72,0,1),
-    filter   .85s cubic-bezier(0.32,0.72,0,1);
+    opacity  .6s cubic-bezier(0.16,1,0.3,1),
+    transform .6s cubic-bezier(0.16,1,0.3,1),
+    filter   .6s cubic-bezier(0.16,1,0.3,1);
 }
-.rv.in { opacity: 1; transform: translateY(0); filter: blur(0); }
-.rv.d1 { transition-delay: .08s } .rv.d2 { transition-delay: .17s }
-.rv.d3 { transition-delay: .26s } .rv.d4 { transition-delay: .35s }
-.rv.d5 { transition-delay: .44s } .rv.d6 { transition-delay: .53s }
+.rv.in { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+.rv.d1 { transition-delay: .06s } .rv.d2 { transition-delay: .12s }
+.rv.d3 { transition-delay: .18s } .rv.d4 { transition-delay: .24s }
+.rv.d5 { transition-delay: .30s } .rv.d6 { transition-delay: .36s }
 
 .rv-left {
-  opacity: 0; transform: translateX(-48px); filter: blur(6px);
+  opacity: 0; transform: translateX(-28px) scale(.98); filter: blur(4px);
   transition:
-    opacity  .9s cubic-bezier(0.32,0.72,0,1),
-    transform .9s cubic-bezier(0.32,0.72,0,1),
-    filter   .9s cubic-bezier(0.32,0.72,0,1);
+    opacity  .65s cubic-bezier(0.16,1,0.3,1),
+    transform .65s cubic-bezier(0.16,1,0.3,1),
+    filter   .65s cubic-bezier(0.16,1,0.3,1);
 }
-.rv-left.in { opacity: 1; transform: translateX(0); filter: blur(0); }
-.rv-left.d1 { transition-delay: .06s } .rv-left.d2 { transition-delay: .16s }
+.rv-left.in { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+.rv-left.d1 { transition-delay: .05s } .rv-left.d2 { transition-delay: .12s }
 
 .rv-right {
-  opacity: 0; transform: translateX(48px); filter: blur(6px);
+  opacity: 0; transform: translateX(28px) scale(.98); filter: blur(4px);
   transition:
-    opacity  .9s cubic-bezier(0.32,0.72,0,1),
-    transform .9s cubic-bezier(0.32,0.72,0,1),
-    filter   .9s cubic-bezier(0.32,0.72,0,1);
+    opacity  .65s cubic-bezier(0.16,1,0.3,1),
+    transform .65s cubic-bezier(0.16,1,0.3,1),
+    filter   .65s cubic-bezier(0.16,1,0.3,1);
 }
-.rv-right.in { opacity: 1; transform: translateX(0); filter: blur(0); }
-.rv-right.d1 { transition-delay: .06s } .rv-right.d2 { transition-delay: .16s }
+.rv-right.in { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+.rv-right.d1 { transition-delay: .05s } .rv-right.d2 { transition-delay: .12s }
 
 .rv-clip {
   clip-path: inset(0 0 100% 0);
-  transition: clip-path .95s cubic-bezier(0.32,0.72,0,1);
+  transition: clip-path .7s cubic-bezier(0.16,1,0.3,1);
 }
 .rv-clip.in { clip-path: inset(0 0 0% 0); }
-.rv-clip.d1 { transition-delay: .05s } .rv-clip.d2 { transition-delay: .15s }
+.rv-clip.d1 { transition-delay: .05s } .rv-clip.d2 { transition-delay: .12s }
 
 .rv-3d {
   opacity: 0;
-  transform: perspective(900px) rotateX(12deg) translateY(40px) scale(.98);
-  filter: blur(6px);
+  transform: perspective(900px) rotateX(8deg) translateY(24px) scale(.96);
+  filter: blur(4px);
   transition:
-    opacity  .95s cubic-bezier(0.32,0.72,0,1),
-    transform .95s cubic-bezier(0.32,0.72,0,1),
-    filter   .95s cubic-bezier(0.32,0.72,0,1);
+    opacity  .65s cubic-bezier(0.16,1,0.3,1),
+    transform .65s cubic-bezier(0.16,1,0.3,1),
+    filter   .65s cubic-bezier(0.16,1,0.3,1);
 }
 .rv-3d.in { opacity: 1; transform: perspective(900px) rotateX(0) translateY(0) scale(1); filter: blur(0); }
-.rv-3d.d1 { transition-delay: .05s } .rv-3d.d2 { transition-delay: .14s }
-.rv-3d.d3 { transition-delay: .23s } .rv-3d.d4 { transition-delay: .32s }
+.rv-3d.d1 { transition-delay: .04s } .rv-3d.d2 { transition-delay: .1s }
+.rv-3d.d3 { transition-delay: .16s } .rv-3d.d4 { transition-delay: .22s }
 
 /* ═══════════════════════════════════════
    HERO TAGLINE TYPOGRAPHY
@@ -134,14 +136,14 @@ body::after {
   -webkit-text-stroke: 1px rgba(255,255,255,.05);
 }
 
-/* "Shaping Aviators" — light italic serif */
+/* "Shaping Aviators" — same family as BEYOND PILOTS, lighter weight for hierarchy */
 .hero-tagline-2 {
-  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.6rem, 7.5vw, 7.5rem);
+  font-family: var(--font-space), "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(2.2rem, 6vw, 5.6rem);
   font-weight: 300;
-  font-style: italic;
-  line-height: 1.0;
-  letter-spacing: .01em;
+  font-style: normal;
+  line-height: 1.05;
+  letter-spacing: -.01em;
   color: var(--gold);
   display: block;
   will-change: transform;
@@ -231,8 +233,8 @@ body::after {
 }
 
 .glass-panel {
-  background: rgba(5,8,15,.88);
-  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  background: rgba(5,8,15,.92);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(212,175,55,.11); border-radius: 14px;
   box-shadow: 0 8px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
 }
@@ -814,7 +816,7 @@ details[open] > .accordion-summary::after { transform: translateY(-50%) rotate(4
   .testimonial-grid { grid-template-columns: 1fr 1fr; }
   .section-num { display: none; }
   .hero-tagline-1 { font-size: clamp(3rem, 12vw, 8rem); }
-  .hero-tagline-2 { font-size: clamp(2rem, 9vw, 6rem); }
+  .hero-tagline-2 { font-size: clamp(1.8rem, 7.5vw, 4.4rem); }
 }
 @media (max-width: 768px) {
   /* Bento → 2-column still (not single) */

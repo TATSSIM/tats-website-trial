@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 const SOCIAL = [
   {
@@ -51,7 +52,7 @@ export default function Footer() {
 
           {/* Tags */}
           <div className="flex gap-1.5 flex-wrap mb-5">
-            {['DGCA Approved', 'EASA Pathway', 'Evidence-First'].map(tag => (
+            {['EASA Pathway', 'Evidence Based Training'].map(tag => (
               <span key={tag}
                 className="text-[.55rem] font-bold tracking-[1px] px-2 py-0.5 rounded"
                 style={{ background: 'rgba(212,175,55,0.07)', color: 'var(--gold)', border: '1px solid rgba(212,175,55,0.15)' }}>
@@ -131,6 +132,7 @@ export default function Footer() {
               { href: '/journey',  label: 'Journey'   },
               { href: '/gallery',  label: 'Gallery'   },
               { href: '/blog',     label: 'Blog'      },
+              { href: '/careers',  label: 'Careers'   },
               { href: '/contact',  label: 'Contact'   },
             ].map(l => (
               <li key={l.href}>
@@ -154,15 +156,19 @@ export default function Footer() {
           </h4>
           <div className="flex flex-col gap-2.5">
             {[
-              { icon: '📍', label: '3rd Floor, Mall of Travancore, Opposite TRV Int\'l Airport, Kerala 695024' },
-              { icon: '📞', label: '+91 62829 95979', href: 'tel:+916282995979' },
-              { icon: '📞', label: '+91 62825 85548', href: 'tel:+916282585548' },
-              { icon: '✉',  label: 'info@theaviatortraining.com', href: 'mailto:info@theaviatortraining.com' },
+              { icon: <MapPin size={13} strokeWidth={1.75} />, label: '3rd Floor, Mall of Travancore, Opposite TRV Int\'l Airport, Kerala 695024' },
+              { icon: <MapPin size={13} strokeWidth={1.75} />, label: 'TATS Command Center — 1st Floor, Terminal Plaza, Bypass Road, Opposite Airport Bridge Road, Chacka, Kerala 695024', href: 'https://share.google/T135ouocIg1VerjCN' },
+              { icon: <Phone size={13} strokeWidth={1.75} />,  label: '+91 62829 95979', href: 'tel:+916282995979' },
+              { icon: <Phone size={13} strokeWidth={1.75} />,  label: '+91 62825 85548', href: 'tel:+916282585548' },
+              { icon: <Mail size={13} strokeWidth={1.75} />,   label: 'info@theaviatortraining.com', href: 'mailto:info@theaviatortraining.com' },
             ].map((c, i) => (
               <div key={i} className="flex gap-2 text-[.73rem] items-start leading-relaxed" style={{ color: 'rgba(255,255,255,.3)' }}>
                 <span style={{ color: 'var(--gold)', flexShrink: 0, marginTop: 1 }}>{c.icon}</span>
                 {c.href ? (
-                  <a href={c.href} style={{ color: 'rgba(255,255,255,.3)', textDecoration: 'none' }}
+                  <a href={c.href}
+                    target={c.href.startsWith('http') ? '_blank' : undefined}
+                    rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    style={{ color: 'rgba(255,255,255,.3)', textDecoration: 'none' }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--gold)'; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,.3)'; }}
                   >{c.label}</a>

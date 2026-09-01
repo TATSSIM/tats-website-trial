@@ -1,60 +1,43 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 
 const POSTS = [
   {
-    slug: '#',
-    category: 'DGCA Exams',
-    date: 'May 2025',
-    title: 'How to Approach the DGCA Air Regulation Paper',
-    excerpt: 'Air Regulation is consistently the highest-failure subject in DGCA theory. Here is how TATS cadets prepare — and consistently clear it in the first attempt.',
-    readTime: '6 min read',
+    slug: 'https://theaviatortraining.com/2025/12/10/tats-bulletin-vol-4/',
+    category: 'TATS Bulletin',
+    date: 'December 2025',
+    title: 'TATS Bulletin Vol. 4 — In Honour of Wing Cdr Namash Sayal',
+    excerpt: 'A tribute issue for Wing Commander Namash Sayal, distinguished LCA Tejas test pilot, who made the ultimate sacrifice at the Dubai Airshow 2025 in service of advancing India’s aviation programme.',
+    readTime: 'Magazine Issue',
   },
   {
-    slug: '#',
-    category: 'Flight Training',
-    date: 'April 2025',
-    title: 'Why We Chose Poland for Flight Training — And What That Means for Your Licence',
-    excerpt: 'EASA CPL vs DGCA CPL. The difference in global mobility, airline acceptance, and career options — explained honestly.',
-    readTime: '8 min read',
+    slug: 'https://theaviatortraining.com/2025/11/05/tats-bulletin-vol-3/',
+    category: 'TATS Bulletin',
+    date: 'November 2025',
+    title: 'TATS Bulletin Vol. 3 — Winglet Batch Epaulette Ceremony',
+    excerpt: 'A letter from the expert marking the winglet batch epaulette ceremony — reflecting on the rigour of training and the cadets’ commitment to mastering the art and science of flight.',
+    readTime: 'Magazine Issue',
   },
   {
-    slug: '#',
-    category: 'Career Guidance',
-    date: 'March 2025',
-    title: 'The Real Cost of Becoming a Commercial Pilot in India (2025)',
-    excerpt: 'From DGCA ground school to CPL issuance. A breakdown of every cost — with no hidden numbers.',
-    readTime: '10 min read',
+    slug: 'https://theaviatortraining.com/2025/10/23/tats-bulletin/',
+    category: 'TATS Bulletin',
+    date: 'October 2025',
+    title: 'TATS Bulletin Vol. 2 — Letter From the Director',
+    excerpt: 'A reflection on the character, courage, and conviction behind The Aviator Training School, at a defining moment in the institution’s journey.',
+    readTime: 'Magazine Issue',
   },
   {
-    slug: '#',
-    category: 'Mental Performance',
-    date: 'February 2025',
-    title: 'Why MBCT Is Part of Our Curriculum — And Why It Should Be Standard',
-    excerpt: "Mindfulness-Based Cognitive Therapy isn't a wellness trend. For high-stakes careers like aviation, it is a performance tool. Wing Cdr Dhanasree P V explains.",
-    readTime: '5 min read',
-  },
-  {
-    slug: '#',
-    category: 'Programme Deep-Dives',
-    date: 'January 2025',
-    title: 'TATS 120 vs TATS 120 ATPL Integrated — Which Is Right for You?',
-    excerpt: 'Both lead to an EASA CPL with frozen ATPL. The difference is in how and where you complete your ATPL theory — and what that means for your preparation.',
-    readTime: '7 min read',
-  },
-  {
-    slug: '#',
-    category: 'Transparency',
-    date: 'December 2024',
-    title: 'What Does "Direct Partnership" Actually Mean in Aviation Training?',
-    excerpt: 'Sub-agents, commissions, and third-party school placements are common in the industry. Here is why TATS operates differently — and what you should ask any school before enrolling.',
-    readTime: '6 min read',
+    slug: 'https://theaviatortraining.com/2025/09/12/tats-bulletin-first-edition/',
+    category: 'TATS Bulletin',
+    date: 'September 2025',
+    title: 'TATS Bulletin — First Edition: The Universal Blueprint',
+    excerpt: 'How ground school creates safe pilots. TATS’s curriculum spans seven critical disciplines forming a universal blueprint for aviation, applicable worldwide.',
+    readTime: 'Magazine Issue',
   },
 ];
 
-const CATEGORIES = ['All', 'DGCA Exams', 'Flight Training', 'Career Guidance', 'Mental Performance', 'Programme Deep-Dives', 'Transparency'];
+const CATEGORIES = ['All', 'TATS Bulletin'];
 
 export default function BlogContent() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -140,9 +123,9 @@ export default function BlogContent() {
                 <span style={{ fontSize: '.6rem', color: 'rgba(212,175,55,.5)', letterSpacing: '2px', textTransform: 'uppercase' }}>
                   {featured.category} · {featured.date} · {featured.readTime}
                 </span>
-                <Link href={featured.slug} className="btn-ghost" style={{ fontSize: '.63rem', padding: '6px 16px' }}>
-                  Read Article →
-                </Link>
+                <a href={featured.slug} target="_blank" rel="noopener noreferrer" className="btn-ghost" style={{ fontSize: '.63rem', padding: '6px 16px' }}>
+                  Read Article ↗
+                </a>
               </div>
             </div>
           </div>
@@ -201,9 +184,9 @@ export default function BlogContent() {
                     <span style={{ fontSize: '.58rem', color: 'rgba(255,255,255,.22)', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
                       {post.date} · {post.readTime}
                     </span>
-                    <Link href={post.slug} style={{ fontSize: '.64rem', color: 'var(--gold)', fontWeight: 600, textDecoration: 'none', letterSpacing: '.5px' }}>
-                      Read →
-                    </Link>
+                    <a href={post.slug} target="_blank" rel="noopener noreferrer" style={{ fontSize: '.64rem', color: 'var(--gold)', fontWeight: 600, textDecoration: 'none', letterSpacing: '.5px' }}>
+                      Read ↗
+                    </a>
                   </div>
                 </article>
               ))}
@@ -216,7 +199,7 @@ export default function BlogContent() {
 
           <div className="rv" style={{ marginTop: 36, textAlign: 'center' }}>
             <p style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.22)', letterSpacing: '1.5px' }}>
-              More articles coming soon. Topics include medical fitness, type ratings, and airline hiring in India.
+              New TATS Bulletin issues published monthly — check back for the latest edition.
             </p>
           </div>
         </div>
