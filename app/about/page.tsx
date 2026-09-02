@@ -35,7 +35,7 @@ export default function About() {
               Founded by <strong>Chintu Karthikeyan</strong>, TATS is located opposite Trivandrum International Airport — deliberate by design. Cadets see aircraft movements daily, reinforcing the reality of the profession they are preparing for.
             </p>
             <p className="section-body rv d4">
-              Since inception, our cadets have delivered <strong>strong results in every DGCA examination attempt</strong>. Batch 1 is currently flying at the National Aviation Academy, Vršac, Serbia — all cadets soloed in under 15 hours. Batch 2 departs for Gold Wings Aviation, Radom, Poland in June 2026.
+              Since inception, our cadets have delivered <strong>strong results in every DGCA examination attempt</strong>. Batch 1 is currently flying at the National Aviation Academy, Vršac, Serbia — all cadets soloed in under 15 hours. Batch 2 departs for Gold Wings Aviation, Poland (Warsaw &amp; Kraków bases) in June 2026.
             </p>
           </div>
           <div className="rv d2">

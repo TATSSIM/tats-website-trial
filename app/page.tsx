@@ -205,7 +205,7 @@ export default function Home() {
                 We were founded in November 2023, opposite Trivandrum International Airport, Kerala, on that one conviction. Kerala had no shortage of aviation coaching institutes — most competed on reputation, none disclosed their flying school upfront. We built TATS to be the opposite.
               </p>
               <p className="section-body rv d4">
-                Our cadets clear DGCA theory with <strong>strong, consistent results</strong>, then proceed to flight training in Europe — Batch 1 at the National Aviation Academy, Vršac, Serbia, and upcoming batches at Gold Wings Aviation, Radom, Poland — where we maintain direct weekly oversight via Flight Logger.
+                Our cadets clear DGCA theory with <strong>strong, consistent results</strong>, then proceed to flight training in Europe — Batch 1 at the National Aviation Academy, Vršac, Serbia, and upcoming batches at Gold Wings Aviation, Poland (Warsaw &amp; Kraków bases) — where we maintain direct weekly oversight via Flight Logger.
               </p>
               <div className="rv d5" style={{ marginTop: 32 }}>
                 <Link href="/about" className="btn-ghost">Our Full Story →</Link>

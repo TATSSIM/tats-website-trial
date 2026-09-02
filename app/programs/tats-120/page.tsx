@@ -127,8 +127,12 @@ export default function TATS120() {
             <p className="section-body rv d3">
               TATS has weekly visibility into each cadet's training via <strong>Flight Logger</strong>. Families receive regular updates on their child's progress. Capt. Dragan Ivanovich provides Board-level oversight on training quality.
             </p>
+            <p className="section-body rv d3" style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)' }}>
+              The Poland flight phase itself runs about 15 months — the remaining time in the programme's 23-month total is the India ground school phase before departure.
+            </p>
             <div className="rv d4" style={{ marginTop: 20 }}>
               {[
+                { label: 'Poland Flight Phase', value: '15 months' },
                 { label: 'Single-Engine Hours', value: '200 hrs' },
                 { label: 'Multi-Engine Hours', value: '17 hrs' },
                 { label: 'Training Organisation', value: 'EASA ATO' },

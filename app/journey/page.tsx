@@ -62,7 +62,7 @@ export default function Journey() {
                 batch: 'Batch 2',
                 status: 'Deploying — June 2026',
                 statusColor: 'var(--sky)',
-                desc: 'Batch 2 is completing ground training and simulator preparation. Departure for Gold Wings Aviation, Radom, Poland scheduled for June 2026.',
+                desc: 'Batch 2 is completing ground training and simulator preparation. Departure for Gold Wings Aviation, Poland (Warsaw & Kraków bases) scheduled for June 2026.',
                 icon: '🛫',
               },
             ].map((b, i) => (
