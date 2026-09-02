@@ -273,7 +273,7 @@ export default function Nav() {
 
         <p style={{
           position: 'absolute', bottom: 40,
-          fontSize: '.6rem', color: 'rgba(255,255,255,.18)',
+          fontSize: '.6rem', color: 'rgba(255,255,255,.55)',
           letterSpacing: '2px', textTransform: 'uppercase',
           fontFamily: 'var(--font-share-mono), monospace',
           transform: mobileOpen ? 'translateY(0)' : 'translateY(10px)',

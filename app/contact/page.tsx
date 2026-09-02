@@ -49,7 +49,7 @@ export default function Contact() {
               >
                 Register Free ↗
               </a>
-              <p style={{ fontSize: '.66rem', color: 'rgba(255,255,255,.2)', letterSpacing: '1px' }}>
+              <p style={{ fontSize: '.66rem', color: 'rgba(255,255,255,.55)', letterSpacing: '1px' }}>
                 No follow-up calls. No pressure. One click to register.
               </p>
             </div>
@@ -84,7 +84,7 @@ export default function Contact() {
                   >
                     <span style={{ color: 'var(--gold)', flexShrink: 0, marginTop: 1 }}>{c.icon}</span>
                     <div>
-                      <div style={{ fontSize: '.5rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,.3)', marginBottom: 2 }}>
+                      <div style={{ fontSize: '.5rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', marginBottom: 2 }}>
                         {c.label}
                       </div>
                       <div style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.7)' }}>{c.value}</div>

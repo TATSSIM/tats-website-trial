@@ -114,13 +114,6 @@ export default function Home() {
           <div id="bg-vignette" />
           <div id="panel-fade" />
         </div>
-        <div id="hero-scan" />
-        <div className="hud-corner hud-corner-tl" />
-        <div className="hud-corner hud-corner-tr" />
-        <div className="hud-corner hud-corner-bl" />
-        <div className="hud-corner hud-corner-br" />
-        <span className="hud-coord hud-coord-tl">08°29′N 76°57′E · VOTV · TRV</span>
-        <span className="hud-coord hud-coord-br">EST. NOV 2023 · KERALA · INDIA</span>
 
         <div style={{ maxWidth: 860, position: 'relative', zIndex: 10 }}>
           <span className="hero-school-label hero-el">
@@ -200,15 +193,13 @@ export default function Home() {
 
         {/* ── WHO WE ARE ── */}
         <section id="about" className="page-section" style={{ position: 'relative', overflow: 'hidden' }}>
-          <span className="section-num">01</span>
           <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center', position: 'relative', zIndex: 2 }}>
             <div>
-              <span className="eyebrow-pill rv-left">Our Story</span>
               <h2 className="section-title rv-left d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)' }}>
-                Can You Prove It?<br /><strong>We Can.</strong>
+                Most academies ask you to <strong>take their word for it.</strong>
               </h2>
               <p className="section-body rv d2">
-                Every aviation academy claims to be the best. Ask them to prove it, and most fall back on reputation. At TATS, <strong>every claim we make is backed by evidence you can verify yourself</strong> — mark sheets on file at our campus, a 32% selection rate, and a flying school we&apos;ll name upfront.
+                At TATS, <strong>every claim we make is backed by evidence you can verify yourself</strong> — mark sheets on file at our campus, a 32% selection rate, and a flying school we&apos;ll name upfront.
               </p>
               <p className="section-body rv d3">
                 We were founded in November 2023, opposite Trivandrum International Airport, Kerala, on that one conviction. Kerala had no shortage of aviation coaching institutes — most competed on reputation, none disclosed their flying school upfront. We built TATS to be the opposite.
@@ -236,7 +227,7 @@ export default function Home() {
                     <span style={{ flexShrink: 0, marginTop: 2, color: 'var(--gold)' }}><item.Icon size={19} strokeWidth={1.5} /></span>
                     <div>
                       <div style={{ fontSize: '.82rem', fontWeight: 600, marginBottom: 4, color: 'rgba(255,255,255,.88)' }}>{item.title}</div>
-                      <div style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.36)', lineHeight: 1.65 }}>{item.desc}</div>
+                      <div style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.65 }}>{item.desc}</div>
                     </div>
                   </div>
                 ))}
@@ -249,11 +240,10 @@ export default function Home() {
 
         {/* ── PROGRAMMES ── */}
         <section id="programs" className="page-section" style={{ flexDirection: 'column', alignItems: 'flex-start', position: 'relative', overflow: 'hidden' }}>
-          <span className="section-num">02</span>
           <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', position: 'relative', zIndex: 2 }}>
-            <span className="eyebrow-pill rv">Our Programmes</span>
-            <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', marginBottom: 44 }}>
-              Four Pathways.<br /><strong>One Standard.</strong>
+            <span className="section-label rv">Our Programmes</span>
+            <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', marginBottom: 44, maxWidth: 640 }}>
+              Four routes to a CPL. <strong>Pick the one that fits where you&apos;re starting from.</strong>
             </h2>
 
             <div className="program-grid">
@@ -281,7 +271,7 @@ export default function Home() {
                   tag: '15–16 months · Skip the grind',
                   bullets: ['For DGCA ground-cleared cadets', 'Bridge prep + 20 hrs simulator', '200 hrs + 17 hrs Multi-Engine', 'DGCA to EASA conversion pathway'],
                   img: '/images/students-campus.jpg',
-                  imgPosition: 'center 18%',
+                  imgPosition: 'center 28%',
                 },
                 {
                   id: 'tapp-50',
@@ -290,7 +280,7 @@ export default function Home() {
                   tag: 'Flight Instructor rating pathway',
                   bullets: ['240 total flight hours (2026)', 'FI Rating pathway', 'Airline interview preparation', 'Structured mentorship'],
                   img: '/images/batch2-dispatch.jpg',
-                  imgPosition: 'center 25%',
+                  imgPosition: 'center 32%',
                 },
               ].map((prog, i) => (
                 <div key={prog.id} className={`program-card-outer rv-3d d${i + 1}`}>
@@ -312,7 +302,7 @@ export default function Home() {
                     </div>
                     <div className="program-card-body">
                       <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.5rem', fontWeight: 700, marginBottom: 4 }}>{prog.name}</h3>
-                      <p style={{ fontSize: '.6rem', color: 'rgba(255,255,255,.3)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: 16 }}>{prog.tag}</p>
+                      <p style={{ fontSize: '.6rem', color: 'rgba(255,255,255,.55)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: 16 }}>{prog.tag}</p>
                       <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 9, marginBottom: 22 }}>
                         {prog.bullets.map(b => (
                           <li key={b} style={{ fontSize: '.78rem', color: 'rgba(255,255,255,.5)', display: 'flex', gap: 10, alignItems: 'flex-start' }}>
@@ -336,11 +326,10 @@ export default function Home() {
 
         {/* ── WHY TATS ── */}
         <section id="why" className="page-section" style={{ flexDirection: 'column', alignItems: 'flex-start', position: 'relative', overflow: 'hidden' }}>
-          <span className="section-num">03</span>
           <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', position: 'relative', zIndex: 2 }}>
-            <span className="eyebrow-pill rv">Why Choose TATS</span>
-            <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', marginBottom: 44 }}>
-              Eight Pillars.<br /><strong>Every Batch. Every Time.</strong>
+            <span className="section-label rv">Why Choose TATS</span>
+            <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', marginBottom: 44, maxWidth: 620 }}>
+              What actually happens differently, <strong>batch after batch.</strong>
             </h2>
             <div className="diff-grid">
               {[
@@ -359,7 +348,7 @@ export default function Home() {
                       <item.Icon size={18} strokeWidth={1.5} />
                     </div>
                     <h3 style={{ fontSize: '.86rem', fontWeight: 700, marginBottom: 8, color: 'rgba(255,255,255,.88)' }}>{item.title}</h3>
-                    <p style={{ fontSize: '.74rem', color: 'rgba(255,255,255,.38)', lineHeight: 1.7 }}>{item.desc}</p>
+                    <p style={{ fontSize: '.74rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.7 }}>{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -374,12 +363,7 @@ export default function Home() {
 
         {/* ── JOURNEY ── */}
         <section id="journey" className="page-section" style={{ flexDirection: 'column', alignItems: 'flex-start', position: 'relative', overflow: 'hidden', padding: '72px 5.5%' }}>
-          <span className="section-num">04</span>
           <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', position: 'relative', zIndex: 2 }}>
-            <span className="eyebrow-pill rv">Our Journey</span>
-            <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', marginBottom: 32 }}>
-              From Trivandrum.<br /><strong>To The Skies Over Europe.</strong>
-            </h2>
             <div className="cta-banner rv-3d d2">
               <span style={{ flexShrink: 0, color: 'var(--gold)' }}><Plane size={44} strokeWidth={1.25} /></span>
               <div>
@@ -401,11 +385,10 @@ export default function Home() {
 
         {/* ── TESTIMONIALS ── */}
         <section className="page-section" style={{ flexDirection: 'column', alignItems: 'flex-start', position: 'relative', overflow: 'hidden' }}>
-          <span className="section-num">05</span>
           <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', position: 'relative', zIndex: 2 }}>
-            <span className="eyebrow-pill rv">Cadet Voices</span>
+            <span className="section-label rv">Cadet Voices</span>
             <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', marginBottom: 44 }}>
-              Hear It From<br /><strong>Our Cadets.</strong>
+              What cadets say <strong>once they&apos;re actually flying.</strong>
             </h2>
             <div className="testimonial-grid">
               {TESTIMONIALS.map((t, i) => (
@@ -446,11 +429,10 @@ export default function Home() {
 
         {/* ── WATCH & LEARN ── */}
         <section style={{ padding: '88px 5.5%', position: 'relative', zIndex: 10, overflow: 'hidden' }}>
-          <span className="section-num">06</span>
           <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', position: 'relative', zIndex: 2 }}>
-            <span className="eyebrow-pill rv">Watch &amp; Learn</span>
+            <span className="section-label rv">Watch &amp; Learn</span>
             <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', marginBottom: 12 }}>
-              Hear It From Us.<br /><strong>See For Yourself.</strong>
+              Before the webinar, <strong>see it for yourself.</strong>
             </h2>
             <p className="section-body rv d2" style={{ maxWidth: 480, marginBottom: 44 }}>
               Programme walkthroughs, our podcast, and interviews — everything to watch before the webinar.
@@ -489,12 +471,12 @@ export default function Home() {
                         <div style={{ width: 56, height: 56, borderRadius: '50%', border: '1.5px solid rgba(212,175,55,.28)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                           <Play size={18} color="var(--gold)" strokeWidth={1.75} style={{ marginLeft: 3 }} fill="var(--gold)" />
                         </div>
-                        <span style={{ fontSize: '.56rem', color: 'rgba(255,255,255,.18)', letterSpacing: '2.5px', textTransform: 'uppercase' }}>Coming Soon</span>
+                        <span style={{ fontSize: '.56rem', color: 'rgba(255,255,255,.55)', letterSpacing: '2.5px', textTransform: 'uppercase' }}>Coming Soon</span>
                       </div>
                     )}
                     <div style={{ padding: '16px 20px 20px' }}>
                       <h4 style={{ fontSize: '.86rem', fontWeight: 700, marginBottom: 6, color: 'rgba(255,255,255,.9)' }}>{video.title}</h4>
-                      <p style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.36)', lineHeight: 1.65 }}>{video.desc}</p>
+                      <p style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.65 }}>{video.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -520,7 +502,7 @@ export default function Home() {
               EVERY FRIDAY · 7 PM IST · FREE WEBINAR
             </span>
             <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.4rem, 5vw, 4.2rem)', textAlign: 'center' }}>
-              One Webinar.<br /><strong>Complete Clarity.</strong>
+              Bring every question. <strong>Leave with answers.</strong>
             </h2>
             <p className="section-body rv d2" style={{ textAlign: 'center', maxWidth: 480, margin: '0 auto 36px' }}>
               No follow-up calls. No pressure. Every question answered — fees, timeline, flying school, results — with verifiable evidence.
@@ -552,7 +534,7 @@ export default function Home() {
               </a>
               <a href="tel:+916282995979" className="btn-ghost">+91 62829 95979</a>
             </div>
-            <p className="rv d5" style={{ fontSize: '.56rem', color: 'rgba(255,255,255,.16)', letterSpacing: '2px', textTransform: 'uppercase' }}>
+            <p className="rv d5" style={{ fontSize: '.56rem', color: 'rgba(255,255,255,.55)', letterSpacing: '2px', textTransform: 'uppercase' }}>
               info@theaviatortraining.com · Mall of Travancore, Kerala 695024
             </p>
           </div>

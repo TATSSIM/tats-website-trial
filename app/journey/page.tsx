@@ -136,7 +136,7 @@ export default function Journey() {
                   style={{ width: '100%', height: 180, objectFit: 'cover', display: 'block' }}
                 />
                 <div style={{ padding: '8px 10px', background: 'rgba(10,14,20,.85)' }}>
-                  <p style={{ fontSize: '.58rem', color: 'rgba(255,255,255,.3)', letterSpacing: '.5px' }}>{photo.caption}</p>
+                  <p style={{ fontSize: '.58rem', color: 'rgba(255,255,255,.55)', letterSpacing: '.5px' }}>{photo.caption}</p>
                 </div>
               </div>
             ))}

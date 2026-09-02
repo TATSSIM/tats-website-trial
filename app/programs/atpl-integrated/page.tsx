@@ -118,7 +118,7 @@ export default function ATPLIntegrated() {
                 <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: 4 }}>
                   {p.title}
                 </h3>
-                <p style={{ fontSize: '.62rem', color: 'rgba(255,255,255,.3)', letterSpacing: '1px', marginBottom: 12, textTransform: 'uppercase' }}>
+                <p style={{ fontSize: '.62rem', color: 'rgba(255,255,255,.55)', letterSpacing: '1px', marginBottom: 12, textTransform: 'uppercase' }}>
                   {p.duration}
                 </p>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 5 }}>

@@ -20,7 +20,7 @@ export default function NotFound() {
       }}>
         Page Not Found
       </h1>
-      <p style={{ fontSize: '.8rem', color: 'rgba(255,255,255,.38)', marginBottom: 32 }}>
+      <p style={{ fontSize: '.8rem', color: 'rgba(255,255,255,.55)', marginBottom: 32 }}>
         The page you&apos;re looking for doesn&apos;t exist.
       </p>
       <Link href="/" className="btn-primary">Return Home →</Link>

@@ -106,7 +106,7 @@ export default function TATS120() {
               <div key={item.title} className={`diff-card rv d${(i % 4) + 1}`}>
                 <div style={{ fontSize: '1.2rem', marginBottom: 8 }}>{item.icon}</div>
                 <h3 style={{ fontSize: '.8rem', fontWeight: 600, marginBottom: 5 }}>{item.title}</h3>
-                <p style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.38)', lineHeight: 1.6 }}>{item.desc}</p>
+                <p style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.6 }}>{item.desc}</p>
               </div>
             ))}
           </div>

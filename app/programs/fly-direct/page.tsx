@@ -65,7 +65,7 @@ export default function FlyDirect() {
                   <span style={{ fontFamily: 'var(--font-share-mono), monospace', fontSize: '.6rem', color: 'var(--gold)', opacity: .5, flexShrink: 0, marginTop: 2 }}>{s.step}</span>
                   <div>
                     <div style={{ fontSize: '.76rem', fontWeight: 600, marginBottom: 2 }}>{s.title}</div>
-                    <div style={{ fontSize: '.7rem', color: 'rgba(255,255,255,.38)' }}>{s.desc}</div>
+                    <div style={{ fontSize: '.7rem', color: 'rgba(255,255,255,.55)' }}>{s.desc}</div>
                   </div>
                 </div>
               ))}

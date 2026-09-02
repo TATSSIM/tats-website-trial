@@ -181,7 +181,7 @@ export default function BlogContent() {
                     {post.excerpt}
                   </p>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto' }}>
-                    <span style={{ fontSize: '.58rem', color: 'rgba(255,255,255,.22)', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
+                    <span style={{ fontSize: '.58rem', color: 'rgba(255,255,255,.55)', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
                       {post.date} · {post.readTime}
                     </span>
                     <a href={post.slug} target="_blank" rel="noopener noreferrer" style={{ fontSize: '.64rem', color: 'var(--gold)', fontWeight: 600, textDecoration: 'none', letterSpacing: '.5px' }}>
@@ -192,13 +192,13 @@ export default function BlogContent() {
               ))}
             </div>
           ) : filtered.length === 0 && (
-            <p style={{ fontSize: '.8rem', color: 'rgba(255,255,255,.3)', textAlign: 'center', padding: '40px 0' }}>
+            <p style={{ fontSize: '.8rem', color: 'rgba(255,255,255,.55)', textAlign: 'center', padding: '40px 0' }}>
               No articles in this category yet — check back soon.
             </p>
           )}
 
           <div className="rv" style={{ marginTop: 36, textAlign: 'center' }}>
-            <p style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.22)', letterSpacing: '1.5px' }}>
+            <p style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.55)', letterSpacing: '1.5px' }}>
               New TATS Bulletin issues published monthly — check back for the latest edition.
             </p>
           </div>

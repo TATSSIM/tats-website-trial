@@ -136,14 +136,14 @@ body::after {
   -webkit-text-stroke: 1px rgba(255,255,255,.05);
 }
 
-/* "Shaping Aviators" — same family as BEYOND PILOTS, lighter weight for hierarchy */
+/* "Shaping Aviators" — same family and weight as BEYOND PILOTS */
 .hero-tagline-2 {
   font-family: var(--font-space), "Space Grotesk", system-ui, sans-serif;
   font-size: clamp(2.2rem, 6vw, 5.6rem);
-  font-weight: 300;
+  font-weight: 900;
   font-style: normal;
   line-height: 1.05;
-  letter-spacing: -.01em;
+  letter-spacing: -.02em;
   color: var(--gold);
   display: block;
   will-change: transform;
@@ -375,42 +375,6 @@ body::after {
   background: linear-gradient(to bottom, transparent 0%, rgba(5,8,15,.7) 55%, #05080f 100%);
 }
 
-/* Scan line across hero */
-#hero-scan {
-  position: absolute; left: 0; right: 0; height: 1px; z-index: 6; pointer-events: none;
-  background: linear-gradient(90deg, transparent, rgba(212,175,55,.3) 30%, rgba(212,175,55,.45) 50%, rgba(212,175,55,.3) 70%, transparent);
-  animation: heroScan 12s linear infinite; opacity: 0;
-  animation-delay: 2s;
-}
-@keyframes heroScan {
-  0%   { top: 0%; opacity: 0; }
-  3%   { opacity: 1; }
-  97%  { opacity: .5; }
-  100% { top: 100%; opacity: 0; }
-}
-
-/* HUD corner brackets */
-.hud-corner {
-  position: absolute; width: 20px; height: 20px;
-  border-color: rgba(212,175,55,.32); border-style: solid;
-  opacity: 0; animation: hudIn .8s ease forwards;
-}
-.hud-corner-tl { top: 8px; left: 8px; border-width: 2px 0 0 2px; animation-delay: 1.4s; }
-.hud-corner-tr { top: 8px; right: 8px; border-width: 2px 2px 0 0; animation-delay: 1.6s; }
-.hud-corner-bl { bottom: 64px; left: 8px; border-width: 0 0 2px 2px; animation-delay: 1.8s; }
-.hud-corner-br { bottom: 64px; right: 8px; border-width: 0 2px 2px 0; animation-delay: 2.0s; }
-@keyframes hudIn {
-  from { opacity: 0; transform: scale(.7); }
-  to   { opacity: 1; transform: scale(1); }
-}
-.hud-coord {
-  position: absolute; font-family: var(--font-share-mono), monospace;
-  font-size: .36rem; letter-spacing: 2px; color: rgba(212,175,55,.28);
-  opacity: 0; animation: hudIn .8s ease forwards; pointer-events: none;
-}
-.hud-coord-tl { top: 32px; left: 36px; animation-delay: 2.2s; }
-.hud-coord-br { bottom: 86px; right: 36px; animation-delay: 2.4s; }
-
 /* ═══════════════════════════════════════
    HERO SECTION
 ═══════════════════════════════════════ */
@@ -443,7 +407,7 @@ body::after {
 }
 .scroll-indicator-label {
   font-size: .42rem; letter-spacing: 4px; text-transform: uppercase;
-  color: rgba(255,255,255,.22); font-family: var(--font-share-mono), monospace;
+  color: rgba(255,255,255,.5); font-family: var(--font-share-mono), monospace;
 }
 .scroll-mouse {
   width: 18px; height: 28px;
@@ -526,14 +490,6 @@ body::after {
   background: transparent;
 }
 
-/* Section number decoration */
-.section-num {
-  position: absolute; right: 5.5%; top: 50%; transform: translateY(-50%);
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-size: clamp(5rem, 10vw, 9rem); font-weight: 700;
-  color: transparent; -webkit-text-stroke: 1px rgba(212,175,55,.05);
-  line-height: 1; user-select: none; pointer-events: none; z-index: 1; letter-spacing: -4px;
-}
 
 /* ═══════════════════════════════════════
    STAT CARDS
@@ -563,7 +519,7 @@ body::after {
 }
 .stat-label {
   font-size: .58rem; font-weight: 700; letter-spacing: 2.5px;
-  text-transform: uppercase; color: rgba(255,255,255,.25);
+  text-transform: uppercase; color: rgba(255,255,255,.5);
 }
 
 /* ═══════════════════════════════════════
@@ -607,7 +563,7 @@ body::after {
 .program-card-outer:hover .program-card::before { transform: scaleX(1); }
 
 .program-card.featured { box-shadow: inset 0 1px 0 rgba(212,175,55,.12); }
-.program-card-img { height: 148px; position: relative; overflow: hidden; }
+.program-card-img { height: 210px; position: relative; overflow: hidden; }
 .program-card-img img { transition: transform 600ms cubic-bezier(0.32,0.72,0,1) !important; }
 .program-card-outer:hover .program-card-img img { transform: scale(1.06) !important; }
 .program-card-body { padding: 24px 22px 22px; }
@@ -773,11 +729,21 @@ details[open] > .accordion-summary::after { transform: translateY(-50%) rotate(4
 /* ═══════════════════════════════════════
    NAV DOTS
 ═══════════════════════════════════════ */
-.nav-dots { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 500; display: flex; flex-direction: column; gap: 8px; }
-.nav-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,.12); cursor: pointer; transition: all .3s; position: relative; border: none; padding: 0; }
-.nav-dot::after { content: attr(data-label); position: absolute; right: calc(100% + 10px); top: 50%; transform: translateY(-50%); font-size: .46rem; font-weight: 700; letter-spacing: 1.5px; color: var(--gold); text-transform: uppercase; white-space: nowrap; opacity: 0; transition: opacity .25s; font-family: var(--font-share-mono), monospace; }
+.nav-dots { position: fixed; right: 14px; top: 50%; transform: translateY(-50%); z-index: 500; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+/* Hit area is 28x28 — the visible dot stays a small 5px mark via ::before.
+   WCAG 2.5.8 asks for >=24px targets; this clears it while keeping the mark subtle. */
+.nav-dot {
+  width: 28px; height: 28px; padding: 0; margin: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: transparent; border: none; cursor: pointer; position: relative;
+}
+.nav-dot::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%;
+  background: rgba(255,255,255,.12); transition: all .3s;
+}
+.nav-dot::after { content: attr(data-label); position: absolute; right: calc(100% + 6px); top: 50%; transform: translateY(-50%); font-size: .46rem; font-weight: 700; letter-spacing: 1.5px; color: var(--gold); text-transform: uppercase; white-space: nowrap; opacity: 0; transition: opacity .25s; font-family: var(--font-share-mono), monospace; pointer-events: none; }
 .nav-dot:hover::after { opacity: 1; }
-.nav-dot.active { background: var(--gold); box-shadow: 0 0 8px rgba(212,175,55,.55), 0 0 22px rgba(212,175,55,.2); transform: scale(1.5); }
+.nav-dot.active::before { background: var(--gold); box-shadow: 0 0 8px rgba(212,175,55,.55), 0 0 22px rgba(212,175,55,.2); transform: scale(1.5); }
 
 /* ═══════════════════════════════════════
    VIDEO CARDS
@@ -814,7 +780,6 @@ details[open] > .accordion-summary::after { transform: translateY(-50%) rotate(4
   .diff-card:nth-child(n) { grid-column: span 1 !important; }
   .stat-grid { grid-template-columns: 1fr 1fr; }
   .testimonial-grid { grid-template-columns: 1fr 1fr; }
-  .section-num { display: none; }
   .hero-tagline-1 { font-size: clamp(3rem, 12vw, 8rem); }
   .hero-tagline-2 { font-size: clamp(1.8rem, 7.5vw, 4.4rem); }
 }

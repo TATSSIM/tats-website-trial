@@ -108,7 +108,7 @@ export default function ProgramsIndex() {
                   <h2 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.4rem', fontWeight: 600, marginBottom: 4 }}>
                     {prog.name}
                   </h2>
-                  <p style={{ fontSize: '.62rem', color: 'rgba(255,255,255,.26)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: 12 }}>
+                  <p style={{ fontSize: '.62rem', color: 'rgba(255,255,255,.55)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: 12 }}>
                     {prog.subtitle}
                   </p>
                   <p style={{ fontSize: '.78rem', color: 'rgba(255,255,255,.5)', lineHeight: 1.7, marginBottom: 14 }}>

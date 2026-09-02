@@ -46,7 +46,7 @@ export default function Footer() {
           >
             THE AVIATOR TRAINING SCHOOL
           </span>
-          <p className="text-[.78rem] leading-7 mt-1 mb-4 max-w-[230px]" style={{ color: 'rgba(255,255,255,.28)' }}>
+          <p className="text-[.78rem] leading-7 mt-1 mb-4 max-w-[230px]" style={{ color: 'rgba(255,255,255,.55)' }}>
             Excellence through evidence. India&apos;s most transparent aviation training institute.
           </p>
 
@@ -162,15 +162,15 @@ export default function Footer() {
               { icon: <Phone size={13} strokeWidth={1.75} />,  label: '+91 62825 85548', href: 'tel:+916282585548' },
               { icon: <Mail size={13} strokeWidth={1.75} />,   label: 'info@theaviatortraining.com', href: 'mailto:info@theaviatortraining.com' },
             ].map((c, i) => (
-              <div key={i} className="flex gap-2 text-[.73rem] items-start leading-relaxed" style={{ color: 'rgba(255,255,255,.3)' }}>
+              <div key={i} className="flex gap-2 text-[.73rem] items-start leading-relaxed" style={{ color: 'rgba(255,255,255,.55)' }}>
                 <span style={{ color: 'var(--gold)', flexShrink: 0, marginTop: 1 }}>{c.icon}</span>
                 {c.href ? (
                   <a href={c.href}
                     target={c.href.startsWith('http') ? '_blank' : undefined}
                     rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    style={{ color: 'rgba(255,255,255,.3)', textDecoration: 'none' }}
+                    style={{ color: 'rgba(255,255,255,.55)', textDecoration: 'none' }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--gold)'; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,.3)'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,.55)'; }}
                   >{c.label}</a>
                 ) : (
                   <span>{c.label}</span>
@@ -183,7 +183,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="flex items-center justify-between flex-wrap gap-2 pt-5 border-t" style={{ borderColor: 'rgba(255,255,255,.03)' }}>
-        <p className="text-[.63rem]" style={{ color: 'rgba(255,255,255,.16)' }}>
+        <p className="text-[.63rem]" style={{ color: 'rgba(255,255,255,.55)' }}>
           © 2024–{new Date().getFullYear()} The Aviator Training School. All rights reserved.
         </p>
         <p className="text-[.63rem]" style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontStyle: 'italic', color: 'rgba(212,175,55,.24)' }}>

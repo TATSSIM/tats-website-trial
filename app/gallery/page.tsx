@@ -72,7 +72,7 @@ export default function Gallery() {
               style={{ width: '100%', height: 480, objectFit: 'cover', objectPosition: 'center 20%', display: 'block' }}
             />
           </div>
-          <p style={{ fontSize: '.62rem', color: 'rgba(255,255,255,.22)', letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: 20 }}>
+          <p style={{ fontSize: '.62rem', color: 'rgba(255,255,255,.55)', letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: 20 }}>
             Epaulette Ceremony of Winglet
           </p>
 
@@ -92,7 +92,7 @@ export default function Gallery() {
                   style={{ width: '100%', height: 220, objectFit: 'cover', display: 'block' }}
                 />
                 <div style={{ padding: '8px 12px', background: 'rgba(10,14,20,.85)' }}>
-                  <p style={{ fontSize: '.6rem', color: 'rgba(255,255,255,.3)', letterSpacing: '1px' }}>{photo.caption}</p>
+                  <p style={{ fontSize: '.6rem', color: 'rgba(255,255,255,.55)', letterSpacing: '1px' }}>{photo.caption}</p>
                 </div>
               </div>
             ))}
@@ -122,7 +122,7 @@ export default function Gallery() {
               />
               <div style={{ padding: '10px 16px 14px', background: 'rgba(10,14,20,.9)' }}>
                 <p style={{ fontSize: '.72rem', fontWeight: 600, marginBottom: 3 }}>Monthly MBCT Session</p>
-                <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.32)' }}>Wing Cdr Dhanasree P V (Retd IAF) · High Performance Psychologist</p>
+                <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>Wing Cdr Dhanasree P V (Retd IAF) · High Performance Psychologist</p>
               </div>
             </div>
             <div className="rv d3" style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
@@ -135,7 +135,7 @@ export default function Gallery() {
               />
               <div style={{ padding: '10px 16px 14px', background: 'rgba(10,14,20,.9)' }}>
                 <p style={{ fontSize: '.72rem', fontWeight: 600, marginBottom: 3 }}>TATS Campus — Trivandrum</p>
-                <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.32)' }}>3rd Floor, Mall of Travancore · Opposite TRV International Airport</p>
+                <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>3rd Floor, Mall of Travancore · Opposite TRV International Airport</p>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function Gallery() {
             />
             <div style={{ padding: '10px 16px 14px', background: 'rgba(10,14,20,.9)' }}>
               <p style={{ fontSize: '.72rem', fontWeight: 600, marginBottom: 3 }}>The TATS Team</p>
-              <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.32)' }}>Faculty, counsellors, and support staff — the people behind every cadet journey</p>
+              <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>Faculty, counsellors, and support staff — the people behind every cadet journey</p>
             </div>
           </div>
         </div>
@@ -222,14 +222,14 @@ export default function Gallery() {
                       }}>
                         <span style={{ color: 'var(--gold)', fontSize: '1.1rem', marginLeft: 4 }}>▶</span>
                       </div>
-                      <span style={{ fontSize: '.6rem', color: 'rgba(255,255,255,.2)', letterSpacing: '2px', textTransform: 'uppercase' }}>
+                      <span style={{ fontSize: '.6rem', color: 'rgba(255,255,255,.55)', letterSpacing: '2px', textTransform: 'uppercase' }}>
                         Video Coming Soon
                       </span>
                     </div>
                   )}
                   <div style={{ padding: '14px 18px 18px' }}>
                     <h4 style={{ fontSize: '.82rem', fontWeight: 600, marginBottom: 5 }}>{video.title}</h4>
-                    <p style={{ fontSize: '.7rem', color: 'rgba(255,255,255,.38)', lineHeight: 1.6 }}>{video.desc}</p>
+                    <p style={{ fontSize: '.7rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.6 }}>{video.desc}</p>
                   </div>
                 </div>
               </div>
@@ -261,7 +261,7 @@ export default function Gallery() {
               />
               <div style={{ padding: '10px 16px 14px', background: 'rgba(10,14,20,.9)' }}>
                 <p style={{ fontSize: '.72rem', fontWeight: 600, marginBottom: 3 }}>Flight Training Serbia</p>
-                <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.32)' }}>National Aviation Academy - Serbia</p>
+                <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>National Aviation Academy - Serbia</p>
               </div>
             </div>
             <div className="rv d2" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 14 }}>
@@ -274,7 +274,7 @@ export default function Gallery() {
                   style={{ width: '100%', height: 152, objectFit: 'cover', display: 'block' }}
                 />
                 <div style={{ padding: '8px 12px 12px', background: 'rgba(10,14,20,.9)' }}>
-                  <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.32)' }}>International training cohort</p>
+                  <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>International training cohort</p>
                 </div>
               </div>
               <div style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
@@ -286,7 +286,7 @@ export default function Gallery() {
                   style={{ width: '100%', height: 152, objectFit: 'cover', display: 'block' }}
                 />
                 <div style={{ padding: '8px 12px 12px', background: 'rgba(10,14,20,.9)' }}>
-                  <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.32)' }}>Ready for the skies</p>
+                  <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>Ready for the skies</p>
                 </div>
               </div>
             </div>
