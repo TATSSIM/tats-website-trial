@@ -100,13 +100,13 @@ export default function About() {
               },
             ].map((person, i) => (
               <div key={person.name} className={`diff-card tilt-card rv d${i + 1}`} style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ height: 300, position: 'relative', background: 'linear-gradient(135deg, rgba(212,175,55,.12), rgba(56,189,248,.08))' }}>
+                <div style={{ height: 340, position: 'relative', background: 'linear-gradient(135deg, rgba(212,175,55,.1), rgba(56,189,248,.07))' }}>
                   {person.img ? (
                     <Image
                       src={withBasePath(person.img)}
                       alt={person.name}
                       fill
-                      style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
+                      style={{ objectFit: 'contain', objectPosition: 'center' }}
                       sizes="(max-width: 780px) 100vw, 500px"
                     />
                   ) : (
@@ -119,7 +119,7 @@ export default function About() {
                       {person.name[0]}
                     </div>
                   )}
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(5,8,15,.95) 0%, transparent 45%)' }} />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(5,8,15,.55) 0%, transparent 12%)', pointerEvents: 'none' }} />
                 </div>
                 <div style={{ padding: '20px 24px 26px' }}>
                   <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: 4 }}>
