@@ -96,7 +96,7 @@ export default function About() {
                 name: 'Wing Commander Dhanasree P V (Retd)',
                 role: 'High Performance Psychologist',
                 bio: 'Retired Indian Air Force officer and psychologist specialising in MBCT (Mindfulness-Based Cognitive Therapy). Conducts monthly resilience sessions for TATS cadets — a programme unique in Kerala aviation training.',
-                img: '',
+                img: '/images/team/dhanasree.jpg',
               },
             ].map((person, i) => (
               <div key={person.name} className={`diff-card tilt-card rv d${i + 1}`}>
