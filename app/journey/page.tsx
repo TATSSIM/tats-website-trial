@@ -85,6 +85,32 @@ export default function Journey() {
               </div>
             ))}
           </div>
+
+          {/* Solo flight videos */}
+          <div className="rv d3" style={{ marginTop: 40 }}>
+            <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.15rem', fontWeight: 600, marginBottom: 4, color: 'var(--gold)' }}>
+              Batch 1 — Solo Flight
+            </h3>
+            <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginBottom: 20, maxWidth: 520 }}>
+              Real footage from Batch 1 cadets&apos; solo flights at Vršac, Serbia.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+              {['/videos/solo-flight-1.mp4', '/videos/solo-flight-2.mp4'].map((src, i) => (
+                <div key={src} style={{ borderRadius: 11, overflow: 'hidden', border: '1px solid rgba(255,255,255,.06)', background: '#000' }}>
+                  {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+                  <video
+                    controls
+                    muted
+                    playsInline
+                    preload="metadata"
+                    style={{ width: '100%', display: 'block', aspectRatio: '16/9', objectFit: 'contain', background: '#000' }}
+                  >
+                    <source src={withBasePath(src)} type="video/mp4" />
+                  </video>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
