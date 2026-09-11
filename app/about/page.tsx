@@ -72,7 +72,7 @@ export default function About() {
         <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
           <span className="section-label rv">Leadership</span>
           <h2 className="section-title rv d1">The People<br /><strong>Behind TATS.</strong></h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: 24, marginTop: 32 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginTop: 32 }}>
             {[
               {
                 name: 'Chintu Karthikeyan',
@@ -99,15 +99,15 @@ export default function About() {
                 img: '/images/team/dhanasree.jpg',
               },
             ].map((person, i) => (
-              <div key={person.name} className={`diff-card tilt-card rv d${i + 1}`} style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ height: 340, position: 'relative', background: 'linear-gradient(135deg, rgba(212,175,55,.1), rgba(56,189,248,.07))' }}>
+              <div key={person.name} className={`diff-card tilt-card rv d${i + 1}`} style={{ padding: 0, overflow: 'hidden', display: 'flex', flexWrap: 'wrap' }}>
+                <div style={{ width: 240, flexShrink: 0, height: 320, position: 'relative', background: 'linear-gradient(135deg, rgba(212,175,55,.1), rgba(56,189,248,.07))' }}>
                   {person.img ? (
                     <Image
                       src={withBasePath(person.img)}
                       alt={person.name}
                       fill
-                      style={{ objectFit: 'contain', objectPosition: 'center' }}
-                      sizes="(max-width: 780px) 100vw, 500px"
+                      style={{ objectFit: 'cover', objectPosition: 'center 18%' }}
+                      sizes="240px"
                     />
                   ) : (
                     <div style={{
@@ -119,16 +119,15 @@ export default function About() {
                       {person.name[0]}
                     </div>
                   )}
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(5,8,15,.55) 0%, transparent 12%)', pointerEvents: 'none' }} />
                 </div>
-                <div style={{ padding: '20px 24px 26px' }}>
-                  <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: 4 }}>
+                <div style={{ flex: 1, minWidth: 260, padding: '26px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.35rem', fontWeight: 600, marginBottom: 4 }}>
                     {person.name}
                   </h3>
                   <p style={{ fontSize: '.6rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 14 }}>
                     {person.role}
                   </p>
-                  <p style={{ fontSize: '.8rem', color: 'rgba(255,255,255,.5)', lineHeight: 1.75 }}>{person.bio}</p>
+                  <p style={{ fontSize: '.82rem', color: 'rgba(255,255,255,.5)', lineHeight: 1.8 }}>{person.bio}</p>
                 </div>
               </div>
             ))}
