@@ -78,28 +78,47 @@ export default function About() {
                 name: 'Chintu Karthikeyan',
                 role: 'Managing Director',
                 bio: 'Founded TATS in November 2023 with a conviction that aviation training in Kerala needed a transparent, evidence-first approach. Personally involved in every cadet\'s journey — from selection to deployment.',
+                img: '/images/team/chintu-karthikeyan.jpg',
               },
               {
                 name: 'Capt. Dragan Ivanovich',
                 role: 'Board Advisor',
                 bio: 'EASA Certified Flight Instructor and Class Rating Examiner. Brings international standards to TATS\'s Poland pathway and ensures training quality at Gold Wings Aviation meets the highest benchmarks.',
+                img: '/images/team/dragan-ivanovich.jpg',
+              },
+              {
+                name: 'Capt. Sujith Subhash',
+                role: 'Head of Theoretical Training',
+                bio: 'Leads TATS\'s ground school and ATPL theory instruction, overseeing the academic preparation every cadet completes before departing for flight training.',
+                img: '/images/team/sujith-subhash.jpg',
               },
               {
                 name: 'Wing Commander Dhanasree P V (Retd)',
                 role: 'High Performance Psychologist',
                 bio: 'Retired Indian Air Force officer and psychologist specialising in MBCT (Mindfulness-Based Cognitive Therapy). Conducts monthly resilience sessions for TATS cadets — a programme unique in Kerala aviation training.',
+                img: '',
               },
             ].map((person, i) => (
               <div key={person.name} className={`diff-card tilt-card rv d${i + 1}`}>
-                <div style={{
-                  width: 56, height: 56, borderRadius: '50%',
-                  background: 'linear-gradient(135deg, var(--gold), var(--sky))',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '1.4rem', fontWeight: 700, color: '#0a0e14',
-                  marginBottom: 14,
-                }}>
-                  {person.name[0]}
-                </div>
+                {person.img ? (
+                  <Image
+                    src={withBasePath(person.img)}
+                    alt={person.name}
+                    width={56}
+                    height={56}
+                    style={{ width: 56, height: 56, borderRadius: '50%', objectFit: 'cover', marginBottom: 14, border: '1px solid rgba(212,175,55,.25)' }}
+                  />
+                ) : (
+                  <div style={{
+                    width: 56, height: 56, borderRadius: '50%',
+                    background: 'linear-gradient(135deg, var(--gold), var(--sky))',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: '1.4rem', fontWeight: 700, color: '#0a0e14',
+                    marginBottom: 14,
+                  }}>
+                    {person.name[0]}
+                  </div>
+                )}
                 <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: 4 }}>
                   {person.name}
                 </h3>
