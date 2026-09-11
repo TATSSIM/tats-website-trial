@@ -108,7 +108,7 @@ export default function ATPLIntegrated() {
                 phase: 'Phase 3',
                 title: 'Flight Training',
                 duration: 'Gold Wings Aviation, Poland',
-                items: ['Arrive. Fly immediately.', '200hrs single-engine', '17hrs multi-engine', 'No theory burden during training', 'Weekly Flight Logger updates'],
+                items: ['Arrive. Fly immediately.', '204 flight hrs', '41 simulator hrs', 'No theory burden during training', 'Weekly Flight Logger updates'],
               },
             ].map((p, i) => (
               <div key={p.phase} className={`diff-card rv d${i + 1}`}>

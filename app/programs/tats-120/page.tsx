@@ -122,7 +122,7 @@ export default function TATS120() {
             <span className="section-label rv">Phase 2 — Poland</span>
             <h2 className="section-title rv d1">Gold Wings Aviation.<br /><strong>Direct Partnership.</strong></h2>
             <p className="section-body rv d2">
-              Flight training is conducted exclusively at <strong>Gold Wings Aviation, Poland</strong> — an EASA Approved Training Organisation (ATO). Our partnership is direct: no intermediary, no sub-agent, no compromise on oversight.
+              Flight training is conducted exclusively at <strong>Gold Wings Aviation, Poland</strong> — an EASA Approved Training Organisation (ATO) operating from Warsaw and Kraków. Our partnership is direct: no intermediary, no sub-agent, no compromise on oversight.
             </p>
             <p className="section-body rv d3">
               TATS has weekly visibility into each cadet's training via <strong>Flight Logger</strong>. Families receive regular updates on their child's progress. Capt. Dragan Ivanovich provides Board-level oversight on training quality.
@@ -133,8 +133,9 @@ export default function TATS120() {
             <div className="rv d4" style={{ marginTop: 20 }}>
               {[
                 { label: 'Poland Flight Phase', value: '15 months' },
-                { label: 'Single-Engine Hours', value: '200 hrs' },
-                { label: 'Multi-Engine Hours', value: '17 hrs' },
+                { label: 'Total Flight Hours', value: '204 hrs' },
+                { label: 'Simulator Hours', value: '41 hrs' },
+                { label: 'Jet Orientation (A320)', value: '16 hrs' },
                 { label: 'Training Organisation', value: 'EASA ATO' },
                 { label: 'Partnership Type', value: 'Direct — no intermediary' },
               ].map(item => (

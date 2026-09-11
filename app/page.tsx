@@ -269,7 +269,7 @@ export default function Home() {
                   badge: { text: 'DGCA-Cleared', sky: false },
                   name: 'Fly Direct',
                   tag: '15–16 months · Skip the grind',
-                  bullets: ['For DGCA ground-cleared cadets', 'Bridge prep + 20 hrs simulator', '200 hrs + 17 hrs Multi-Engine', 'DGCA to EASA conversion pathway'],
+                  bullets: ['For DGCA ground-cleared cadets', 'Bridge prep + 20 hrs simulator', '204 flight hrs + 41 simulator hrs', 'DGCA to EASA conversion pathway'],
                   img: '/images/students-campus.jpg',
                   imgPosition: 'center 28%',
                 },

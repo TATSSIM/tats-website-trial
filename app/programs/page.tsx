@@ -43,7 +43,7 @@ const programs = [
     subtitle: '15–16 months · Skip ground',
     duration: '15–16 months',
     target: 'Candidates who have cleared DGCA ground examinations',
-    outcomes: ['200hrs single-engine + 17hrs multi-engine', 'EASA CPL(A) + IR', 'DGCA to EASA conversion', 'Bridge prep + 20hrs simulator before Poland', 'Airline Crew Orientation'],
+    outcomes: ['204 flight hrs + 41 simulator hrs', 'EASA CPL(A) + IR', 'DGCA to EASA conversion', 'Bridge prep + 20hrs simulator before Poland', 'Airline Crew Orientation'],
     img: 'https://images.unsplash.com/photo-1559628233-100c798642d0?w=800&q=75&fit=crop',
     desc: 'For candidates who have already cleared DGCA ground examinations. Skip the theory phase and proceed directly to flight training, with a structured bridge programme and 20hrs simulator prep.',
   },
