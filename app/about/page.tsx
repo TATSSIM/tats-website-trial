@@ -72,60 +72,64 @@ export default function About() {
         <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
           <span className="section-label rv">Leadership</span>
           <h2 className="section-title rv d1">The People<br /><strong>Behind TATS.</strong></h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20, marginTop: 32 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: 24, marginTop: 32 }}>
             {[
               {
                 name: 'Chintu Karthikeyan',
                 role: 'Managing Director',
-                bio: 'Founded TATS in November 2023 with a conviction that aviation training in Kerala needed a transparent, evidence-first approach. Personally involved in every cadet\'s journey — from selection to deployment.',
+                bio: 'Founded TATS in November 2023 with a conviction that aviation training in Kerala needed a transparent, evidence-first approach. Personally involved in every cadet\'s journey — from the selection interviews through to their departure for Poland. Every claim TATS makes to a prospective cadet is one he insists must be verifiable at the campus.',
                 img: '/images/team/chintu-karthikeyan.jpg',
               },
               {
                 name: 'Capt. Dragan Ivanovich',
                 role: 'Board Advisor',
-                bio: 'EASA Certified Flight Instructor and Class Rating Examiner. Brings international standards to TATS\'s Poland pathway and ensures training quality at Gold Wings Aviation meets the highest benchmarks.',
+                bio: 'EASA Certified Flight Instructor and Class Rating Examiner. Brings international standards to TATS\'s Poland pathway and ensures training quality at Gold Wings Aviation meets the highest benchmarks. Reviews cadet progress through Flight Logger and provides Board-level oversight on training quality throughout the Poland flight phase.',
                 img: '/images/team/dragan-ivanovich.jpg',
               },
               {
                 name: 'Capt. Sujith Subhash',
                 role: 'Head of Theoretical Training',
-                bio: 'Leads TATS\'s ground school and ATPL theory instruction, overseeing the academic preparation every cadet completes before departing for flight training.',
+                bio: 'Leads TATS\'s ground school and ATPL theory instruction, overseeing the academic preparation every cadet completes before departing for flight training. Responsible for the DGCA ground subjects — Meteorology, Navigation, and Air Regulations — alongside the EASA ATPL theory delivered through TATS\'s in-house classroom programme.',
                 img: '/images/team/sujith-subhash.jpg',
               },
               {
                 name: 'Wing Commander Dhanasree P V (Retd)',
                 role: 'High Performance Psychologist',
-                bio: 'Retired Indian Air Force officer and psychologist specialising in MBCT (Mindfulness-Based Cognitive Therapy). Conducts monthly resilience sessions for TATS cadets — a programme unique in Kerala aviation training.',
+                bio: 'Retired Indian Air Force officer and psychologist specialising in MBCT (Mindfulness-Based Cognitive Therapy). Conducts monthly resilience sessions for TATS cadets — a programme unique in Kerala aviation training. Her sessions form part of TATS\'s tailored 3-layer aptitude and psychological screening for every incoming batch.',
                 img: '/images/team/dhanasree.jpg',
               },
             ].map((person, i) => (
-              <div key={person.name} className={`diff-card tilt-card rv d${i + 1}`}>
-                {person.img ? (
-                  <Image
-                    src={withBasePath(person.img)}
-                    alt={person.name}
-                    width={56}
-                    height={56}
-                    style={{ width: 56, height: 56, borderRadius: '50%', objectFit: 'cover', marginBottom: 14, border: '1px solid rgba(212,175,55,.25)' }}
-                  />
-                ) : (
-                  <div style={{
-                    width: 56, height: 56, borderRadius: '50%',
-                    background: 'linear-gradient(135deg, var(--gold), var(--sky))',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '1.4rem', fontWeight: 700, color: '#0a0e14',
-                    marginBottom: 14,
-                  }}>
-                    {person.name[0]}
-                  </div>
-                )}
-                <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: 4 }}>
-                  {person.name}
-                </h3>
-                <p style={{ fontSize: '.58rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 12 }}>
-                  {person.role}
-                </p>
-                <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.7 }}>{person.bio}</p>
+              <div key={person.name} className={`diff-card tilt-card rv d${i + 1}`} style={{ padding: 0, overflow: 'hidden' }}>
+                <div style={{ height: 300, position: 'relative', background: 'linear-gradient(135deg, rgba(212,175,55,.12), rgba(56,189,248,.08))' }}>
+                  {person.img ? (
+                    <Image
+                      src={withBasePath(person.img)}
+                      alt={person.name}
+                      fill
+                      style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
+                      sizes="(max-width: 780px) 100vw, 500px"
+                    />
+                  ) : (
+                    <div style={{
+                      position: 'absolute', inset: 0,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      fontSize: '3.5rem', fontWeight: 700, color: 'rgba(212,175,55,.4)',
+                      fontFamily: 'var(--font-cormorant), Georgia, serif',
+                    }}>
+                      {person.name[0]}
+                    </div>
+                  )}
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(5,8,15,.95) 0%, transparent 45%)' }} />
+                </div>
+                <div style={{ padding: '20px 24px 26px' }}>
+                  <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: 4 }}>
+                    {person.name}
+                  </h3>
+                  <p style={{ fontSize: '.6rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 14 }}>
+                    {person.role}
+                  </p>
+                  <p style={{ fontSize: '.8rem', color: 'rgba(255,255,255,.5)', lineHeight: 1.75 }}>{person.bio}</p>
+                </div>
               </div>
             ))}
           </div>
