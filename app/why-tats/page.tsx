@@ -27,15 +27,15 @@ The distinction matters: aviation theory is complex, and the depth required for 
     n: '03', icon: '🖥',
     title: 'Cessna 172 FBS — 20 Hours Procedure Training',
     summary: 'Cadets fly a simulator before they fly a real aircraft. By design.',
-    body: `TATS operates a Cessna 172 Full-Body Simulator on-site. Every cadet in the TATS 120 and Fly Direct programmes completes 20 hours of procedure training before departing for Poland.
+    body: `TATS operates a Cessna 172 Fixed-Base Simulator (FBS) on-site. Every cadet in the TATS 120 and Fly Direct programmes completes 20 hours of procedure training before departing for Poland.
 
 This is not a familiarisation exercise. It is structured procedure training — cockpit flows, radio calls, circuit work, emergency procedures. Cadets who arrive in Poland having already built this muscle memory progress significantly faster than those who haven't.`,
   },
   {
     n: '04', icon: '🤝',
-    title: 'Direct Poland Partnership — Gold Wings Aviation',
+    title: 'Direct Poland Partnership — Goldwings Flight Academy',
     summary: 'No intermediary. No sub-agent. Full oversight, every week.',
-    body: `TATS's partnership with Gold Wings Aviation, Poland, is direct. There is no intermediary, no sub-agent, and no third party between us and the flying school. This is not common in Indian aviation training.
+    body: `TATS's partnership with Goldwings Flight Academy, Poland, is direct. There is no intermediary, no sub-agent, and no third party between us and the flying school. This is not common in Indian aviation training.
 
 What direct means practically: TATS has weekly visibility into each cadet's flight training progress. Capt. Dragan Ivanovich — our Board Advisor, an EASA CFI and Class Rating Examiner — provides ongoing training quality oversight. When something needs to change, we can change it.`,
   },

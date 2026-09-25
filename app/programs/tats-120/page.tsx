@@ -66,7 +66,7 @@ export default function TATS120() {
                 'EASA CPL(A) with Multi-Engine Instrument Rating',
                 'Frozen ATPL (14 subjects)',
                 'MCC Certificate',
-                'JOC on Airbus A320 Full Flight Simulator',
+                'JOC on a fixed-base Airbus A320 simulator',
                 'UPRT (Upset Prevention & Recovery)',
                 'FIKI (Flight Into Known Icing)',
                 'International cross-country included',
@@ -96,7 +96,7 @@ export default function TATS120() {
               { icon: '📐', title: 'Foundation Physics & Maths', desc: 'Bridging any gaps before formal aviation theory begins.' },
               { icon: '📚', title: 'DGCA Ground School', desc: 'Met, Nav, Regulations, RTR (A) — comprehensive in-person coverage.' },
               { icon: '✈️', title: '20hrs Principles of Flight', desc: 'Dedicated aerodynamics module. Theory before the cockpit.' },
-              { icon: '🖥', title: '20hrs Cessna 172 FBS', desc: 'Procedure training on a full flight simulator. Before Poland.' },
+              { icon: '🖥', title: '20hrs Cessna 172 FBS', desc: 'Procedure training on a Cessna 172 fixed-base simulator. Before Poland.' },
               { icon: '🧠', title: 'Tailored Assessment', desc: 'Psychologist-designed 3-layer screening — aptitude, academic & MD interview.' },
               { icon: '🏥', title: 'BLS Certification', desc: 'Basic Life Support — required for commercial pilot careers.' },
               { icon: '🗣', title: 'Communicative English', desc: 'ICAO Level 4 preparation. Twice-monthly sessions.' },
@@ -120,9 +120,9 @@ export default function TATS120() {
         <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
           <div>
             <span className="section-label rv">Phase 2 — Poland</span>
-            <h2 className="section-title rv d1">Gold Wings Aviation.<br /><strong>Direct Partnership.</strong></h2>
+            <h2 className="section-title rv d1">Goldwings Flight Academy.<br /><strong>Direct Partnership.</strong></h2>
             <p className="section-body rv d2">
-              Flight training is conducted exclusively at <strong>Gold Wings Aviation, Poland</strong> — an EASA Approved Training Organisation (ATO) operating from Warsaw and Kraków. Our partnership is direct: no intermediary, no sub-agent, no compromise on oversight.
+              Flight training is conducted exclusively at <strong>Goldwings Flight Academy, Poland</strong> — an EASA Approved Training Organisation (ATO) operating from Warsaw and Kraków. Our partnership is direct: no intermediary, no sub-agent, no compromise on oversight.
             </p>
             <p className="section-body rv d3">
               TATS has weekly visibility into each cadet's training via <strong>Flight Logger</strong>. Families receive regular updates on their child's progress. Capt. Dragan Ivanovich provides Board-level oversight on training quality.
@@ -150,7 +150,7 @@ export default function TATS120() {
             <div style={{ borderRadius: 11, overflow: 'hidden', height: 360, position: 'relative' }}>
               <Image
                 src="https://images.unsplash.com/photo-1559628233-100c798642d0?w=700&q=75&fit=crop"
-                alt="Flight training at Gold Wings Aviation, Poland"
+                alt="Flight training at Goldwings Flight Academy, Poland"
                 fill
                 style={{ objectFit: 'cover', opacity: .72 }}
                 sizes="(max-width: 1040px) 100vw, 500px"

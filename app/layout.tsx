@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | The Aviator Training School",
   },
   description:
-    "Evidence-first aviation training in Trivandrum, Kerala. Verified DGCA results every attempt. EASA CPL pathway via Gold Wings Aviation, Poland. Founded Nov 2023.",
+    "Evidence-first aviation training in Trivandrum, Kerala. Verified DGCA results every attempt. EASA CPL pathway via Goldwings Flight Academy, Poland. Founded Nov 2023.",
   keywords: [
     "aviation training Kerala",
     "pilot training Trivandrum",

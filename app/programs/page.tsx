@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import { withBasePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
   title: 'Programmes | The Aviator Training School',
-  description: 'Four pathways to a commercial pilot licence — TATS 120, ATPL Integrated, Fly Direct, and TAPP 50.',
+  description: 'Five pathways — TATS 120, ATPL Integrated, Fly Direct, TAPP 50, and AC 48, a PPL pathway in Serbia.',
 };
 
 const programs = [
@@ -17,7 +18,7 @@ const programs = [
     subtitle: '23 months · Ground up',
     duration: '23 months',
     target: 'Students with no prior aviation training',
-    outcomes: ['EASA CPL(A) + Multi-Engine Instrument Rating', 'Frozen ATPL (14 subjects)', 'MCC Certificate', 'JOC on Airbus A320 Full Flight Simulator', 'UPRT, FIKI, International cross-country'],
+    outcomes: ['EASA CPL(A) + Multi-Engine Instrument Rating', 'Frozen ATPL (14 subjects)', 'MCC Certificate', 'JOC on a fixed-base Airbus A320 simulator', 'UPRT, FIKI, International cross-country'],
     img: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=800&q=75&fit=crop',
     desc: 'Our flagship programme. Begin with zero aviation experience and graduate with an EASA CPL(A), Multi-Engine Instrument Rating, and a Frozen ATPL — ready for airline type rating.',
   },
@@ -30,9 +31,9 @@ const programs = [
     subtitle: '23 months · ATPL theory in India',
     duration: '23 months',
     target: 'Beginners who prefer completing ATPL theory in India',
-    outcomes: ['Full EASA ATPL theory (745 hrs) via Evionica CBT', '14 ATPL subjects completed before Poland', 'Depart and fly immediately upon arrival', 'DGCA Conversion Support', 'MCC Certificate'],
+    outcomes: ['Full EASA ATPL theory (960 hrs) completed in India', '14 ATPL subjects completed before Poland', 'Depart and fly immediately upon arrival', 'DGCA Conversion Support', 'MCC Certificate'],
     img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=75&fit=crop',
-    desc: 'New for 2026. Complete all 745 hours of EASA ATPL theory in India via Evionica\'s evidence-based CBT system, then depart for Poland ready to fly from day one.',
+    desc: 'New for 2026. Complete all 960 hours of EASA ATPL theory in India while your visa is processed, then depart for Poland ready to fly from day one.',
   },
   {
     id: 'fly-direct',
@@ -40,12 +41,12 @@ const programs = [
     badge: 'DGCA-Cleared',
     badgeStyle: { background: 'rgba(212,175,55,.08)', color: 'var(--gold)' },
     name: 'Fly Direct',
-    subtitle: '15–16 months · Skip ground',
-    duration: '15–16 months',
-    target: 'Candidates who have cleared DGCA ground examinations',
-    outcomes: ['204 flight hrs + 41 simulator hrs', 'EASA CPL(A) + IR', 'DGCA to EASA conversion', 'Bridge prep + 20hrs simulator before Poland', 'Airline Crew Orientation'],
+    subtitle: '15 months · Integrated ATPL',
+    duration: '15 months',
+    target: 'Candidates who have cleared Meteorology, Navigation and Regulation',
+    outcomes: ['204 flight hrs + 41 simulator hrs', 'EASA CPL(A) + Multi-Engine IR', '100% EASA ATPL theory in India', '20 hrs simulator pre-training', 'EASA to DGCA licence conversion support'],
     img: 'https://images.unsplash.com/photo-1559628233-100c798642d0?w=800&q=75&fit=crop',
-    desc: 'For candidates who have already cleared DGCA ground examinations. Skip the theory phase and proceed directly to flight training, with a structured bridge programme and 20hrs simulator prep.',
+    desc: 'For candidates who have already cleared Meteorology, Navigation and Regulation. Complete 100% of your EASA ATPL theory in India while your visa is processed, then fly in Poland — 204 flight hours and 41 simulator hours across six stages.',
   },
   {
     id: 'tapp-50',
@@ -60,6 +61,19 @@ const programs = [
     img: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=800&q=75&fit=crop',
     desc: 'For commercial pilot licence holders seeking a Flight Instructor rating or structured pathway to airline employment. Includes mentorship and airline interview preparation.',
   },
+  {
+    id: 'ac-48',
+    icon: '🛩',
+    badge: 'PPL · Serbia',
+    badgeStyle: { background: 'rgba(212,175,55,.08)', color: 'var(--gold)' },
+    name: 'AC 48',
+    subtitle: 'PPL pathway · Serbia',
+    duration: '3-month flying window',
+    target: 'Working professionals, including those based in the Middle East',
+    outcomes: ['Private Pilot Licence (PPL)', '9 subjects via Evionica online training', '10 hrs simulator training included', 'Flight training in Serbia (April–September)', 'First step towards a CPL'],
+    img: withBasePath('/images/serbia.jpg'),
+    desc: 'A Private Pilot Licence pathway in Serbia, built for working professionals. Complete your ground subjects online, train on the simulator, then fly across three consecutive months of your choice.',
+  },
 ];
 
 export default function ProgramsIndex() {
@@ -69,7 +83,7 @@ export default function ProgramsIndex() {
         <div>
           <span className="section-label">Our Programmes</span>
           <h1 className="section-title" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4rem)', fontWeight: 300 }}>
-            Four Pathways.<br />
+            Five Pathways.<br />
             <strong>One Standard.</strong>
           </h1>
         </div>
@@ -78,7 +92,7 @@ export default function ProgramsIndex() {
       <section className="page-section" style={{ minHeight: 'auto', paddingTop: 56, flexDirection: 'column' }}>
         <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
           <p className="section-body rv" style={{ maxWidth: 600, marginBottom: 40 }}>
-            Whether you're starting from zero or already hold a commercial licence, TATS has a structured, evidence-backed pathway for you. All programmes are delivered in partnership with <strong>Gold Wings Aviation, Poland</strong> — directly, with no intermediary.
+            Whether you're starting from zero or already hold a commercial licence, TATS has a structured, evidence-backed pathway for you. Our Poland pathways — TATS 120, ATPL Integrated and Fly Direct — are delivered in partnership with <strong>Goldwings Flight Academy, Poland</strong>, directly and with no intermediary.
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>

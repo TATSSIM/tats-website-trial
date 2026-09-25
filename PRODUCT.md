@@ -1,7 +1,7 @@
 # PRODUCT.md — The Aviator Training School (TATS)
 
 ## Product Purpose
-Aviation ground training institute in Trivandrum, Kerala. Prepares aspiring pilots for DGCA examinations and deploys them to EASA-certified flight schools (Gold Wings Aviation, Poland). Evidence-first: every claim backed by verifiable results.
+Aviation ground training institute in Trivandrum, Kerala. Prepares aspiring pilots for DGCA examinations and deploys them to EASA-certified flight schools (Goldwings Flight Academy, Poland). Evidence-first: every claim backed by verifiable results.
 
 ## Register
 brand
@@ -18,7 +18,7 @@ Premium, transparent, authoritative without arrogance. Never salesy. Every claim
 - "Beyond Pilots. Shaping Aviators." — the tagline
 - Evidence-backed DGCA results, every attempt, mark sheets on campus
 - 32% selection rate — selective by design
-- Direct EASA CPL pathway via Gold Wings Aviation, Poland
+- Direct EASA CPL pathway via Goldwings Flight Academy, Poland
 - Batch 1 flying in Poland; Batch 2 deploying June 2026
 
 ## Programmes

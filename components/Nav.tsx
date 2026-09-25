@@ -54,6 +54,7 @@ export default function Nav() {
     { href: '/programs/atpl-integrated', label: 'TATS 120 ATPL Integrated', badge: 'NEW' },
     { href: '/programs/fly-direct',      label: 'Fly Direct'                },
     { href: '/programs/tapp-50',         label: 'TAPP 50'                   },
+    { href: '/programs/ac-48',           label: 'AC 48 — PPL Serbia'        },
   ];
 
   const isActive = (href: string) =>

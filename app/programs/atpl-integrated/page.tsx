@@ -3,7 +3,7 @@ import InnerPageLayout from '@/components/InnerPageLayout';
 
 export const metadata: Metadata = {
   title: 'TATS 120 ATPL Integrated | New 2026 Programme | The Aviator Training School',
-  description: 'New for 2026. Complete all 14 EASA ATPL subjects in India via Evionica CBT, then depart for Poland ready to fly from day one.',
+  description: 'New for 2026. Complete 100% of your 960-hour EASA ATPL theory in India, then depart for Poland ready to fly from day one.',
 };
 
 export default function ATPLIntegrated() {
@@ -30,7 +30,7 @@ export default function ATPLIntegrated() {
           <div className="stat-strip rv">
             {[
               { n: '23', suf: ' months', label: 'Duration' },
-              { n: '745', suf: '', label: 'ATPL Theory Hours' },
+              { n: '960', suf: '', label: 'ATPL Theory Hours' },
               { n: '14', suf: '', label: 'ATPL Subjects' },
               { n: '204', suf: '', label: 'Flight Hours (Poland)' },
             ].map(s => (
@@ -50,7 +50,7 @@ export default function ATPLIntegrated() {
             <span className="section-label rv">What's Different</span>
             <h2 className="section-title rv d1">All 14 Subjects.<br /><strong>Completed in India.</strong></h2>
             <p className="section-body rv d2">
-              In the standard TATS 120 pathway, ATPL theory is completed alongside flight training in Poland. In this integrated variant, <strong>the entire 745-hour EASA ATPL theory is completed in India</strong> via Evionica's evidence-based CBT platform.
+              In the standard TATS 120 pathway, ATPL theory is completed alongside flight training in Poland. In this integrated variant, <strong>the entire 960-hour EASA ATPL theory is completed in India</strong> while your visa is processed.
             </p>
             <p className="section-body rv d3">
               Cadets then depart for Poland with all 14 subjects done — ready to fly immediately upon arrival, with no theory sitting alongside flight training.
@@ -66,9 +66,9 @@ export default function ATPLIntegrated() {
               </h3>
               {[
                 'All 14 EASA ATPL subjects completed in India',
-                '745 hours of CBT via Evionica',
+                '960 hours of EASA ATPL theory',
                 'Evidence-Based Learning Management System (LMS)',
-                'Depart Poland — fly from day one',
+                'Arrive in Poland — fly from day one',
                 'EASA CPL(A) + Multi-Engine IR',
                 'MCC Certificate',
                 'DGCA Conversion Support',
@@ -101,13 +101,13 @@ export default function ATPLIntegrated() {
               {
                 phase: 'Phase 2',
                 title: 'EASA ATPL Theory',
-                duration: '745 hrs via Evionica CBT — India',
-                items: ['All 14 ATPL subjects', 'Evidence-Based LMS', 'Progress tracking', '100% Evionica (June intake)', 'Tailored assessment + simulator prep alongside'],
+                duration: '960 hrs EASA ATPL theory — India',
+                items: ['All 14 ATPL subjects', 'Evidence-Based LMS', 'Progress tracking', '100% completed in India (June intake)', 'Tailored assessment + simulator prep alongside'],
               },
               {
                 phase: 'Phase 3',
                 title: 'Flight Training',
-                duration: 'Gold Wings Aviation, Poland',
+                duration: 'Goldwings Flight Academy, Poland',
                 items: ['Arrive. Fly immediately.', '204 flight hrs', '41 simulator hrs', 'No theory burden during training', 'Weekly Flight Logger updates'],
               },
             ].map((p, i) => (

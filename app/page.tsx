@@ -205,7 +205,7 @@ export default function Home() {
                 We were founded in November 2023, opposite Trivandrum International Airport, Kerala, on that one conviction. Kerala had no shortage of aviation coaching institutes — most competed on reputation, none disclosed their flying school upfront. We built TATS to be the opposite.
               </p>
               <p className="section-body rv d4">
-                Our cadets clear DGCA theory with <strong>strong, consistent results</strong>, then proceed to flight training in Europe — Batch 1 at the National Aviation Academy, Vršac, Serbia, and upcoming batches at Gold Wings Aviation, Poland (Warsaw &amp; Kraków bases) — where we maintain direct weekly oversight via Flight Logger.
+                Our cadets clear DGCA theory with <strong>strong, consistent results</strong>, then proceed to flight training in Europe — Batch 1 at the National Aviation Academy, Vršac, Serbia, and upcoming batches at Goldwings Flight Academy, Poland (Warsaw &amp; Kraków bases) — where we maintain direct weekly oversight via Flight Logger.
               </p>
               <div className="rv d5" style={{ marginTop: 32 }}>
                 <Link href="/about" className="btn-ghost">Our Full Story →</Link>
@@ -253,7 +253,7 @@ export default function Home() {
                   badge: { text: 'Beginners', sky: false },
                   name: 'TATS 120',
                   tag: '23 months · From zero to CPL',
-                  bullets: ['EASA CPL(A) + Multi-Engine IR', 'Frozen ATPL (14 subjects)', 'Gold Wings Aviation, Poland', 'India ground + FBS simulator prep'],
+                  bullets: ['EASA CPL(A) + Multi-Engine IR', 'Frozen ATPL (14 subjects)', 'Goldwings Flight Academy, Poland', 'India ground + FBS simulator prep'],
                   img: '/images/batch1-dispatch.jpg',
                 },
                 {
@@ -261,15 +261,15 @@ export default function Home() {
                   badge: { text: 'NEW — June 2026', sky: true },
                   name: 'TATS 120 ATPL Integrated',
                   tag: '23 months · Full ATPL theory in India',
-                  bullets: ['Complete EASA ATPL theory in India', '745 hrs Evionica CBT platform', 'Arrive in Poland, fly immediately', 'June 2026 intake open'],
+                  bullets: ['Complete EASA ATPL theory in India', '960 hrs of ATPL theory', 'Arrive in Poland, fly immediately', 'June 2026 intake open'],
                   img: '/images/ft-grp.jpg',
                 },
                 {
                   id: 'fly-direct',
                   badge: { text: 'DGCA-Cleared', sky: false },
                   name: 'Fly Direct',
-                  tag: '15–16 months · Skip the grind',
-                  bullets: ['For DGCA ground-cleared cadets', 'Bridge prep + 20 hrs simulator', '204 flight hrs + 41 simulator hrs', 'DGCA to EASA conversion pathway'],
+                  tag: '15 months · Integrated ATPL pathway',
+                  bullets: ['For cadets who cleared Met, Nav & Regs', '20 hrs simulator pre-training', '204 flight hrs + 41 simulator hrs', 'EASA to DGCA licence conversion support'],
                   img: '/images/students-campus.jpg',
                   imgPosition: 'center 28%',
                 },
@@ -336,7 +336,7 @@ export default function Home() {
                 { Icon: TestTube,      title: 'Tailored Assessment',       desc: '~32% acceptance. Psychologist-designed 3-layer aptitude screening.' },
                 { Icon: BookOpen,      title: '3–4 hrs Daily Offline',     desc: 'In-person, every day at our campus. Never outsourced, never online-only.' },
                 { Icon: PlaneTakeoff,  title: 'Cessna 172 FBS',            desc: '20 hrs procedure training before Poland. Cadets arrive genuinely ready.' },
-                { Icon: Handshake,     title: 'Direct Poland Partnership', desc: 'Gold Wings Aviation. No intermediary. Weekly oversight via Flight Logger.' },
+                { Icon: Handshake,     title: 'Direct Poland Partnership', desc: 'Goldwings Flight Academy. No intermediary. Weekly oversight via Flight Logger.' },
                 { Icon: Brain,         title: 'Monthly MBCT',              desc: 'Wing Cdr Dhanasree P V (Retd IAF). Unique in Kerala aviation training.' },
                 { Icon: Smartphone,    title: 'Flight Logger Access',      desc: 'Families receive regular updates on cadet training progress from Poland.' },
                 { Icon: GraduationCap, title: 'Conversion Support',        desc: 'Airline Crew Orientation + post-training pathway guidance included.' },

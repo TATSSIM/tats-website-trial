@@ -105,6 +105,7 @@ export default function Footer() {
               { href: '/programs/atpl-integrated',  label: 'ATPL Integrated' },
               { href: '/programs/fly-direct',       label: 'Fly Direct' },
               { href: '/programs/tapp-50',          label: 'TAPP 50' },
+              { href: '/programs/ac-48',            label: 'AC 48 (PPL Serbia)' },
             ].map(l => (
               <li key={l.href}>
                 <Link href={l.href}

@@ -3,7 +3,7 @@ import InnerPageLayout from '@/components/InnerPageLayout';
 
 export const metadata: Metadata = {
   title: 'Fly Direct | For DGCA-Cleared Candidates | The Aviator Training School',
-  description: 'For candidates who have already cleared DGCA ground examinations. Skip the theory phase — 15–16 months to EASA CPL.',
+  description: 'An Integrated ATPL pathway for candidates who have already cleared Meteorology, Navigation and Regulation. 100% of EASA ATPL theory in India, then flight training in Poland — 15 months to EASA CPL and Multi-Engine IR.',
 };
 
 export default function FlyDirect() {
@@ -11,7 +11,7 @@ export default function FlyDirect() {
     <InnerPageLayout>
       <div className="page-hero">
         <div>
-          <span className="section-label">Skip Ground. Start Flying.</span>
+          <span className="section-label">Integrated ATPL Pathway</span>
           <h1 className="section-title" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4rem)', fontWeight: 300 }}>
             Fly Direct<br />
             <strong>For DGCA-Cleared Candidates.</strong>
@@ -23,7 +23,7 @@ export default function FlyDirect() {
         <div style={{ maxWidth: 1040, margin: '0 auto' }}>
           <div className="stat-strip rv">
             {[
-              { n: '15', suf: '–16 months', label: 'Duration' },
+              { n: '15', suf: ' months', label: 'Duration' },
               { n: '204', suf: '', label: 'Flight Hours' },
               { n: '41', suf: '', label: 'Simulator Hours' },
               { n: '21', suf: '', label: 'Jet Orientation (A320)' },
@@ -43,10 +43,13 @@ export default function FlyDirect() {
             <span className="section-label rv">Who This Is For</span>
             <h2 className="section-title rv d1">Already Cleared<br /><strong>DGCA Ground?</strong></h2>
             <p className="section-body rv d2">
-              If you have already cleared Meteorology, Navigation, and Air Regulations (RTR recommended but not mandatory), you are ready for the Fly Direct pathway. <strong>Skip the 6–7 month ground phase</strong> and move into flight training preparation immediately.
+              Fly Direct is TATS&apos;s Integrated ATPL airline pathway. If you have already cleared Meteorology, Navigation, and Regulation (with at least one RTR paper strongly recommended), you can join directly — <strong>100% of the 960-hour EASA ATPL theory is completed in India</strong> while your visa is processed, so you arrive in Poland academically ready to fly.
             </p>
             <p className="section-body rv d3">
-              Entry is subject to a knowledge assessment and psychological orientation. Once cleared, you receive a structured bridge programme and 20 hours of Cessna 172 simulator procedure training before departing for Poland.
+              Admission follows a structured screening process. Selected candidates then complete two to three weeks of mandatory pre-training — Principles of Flight and 20 hours of Cessna 172 simulator training — before departing for Poland.
+            </p>
+            <p className="section-body rv d4" style={{ fontSize: '.78rem', color: 'rgba(255,255,255,.55)' }}>
+              Candidates who have not cleared Navigation but perform well in screening may be offered Navigation and RTR training as an add-on.
             </p>
           </div>
           <div className="rv d2">
@@ -55,11 +58,12 @@ export default function FlyDirect() {
                 Programme Pathway
               </h3>
               {[
-                { step: '01', title: 'Knowledge Assessment', desc: 'Verify DGCA clearance depth. Identify any bridging needs.' },
-                { step: '02', title: 'Psychological Orientation', desc: 'Tailored aptitude & psychological assessment. Ensures readiness for full-time flying training.' },
-                { step: '03', title: 'Bridge Preparation', desc: 'Targeted academic preparation for EASA flight training context.' },
-                { step: '04', title: '20hrs FBS Procedure Training', desc: 'Cessna 172 simulator. Cockpit flows, procedures, and familiarity.' },
-                { step: '05', title: 'Depart for Poland', desc: 'Gold Wings Aviation, Warsaw & Kraków. 204 flight hrs + 41 simulator hrs. EASA CPL.' },
+                { step: '01', title: 'Academic Eligibility', desc: 'Meteorology, Navigation and Regulation cleared. At least one RTR paper strongly recommended.' },
+                { step: '02', title: 'Screening Interview', desc: 'Technical understanding of the cleared subjects, plus attitude, intent and suitability through a psychological assessment.' },
+                { step: '03', title: 'Seat Reservation & LMS Access', desc: 'Selected candidates confirm their seat and gain access to the TATS Learning Management System.' },
+                { step: '04', title: 'Mandatory Pre-Training', desc: '2–3 weeks: Principles of Flight and 20 hours of Cessna 172 simulator — taxi, take-off, basic manoeuvres, landing, circuits and a solo check.' },
+                { step: '05', title: 'EASA ATPL Theory in India', desc: '100% of the 960-hour EASA ATPL theory completed in India while your visa is processed.' },
+                { step: '06', title: 'Flight Training in Poland', desc: 'Goldwings Flight Academy, Warsaw & Kraków. 204 flight hrs + 41 simulator hrs across six stages. EASA CPL + Multi-Engine IR.' },
               ].map(s => (
                 <div key={s.step} style={{ display: 'flex', gap: 12, padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,.04)' }}>
                   <span style={{ fontFamily: 'var(--font-share-mono), monospace', fontSize: '.6rem', color: 'var(--gold)', opacity: .5, flexShrink: 0, marginTop: 2 }}>{s.step}</span>
@@ -87,7 +91,9 @@ export default function FlyDirect() {
               { title: 'MCC + JOC (A320)', desc: 'Multi-Crew Cooperation and 21 hours of Jet Orientation on a fixed-base Airbus A320 simulator.' },
               { title: 'International Cross-Country', desc: '5 hours of international cross-country flying as part of Instrument Rating training.' },
               { title: 'Cold Weather Operations', desc: 'Real winter flying exposure on FIKI-certified aircraft (Flight Into Known Icing).' },
-              { title: 'LOFT', desc: 'Line Oriented Flight Training, included in the Poland flight phase.' },
+              { title: 'LOFT', desc: 'Line Oriented Flight Training. Terms and conditions may apply at the signing of the Flight Training Agreement.' },
+              { title: 'ELP & CAA Exams', desc: 'English Language Proficiency and CAA examinations cleared as part of the programme.' },
+              { title: 'DGCA India Support', desc: 'Logbook alignment and documentation support for your DGCA India licence application on return.' },
             ].map((item, i) => (
               <div key={item.title} className={`diff-card rv d${(i % 4) + 1}`}>
                 <h3 style={{ fontSize: '.8rem', fontWeight: 600, marginBottom: 5 }}>{item.title}</h3>

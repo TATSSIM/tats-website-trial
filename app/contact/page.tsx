@@ -95,6 +95,15 @@ export default function Contact() {
 
               <div style={{ marginTop: 20, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,.06)' }}>
                 <div style={{ fontSize: '.52rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 10 }}>
+                  Office Hours
+                </div>
+                <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.9 }}>
+                  Monday – Saturday, 9:30 AM to 5:30 PM (IST)
+                </p>
+              </div>
+
+              <div style={{ marginTop: 20, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,.06)' }}>
+                <div style={{ fontSize: '.52rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 10 }}>
                   Main Campus
                 </div>
                 <address style={{ fontStyle: 'normal', fontSize: '.76rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.9 }}>
