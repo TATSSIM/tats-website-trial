@@ -325,21 +325,9 @@ body::after {
   position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #020610;
 }
 
-/* Photo fallback — Ken Burns */
-#bg-photo {
-  position: absolute; inset: 0; z-index: 1;
-  background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&q=85&fit=crop&crop=center');
-  background-size: cover; background-position: center 30%;
-  animation: kenburns 44s ease-in-out infinite alternate; will-change: transform;
-}
-@keyframes kenburns {
-  0%   { transform: scale(1.0) translate(0,0); }
-  100% { transform: scale(1.08) translate(-1.2%,1%); }
-}
-
-/* Video layer — auto-plays over photo when file exists */
+/* Video layer — hero background */
 #bg-video {
-  position: absolute; inset: 0; z-index: 2;
+  position: absolute; inset: 0; z-index: 1;
   width: 100%; height: 100%; object-fit: cover;
 }
 

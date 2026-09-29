@@ -104,10 +104,9 @@ export default function Home() {
       ════════════════════════════════════ */}
       <section id="hero">
         <div id="cockpit-scene">
-          <div id="bg-photo" />
           {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
           <video id="bg-video" autoPlay muted loop playsInline aria-hidden="true">
-            <source src={withBasePath("/videos/cessna-circuit.mp4")} type="video/mp4" />
+            <source src={withBasePath("/videos/hero-runway.mp4")} type="video/mp4" />
           </video>
           <div id="hero-grid" />
           <div id="bg-overlay" />
