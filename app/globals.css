@@ -818,4 +818,8 @@ details[open] > .accordion-summary::after { transform: translateY(-50%) rotate(4
     filter: none !important;
   }
   .inner-bg-video { opacity: .22; }
+  /* Landscape hero video into a tall portrait viewport: cover crops it
+     down to an unrecognisable sliver. Contain it instead, letterboxed
+     into the existing dark background, so the aircraft stays visible. */
+  #bg-video { object-fit: contain; object-position: center 30%; }
 }

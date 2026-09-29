@@ -28,7 +28,7 @@ export default function InnerPageLayout({ children }: Props) {
           playsInline
           aria-hidden="true"
         >
-          <source src={withBasePath("/videos/bg-tech.mp4")} type="video/mp4" />
+          <source src={withBasePath("/videos/hero-runway.mp4")} type="video/mp4" />
         </video>
         {/* Overlay layers */}
         <div className="inner-bg-overlay" />

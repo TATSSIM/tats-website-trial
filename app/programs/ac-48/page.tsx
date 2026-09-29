@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import { Plane } from 'lucide-react';
+import { withBasePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
   title: 'AC 48 | PPL Training Pathway in Serbia | The Aviator Training School',
@@ -50,6 +51,20 @@ export default function AC48() {
                 <span className="stat-label">{s.label}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Photo banner */}
+      <div className="rv" style={{ padding: '0 5.5% 56px', position: 'relative', zIndex: 10 }}>
+        <div style={{
+          maxWidth: 1040, margin: '0 auto', borderRadius: 11, overflow: 'hidden',
+          backgroundImage: `url(${withBasePath('/images/serbia-grp.jpg')})`,
+          backgroundSize: 'cover', backgroundPosition: 'center', height: 340,
+          display: 'flex', alignItems: 'flex-end', border: '1px solid rgba(255,255,255,.045)',
+        }}>
+          <div style={{ padding: '18px 24px', background: 'linear-gradient(to top, rgba(0,0,0,.75), transparent)', width: '100%' }}>
+            <p style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.75)' }}>AC 48 cadets on the flight line in Serbia</p>
           </div>
         </div>
       </div>

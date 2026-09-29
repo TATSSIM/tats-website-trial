@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import { withBasePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
   title: 'TATS 120 | Commercial Pilot Programme | The Aviator Training School',
@@ -149,8 +150,8 @@ export default function TATS120() {
           <div className="rv d2">
             <div style={{ borderRadius: 11, overflow: 'hidden', height: 360, position: 'relative' }}>
               <Image
-                src="https://images.unsplash.com/photo-1559628233-100c798642d0?w=700&q=75&fit=crop"
-                alt="Flight training at Goldwings Flight Academy, Poland"
+                src={withBasePath('/images/ft-grp.jpg')}
+                alt="TATS cadets on the flight line at Goldwings Flight Academy, Poland"
                 fill
                 style={{ objectFit: 'cover', opacity: .72 }}
                 sizes="(max-width: 1040px) 100vw, 500px"

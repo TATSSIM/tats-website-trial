@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import { withBasePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
   title: 'TAPP 50 | Flight Instructor Rating | The Aviator Training School',
@@ -33,6 +34,20 @@ export default function TAPP50() {
                 <span className="stat-label">{s.label}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Photo banner */}
+      <div className="rv" style={{ padding: '0 5.5% 56px', position: 'relative', zIndex: 10 }}>
+        <div style={{
+          maxWidth: 1040, margin: '0 auto', borderRadius: 11, overflow: 'hidden',
+          backgroundImage: `url(${withBasePath('/images/ft-grp.jpg')})`,
+          backgroundSize: 'cover', backgroundPosition: 'center', height: 340,
+          display: 'flex', alignItems: 'flex-end', border: '1px solid rgba(255,255,255,.045)',
+        }}>
+          <div style={{ padding: '18px 24px', background: 'linear-gradient(to top, rgba(0,0,0,.75), transparent)', width: '100%' }}>
+            <p style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.75)' }}>Flight line briefing ahead of a training sortie</p>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ const programs = [
     duration: '23 months',
     target: 'Students with no prior aviation training',
     outcomes: ['EASA CPL(A) + Multi-Engine Instrument Rating', 'Frozen ATPL (14 subjects)', 'MCC Certificate', 'JOC on a fixed-base Airbus A320 simulator', 'UPRT, FIKI, International cross-country'],
-    img: 'https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=800&q=75&fit=crop',
+    img: withBasePath('/images/batch1-dispatch.jpg'),
     desc: 'Our flagship programme. Begin with zero aviation experience and graduate with an EASA CPL(A), Multi-Engine Instrument Rating, and a Frozen ATPL — ready for airline type rating.',
   },
   {
@@ -32,7 +32,7 @@ const programs = [
     duration: '23 months',
     target: 'Beginners who prefer completing ATPL theory in India',
     outcomes: ['Full EASA ATPL theory (960 hrs) completed in India', '14 ATPL subjects completed before Poland', 'Depart and fly immediately upon arrival', 'DGCA Conversion Support', 'MCC Certificate'],
-    img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=75&fit=crop',
+    img: withBasePath('/images/classroom-session.jpg'),
     desc: 'New for 2026. Complete all 960 hours of EASA ATPL theory in India while your visa is processed, then depart for Poland ready to fly from day one.',
   },
   {
@@ -45,7 +45,7 @@ const programs = [
     duration: '15 months',
     target: 'Candidates who have cleared Meteorology, Navigation and Regulation',
     outcomes: ['204 flight hrs + 41 simulator hrs', 'EASA CPL(A) + Multi-Engine IR', '100% EASA ATPL theory in India', '20 hrs simulator pre-training', 'EASA to DGCA licence conversion support'],
-    img: 'https://images.unsplash.com/photo-1559628233-100c798642d0?w=800&q=75&fit=crop',
+    img: withBasePath('/images/batch2-dispatch.jpg'),
     desc: 'For candidates who have already cleared Meteorology, Navigation and Regulation. Complete 100% of your EASA ATPL theory in India while your visa is processed, then fly in Poland — 204 flight hours and 41 simulator hours across six stages.',
   },
   {
@@ -58,7 +58,7 @@ const programs = [
     duration: 'Varies',
     target: 'CPL holders seeking FI rating or airline preparation',
     outcomes: ['240 total flight hours (2026)', 'Flight Instructor Rating', 'Airline Interview Preparation', 'Structured mentorship programme', 'Career pathway guidance'],
-    img: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=800&q=75&fit=crop',
+    img: withBasePath('/images/ft-grp.jpg'),
     desc: 'For commercial pilot licence holders seeking a Flight Instructor rating or structured pathway to airline employment. Includes mentorship and airline interview preparation.',
   },
   {
@@ -143,6 +143,30 @@ export default function ProgramsIndex() {
                   <Link href={`/programs/${prog.id}`} className="btn-primary" style={{ fontSize: '.64rem', padding: '10px 20px' }}>
                     Full Programme Details →
                   </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Life at TATS strip */}
+      <section className="page-section" style={{ minHeight: 'auto', paddingTop: 0, paddingBottom: 40, flexDirection: 'column' }}>
+        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
+          <span className="eyebrow-pill rv">Beyond The Syllabus</span>
+          <h2 className="section-title rv" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 300, margin: '10px 0 28px' }}>
+            Every pathway ends the same way — <strong>in the air.</strong>
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+            {[
+              { img: '/images/staff-team.jpg', caption: 'Ground school, taught by airline-experienced faculty' },
+              { img: '/images/batch3-dispatch.jpg', caption: 'Every batch sent off as a cohort, not a headcount' },
+              { img: '/images/serbia-grp.jpg', caption: 'Flying across Poland and Serbia, hours logged from day one' },
+            ].map((item, i) => (
+              <div key={item.img} className={`rv d${i + 1}`} style={{ borderRadius: 10, overflow: 'hidden', border: '1px solid rgba(255,255,255,.045)' }}>
+                <div style={{ backgroundImage: `url(${withBasePath(item.img)})`, backgroundSize: 'cover', backgroundPosition: 'center', height: 220 }} />
+                <div style={{ padding: '12px 16px 16px', background: 'rgba(10,14,20,.9)' }}>
+                  <p style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.6 }}>{item.caption}</p>
                 </div>
               </div>
             ))}
