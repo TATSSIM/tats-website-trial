@@ -620,6 +620,22 @@ body::after {
 .diff-card:hover { border-color: rgba(212,175,55,.15); transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,.5); }
 .diff-card:hover .diff-card-inner::after { opacity: 1; }
 
+/* Expandable bento card (<details> as the grid item — Why TATS).
+   .diff-card-inner's height:100% (needed so static bento cards fill an
+   uneven grid row) fights the grid's default align-items:stretch once a
+   card's content grows on open — the summary balloons to the stale
+   pre-open row height and the newly-added body renders outside the
+   visible box. Opt expandable cards out of row-stretch entirely so their
+   height is purely content-driven. */
+details.diff-card { align-self: start; }
+details.diff-card > summary.diff-card-inner { height: auto; }
+details.diff-card > summary { list-style: none; cursor: pointer; }
+details.diff-card > summary::-webkit-details-marker { display: none; }
+.diff-expand-icon { transition: transform 350ms cubic-bezier(0.32,0.72,0,1), color 300ms; }
+details[open].diff-card .diff-expand-icon { transform: rotate(45deg); color: var(--gold); }
+details[open].diff-card { border-color: rgba(212,175,55,.22); }
+.diff-card-body { animation: accordionOpen .35s var(--ease2); }
+
 /* ═══════════════════════════════════════
    TESTIMONIALS — double-bezel
 ═══════════════════════════════════════ */
