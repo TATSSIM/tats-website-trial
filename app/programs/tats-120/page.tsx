@@ -166,13 +166,13 @@ export default function TATS120() {
             </div>
           </div>
           <div className="rv d2">
-            <div style={{ borderRadius: 11, overflow: 'hidden', height: 360, position: 'relative' }}>
+            <div style={{ borderRadius: 11, overflow: 'hidden', height: 360, background: '#0a1a3c', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Image
-                src={withBasePath('/images/ft-grp.jpg')}
-                alt="TATS cadets on the flight line at Goldwings Flight Academy, Poland"
-                fill
-                style={{ objectFit: 'cover', opacity: .72 }}
-                sizes="(max-width: 1040px) 100vw, 500px"
+                src={withBasePath('/images/goldwings-logo.jpg')}
+                alt="Goldwings Flight Academy, Poland — official partner logo"
+                width={200}
+                height={200}
+                style={{ borderRadius: 16, width: 200, height: 200 }}
               />
             </div>
           </div>

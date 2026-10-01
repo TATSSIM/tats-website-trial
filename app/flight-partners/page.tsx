@@ -77,25 +77,18 @@ export default function FlightPartners() {
           </div>
           <div className="rv d2">
             <div style={{ borderRadius: 11, overflow: 'hidden', border: '1px solid rgba(255,255,255,.045)', marginBottom: 14 }}>
-              <Image
-                src={withBasePath('/images/ft-grp.jpg')}
-                alt="TATS cadets on the flight line at Goldwings Flight Academy, Poland"
-                width={700}
-                height={360}
-                style={{ width: '100%', height: 300, objectFit: 'cover', display: 'block' }}
-              />
-              <div style={{ padding: '10px 16px 14px', background: 'rgba(10,14,20,.9)', display: 'flex', alignItems: 'center', gap: 12 }}>
+              <div style={{ background: '#0a1a3c', height: 260, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Image
                   src={withBasePath('/images/goldwings-logo.jpg')}
                   alt="Goldwings Flight Academy official logo"
-                  width={36}
-                  height={36}
-                  style={{ borderRadius: 7, flexShrink: 0 }}
+                  width={180}
+                  height={180}
+                  style={{ borderRadius: 14, width: 180, height: 180 }}
                 />
-                <div>
-                  <p style={{ fontSize: '.72rem', fontWeight: 600, marginBottom: 3 }}>Goldwings Flight Academy</p>
-                  <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>EASA ATO · Warsaw &amp; Kraków, Poland</p>
-                </div>
+              </div>
+              <div style={{ padding: '10px 16px 14px', background: 'rgba(10,14,20,.9)' }}>
+                <p style={{ fontSize: '.72rem', fontWeight: 600, marginBottom: 3 }}>Goldwings Flight Academy</p>
+                <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>EASA ATO · Warsaw &amp; Kraków, Poland</p>
               </div>
             </div>
             <div style={{ borderRadius: 11, overflow: 'hidden', border: '1px solid rgba(255,255,255,.045)' }}>
