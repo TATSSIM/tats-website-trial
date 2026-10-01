@@ -197,9 +197,6 @@ export default function Home() {
               <h2 className="section-title rv-left d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)' }}>
                 Most academies ask you to <strong>take their word for it.</strong>
               </h2>
-              <p className="section-body rv d2">
-                At TATS, <strong>every claim we make is backed by evidence you can verify yourself</strong> — mark sheets on file at our campus, a 32% selection rate, and a flying school we&apos;ll name upfront.
-              </p>
               <p className="section-body rv d3">
                 We were founded in November 2023, opposite Trivandrum International Airport, Kerala, on that one conviction. Kerala had no shortage of aviation coaching institutes — most competed on reputation, none disclosed their flying school upfront. We built TATS to be the opposite.
               </p>
