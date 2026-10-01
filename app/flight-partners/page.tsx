@@ -6,7 +6,7 @@ import JsonLd from '@/components/JsonLd';
 import YouTubeFacade from '@/components/YouTubeFacade';
 import { withBasePath } from '@/lib/basePath';
 import { breadcrumbSchema, SITE_URL } from '@/lib/seo';
-import { ShieldCheck, Radio, Plane, Gauge, Award, Users, Snowflake, Wrench } from 'lucide-react';
+import { ShieldCheck, Radio, Plane, Gauge, Award, Users, Snowflake, Wrench, Building2, Landmark } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Goldwings Flight Academy & National Aviation Academy Vršac | TATS Flight Partners',
@@ -212,6 +212,57 @@ export default function FlightPartners() {
               <Link href="/gallery" className="btn-ghost">See The Gallery →</Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Fleet & Facilities — Vršac */}
+      <section className="page-section" style={{ minHeight: 'auto', paddingTop: 0, flexDirection: 'column' }}>
+        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
+          <span className="eyebrow-pill rv">Fleet &amp; Facilities</span>
+          <h2 className="section-title rv d1" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 300, margin: '10px 0 28px' }}>
+            A government-run academy. <strong>Decades of history.</strong>
+          </h2>
+          <div className="diff-grid">
+            {[
+              {
+                Icon: Plane, title: 'Cessna 172 Fleet + Piper Seneca',
+                desc: 'A fleet of classic and G1000 glass-cockpit Cessna 172s for single-engine VFR/IFR training, plus the Piper PA-34 Seneca for multi-engine class training.',
+              },
+              {
+                Icon: Gauge, title: 'ALSIM FNPT II Simulator',
+                desc: 'An ALSIM FNPT II flight training device for instrument and procedural training before cadets log real hours in the air.',
+              },
+              {
+                Icon: Landmark, title: 'Government-Owned Academy',
+                desc: 'Operated by the SMATSA Aviation Academy (formerly Jat Airways Flight Academy) and owned by the Government of Serbia — a national training institution, not a private operator.',
+              },
+              {
+                Icon: Building2, title: 'Five Hangars, Own Airfield',
+                desc: 'Vršac Airfield (ICAO: LYVR) has five hangars, a dedicated classroom building, and a control tower — with three runways, including a 1,000m asphalt strip.',
+              },
+              {
+                Icon: Wrench, title: 'EASA Part-145 Certified',
+                desc: 'The Academy’s Maintenance Department has held EASA Part-145 light-aircraft maintenance certification since 2005.',
+              },
+              {
+                Icon: Snowflake, title: 'Batch 1’s Proving Ground',
+                desc: 'Where TATS sent its very first cadets — every Batch 1 pilot soloed in under 15 hours, the result TATS now measures every batch against.',
+              },
+            ].map((item, i) => (
+              <div key={item.title} className={`diff-card tilt-card rv d${(i % 4) + 1}`}>
+                <div className="diff-card-inner">
+                  <div style={{ width: 38, height: 38, borderRadius: 9, background: 'rgba(56,189,248,.07)', border: '1px solid rgba(56,189,248,.14)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--sky)', marginBottom: 14 }}>
+                    <item.Icon size={18} strokeWidth={1.5} />
+                  </div>
+                  <h3 style={{ fontSize: '.86rem', fontWeight: 700, marginBottom: 8, color: 'rgba(255,255,255,.88)' }}>{item.title}</h3>
+                  <p style={{ fontSize: '.74rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.7 }}>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontSize: '.64rem', color: 'rgba(255,255,255,.3)', marginTop: 16 }}>
+            Fleet and facility details sourced from the Academy&apos;s official site, <a href="https://www.vakademija.edu.rs" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,.45)' }}>vakademija.edu.rs</a>, and public airfield records.
+          </p>
         </div>
       </section>
 
