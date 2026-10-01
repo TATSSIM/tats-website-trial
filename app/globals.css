@@ -862,4 +862,23 @@ details[open] > .accordion-summary::after { transform: translateY(-50%) rotate(4
     transform: scale(1.55);
     transform-origin: center 38%;
   }
+  /* The hero video is a 9+ second autoplaying clip (full approach to
+     touchdown) — its brightness varies a lot frame to frame (open bright
+     sky on approach vs. dark tarmac at touchdown). #bg-overlay's gradient
+     only gets reliably dark by ~90% down, tuned for a desktop full-bleed
+     video; on mobile the scaled/letterboxed video's visible edge lands
+     well above that, so a bright frame (sky, terminal buildings) can
+     still show a hard seam against the solid background below it.
+     Darken earlier and harder here so every frame — not just the dim
+     ones — blends out before the video's own edge. */
+  #bg-overlay {
+    background:
+      linear-gradient(to bottom,
+        rgba(2,6,16,.4) 0%, rgba(3,8,20,.38) 18%,
+        rgba(4,10,22,.62) 36%, rgba(4,9,20,.87) 52%,
+        rgba(5,8,15,.97) 66%, #05080f 80%, #05080f 100%),
+      linear-gradient(to right,
+        rgba(5,15,40,.22) 0%, transparent 45%,
+        transparent 55%, rgba(5,15,40,.14) 100%);
+  }
 }
