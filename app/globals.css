@@ -831,5 +831,13 @@ details[open] > .accordion-summary::after { transform: translateY(-50%) rotate(4
   /* Landscape hero video into a tall portrait viewport: cover crops it
      down to an unrecognisable sliver. Contain it instead, letterboxed
      into the existing dark background, so the aircraft stays visible. */
-  #bg-video { object-fit: contain; object-position: center 30%; }
+  #bg-video {
+    object-fit: contain; object-position: center 30%;
+    /* #bg-overlay's gradient is tuned for a full-bleed (cover) video, so on
+       this letterboxed layout it leaves a hard edge where the video frame
+       meets the solid background instead of a smooth fade. Fade the video's
+       own top/bottom edges so it blends into the backdrop at any height. */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 88%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 88%, transparent 100%);
+  }
 }

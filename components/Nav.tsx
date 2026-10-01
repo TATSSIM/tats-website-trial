@@ -221,7 +221,11 @@ export default function Nav() {
         </nav>
       </div>
 
-      {/* ── Full-screen mobile overlay ── */}
+      {/* ── Full-screen mobile overlay ──
+          Reserve clear space below the fixed logo pill (top:20px + 52px tall)
+          instead of centering across the full viewport — on short viewports
+          (browser chrome eating height) a centered list pushes "Home" up
+          behind the pill, which sits at a higher z-index and swallows the tap. */}
       <div
         className="fixed inset-0 z-[999] flex flex-col items-center justify-center md:hidden"
         style={{
@@ -231,6 +235,10 @@ export default function Nav() {
           opacity: mobileOpen ? 1 : 0,
           pointerEvents: mobileOpen ? 'all' : 'none',
           transition: 'opacity 450ms cubic-bezier(0.32,0.72,0,1), backdrop-filter 450ms',
+          paddingTop: 100,
+          paddingBottom: 24,
+          justifyContent: 'flex-start',
+          overflowY: 'auto',
         }}
       >
         <nav className="flex flex-col items-center gap-1">
