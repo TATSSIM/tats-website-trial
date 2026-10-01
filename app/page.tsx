@@ -352,9 +352,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="rv" style={{ textAlign: 'center', marginTop: 38 }}>
-              <Link href="/why-tats" className="btn-ghost">All Differentiators →</Link>
-            </div>
           </div>
         </section>
 
