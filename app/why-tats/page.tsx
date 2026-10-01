@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Why TATS | Eight Pillars of Excellence | The Aviator Training School',
   description: 'Eight pillars that set TATS apart: tailored assessment, daily offline classes, direct Poland partnership, MBCT, Aviation English, and more.',
+  alternates: { canonical: '/why-tats' },
 };
 
 const differentiators = [
@@ -76,6 +79,7 @@ These sessions focus on the specific register of aviation communication — ATC 
 export default function WhyTATS() {
   return (
     <InnerPageLayout>
+      <JsonLd data={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Why TATS', path: '/why-tats' }])} />
       <div className="page-hero">
         <div>
           <span className="section-label">Our Differentiators</span>

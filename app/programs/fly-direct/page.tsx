@@ -1,15 +1,33 @@
 import type { Metadata } from 'next';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import JsonLd from '@/components/JsonLd';
 import { withBasePath } from '@/lib/basePath';
+import { breadcrumbSchema, courseSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Fly Direct | For DGCA-Cleared Candidates | The Aviator Training School',
   description: 'An Integrated ATPL pathway for candidates who have already cleared Meteorology, Navigation and Regulation. 100% of EASA ATPL theory in India, then flight training in Poland — 15 months to EASA CPL and Multi-Engine IR.',
+  alternates: { canonical: '/programs/fly-direct' },
 };
 
 export default function FlyDirect() {
   return (
     <InnerPageLayout>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Programmes', path: '/programs' },
+            { name: 'Fly Direct', path: '/programs/fly-direct' },
+          ]),
+          courseSchema({
+            name: 'Fly Direct',
+            description: 'An Integrated ATPL pathway for candidates who have already cleared Meteorology, Navigation and Regulation. 100% of EASA ATPL theory in India, then flight training in Poland.',
+            path: '/programs/fly-direct',
+            timeToComplete: 'P15M',
+          }),
+        ]}
+      />
       <div className="page-hero">
         <div>
           <span className="section-label">Integrated ATPL Pathway</span>

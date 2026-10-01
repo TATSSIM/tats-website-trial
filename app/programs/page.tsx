@@ -2,10 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import { withBasePath } from '@/lib/basePath';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Programmes | The Aviator Training School',
   description: 'Five pathways — TATS 120, ATPL Integrated, Fly Direct, TAPP 50, and AC 48, a PPL pathway in Serbia.',
+  alternates: { canonical: '/programs' },
 };
 
 const programs = [
@@ -79,6 +82,12 @@ const programs = [
 export default function ProgramsIndex() {
   return (
     <InnerPageLayout>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Programmes', path: '/programs' },
+        ])}
+      />
       <div className="page-hero">
         <div>
           <span className="section-label">Our Programmes</span>

@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import { Plane } from 'lucide-react';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Careers | The Aviator Training School',
   description: 'Join The Aviator Training School. Current opening: Ground School Pilot Training Instructor, Trivandrum, Kerala.',
+  alternates: { canonical: '/careers' },
 };
 
 const RESPONSIBILITIES = [
@@ -32,6 +35,7 @@ const QUALIFICATIONS = [
 export default function Careers() {
   return (
     <InnerPageLayout>
+      <JsonLd data={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Careers', path: '/careers' }])} />
       <div className="page-hero">
         <div>
           <span className="section-label">Join The Team</span>

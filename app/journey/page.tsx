@@ -3,10 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import { withBasePath } from '@/lib/basePath';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Journey | Milestones | The Aviator Training School',
   description: 'The TATS journey since November 2023 — milestones, batch status, and student life at The Aviator Training School, Trivandrum.',
+  alternates: { canonical: '/journey' },
 };
 
 const milestones = [
@@ -29,6 +32,7 @@ const studentLifePhotos = [
 export default function Journey() {
   return (
     <InnerPageLayout>
+      <JsonLd data={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Journey', path: '/journey' }])} />
       <div className="page-hero">
         <div>
           <span className="section-label">Our Journey</span>

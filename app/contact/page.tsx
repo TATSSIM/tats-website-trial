@@ -1,14 +1,18 @@
 import type { Metadata } from 'next';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Contact | The Aviator Training School',
   description: 'Contact TATS. Register for our free Friday 7 PM webinar. Mall of Travancore, opposite Trivandrum International Airport.',
+  alternates: { canonical: '/contact' },
 };
 
 export default function Contact() {
   return (
     <InnerPageLayout>
+      <JsonLd data={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }])} />
       <div className="page-hero">
         <div>
           <span className="section-label">Every Friday · 7 PM IST</span>

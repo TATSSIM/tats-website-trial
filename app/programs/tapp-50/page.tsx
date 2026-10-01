@@ -1,15 +1,32 @@
 import type { Metadata } from 'next';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import JsonLd from '@/components/JsonLd';
 import { withBasePath } from '@/lib/basePath';
+import { breadcrumbSchema, courseSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'TAPP 50 | Flight Instructor Rating | The Aviator Training School',
   description: 'For CPL holders. Flight Instructor Rating, 240 flight hours, and structured airline interview preparation.',
+  alternates: { canonical: '/programs/tapp-50' },
 };
 
 export default function TAPP50() {
   return (
     <InnerPageLayout>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Programmes', path: '/programs' },
+            { name: 'TAPP 50', path: '/programs/tapp-50' },
+          ]),
+          courseSchema({
+            name: 'TAPP 50 — Flight Instructor Rating',
+            description: 'For CPL holders. Flight Instructor Rating, 240 flight hours, and structured airline interview preparation.',
+            path: '/programs/tapp-50',
+          }),
+        ]}
+      />
       <div className="page-hero">
         <div>
           <span className="section-label">For CPL Holders</span>

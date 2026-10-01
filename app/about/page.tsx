@@ -2,15 +2,19 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import { withBasePath } from '@/lib/basePath';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'About | The Aviator Training School',
   description: 'Founded November 2023. Evidence-driven aviation training opposite Trivandrum International Airport, Kerala.',
+  alternates: { canonical: '/about' },
 };
 
 export default function About() {
   return (
     <InnerPageLayout>
+      <JsonLd data={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }])} />
       {/* Hero */}
       <div className="page-hero">
         <div>

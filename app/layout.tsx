@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Space_Grotesk, Share_Tech_Mono } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL, organizationSchema, localBusinessSchema } from "@/lib/seo";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -26,6 +28,7 @@ const shareTechMono = Share_Tech_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "The Aviator Training School | Beyond Pilots. Shaping Aviators. | Trivandrum",
     template: "%s | The Aviator Training School",
@@ -40,14 +43,46 @@ export const metadata: Metadata = {
     "commercial pilot course India",
     "flight school Kerala",
     "EASA CPL India",
+    "pilot training institute near TRV airport",
+    "aviation academy Thiruvananthapuram",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
+    url: SITE_URL,
     siteName: "The Aviator Training School",
     title: "The Aviator Training School | Beyond Pilots. Shaping Aviators.",
     description:
       "Evidence-first aviation training. Verified DGCA results every attempt. EASA CPL via Poland. Trivandrum, Kerala.",
     locale: "en_IN",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "TATS cadets and faculty — The Aviator Training School, Trivandrum",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Aviator Training School | Beyond Pilots. Shaping Aviators.",
+    description:
+      "Evidence-first aviation training. Verified DGCA results every attempt. EASA CPL via Poland. Trivandrum, Kerala.",
+    images: ["/images/og-image.jpg"],
   },
 };
 
@@ -59,6 +94,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${spaceGrotesk.variable} ${shareTechMono.variable}`}>
       <body className="antialiased">
+        <JsonLd data={[organizationSchema(), localBusinessSchema()]} />
         <SmoothScroll />
         {children}
       </body>

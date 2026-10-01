@@ -2,16 +2,34 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import JsonLd from '@/components/JsonLd';
 import { withBasePath } from '@/lib/basePath';
+import { breadcrumbSchema, courseSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'TATS 120 | Commercial Pilot Programme | The Aviator Training School',
   description: 'Our flagship 23-month programme. Begin with zero aviation experience and graduate with EASA CPL(A), Multi-Engine IR, and a Frozen ATPL.',
+  alternates: { canonical: '/programs/tats-120' },
 };
 
 export default function TATS120() {
   return (
     <InnerPageLayout>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Programmes', path: '/programs' },
+            { name: 'TATS 120', path: '/programs/tats-120' },
+          ]),
+          courseSchema({
+            name: 'TATS 120 — Commercial Pilot Programme',
+            description: 'Our flagship 23-month programme. Begin with zero aviation experience and graduate with EASA CPL(A), Multi-Engine IR, and a Frozen ATPL.',
+            path: '/programs/tats-120',
+            timeToComplete: 'P23M',
+          }),
+        ]}
+      />
       {/* Hero */}
       <div className="page-hero">
         <div>

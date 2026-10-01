@@ -3,10 +3,13 @@ import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import { Plane } from 'lucide-react';
 import { withBasePath } from '@/lib/basePath';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbSchema, courseSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'AC 48 | PPL Training Pathway in Serbia | The Aviator Training School',
   description: 'AC 48 is a Private Pilot Licence pathway in Serbia, built for working professionals in the Middle East — your first step towards a Commercial Pilot Licence.',
+  alternates: { canonical: '/programs/ac-48' },
 };
 
 const SUBJECTS = [
@@ -24,6 +27,21 @@ const SUBJECTS = [
 export default function AC48() {
   return (
     <InnerPageLayout>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Programmes', path: '/programs' },
+            { name: 'AC 48', path: '/programs/ac-48' },
+          ]),
+          courseSchema({
+            name: 'AC 48 — PPL Training in Serbia',
+            description: 'AC 48 is a Private Pilot Licence pathway in Serbia, built for working professionals in the Middle East — your first step towards a Commercial Pilot Licence.',
+            path: '/programs/ac-48',
+            timeToComplete: 'P3M',
+          }),
+        ]}
+      />
       <div className="page-hero">
         <div>
           <span className="section-label">PPL Pathway for Working Professionals</span>

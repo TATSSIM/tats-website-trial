@@ -1,15 +1,33 @@
 import type { Metadata } from 'next';
 import InnerPageLayout from '@/components/InnerPageLayout';
+import JsonLd from '@/components/JsonLd';
 import { withBasePath } from '@/lib/basePath';
+import { breadcrumbSchema, courseSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'TATS 120 ATPL Integrated | New 2026 Programme | The Aviator Training School',
   description: 'New for 2026. Complete 100% of your 960-hour EASA ATPL theory in India, then depart for Poland ready to fly from day one.',
+  alternates: { canonical: '/programs/atpl-integrated' },
 };
 
 export default function ATPLIntegrated() {
   return (
     <InnerPageLayout>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Programmes', path: '/programs' },
+            { name: 'TATS 120 ATPL Integrated', path: '/programs/atpl-integrated' },
+          ]),
+          courseSchema({
+            name: 'TATS 120 ATPL Integrated',
+            description: 'New for 2026. Complete 100% of your 960-hour EASA ATPL theory in India, then depart for Poland ready to fly from day one.',
+            path: '/programs/atpl-integrated',
+            timeToComplete: 'P23M',
+          }),
+        ]}
+      />
       <div className="page-hero">
         <div>
           <div style={{ display: 'inline-flex', gap: 8, marginBottom: 14 }}>

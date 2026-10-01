@@ -3,10 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import { withBasePath } from '@/lib/basePath';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Gallery | Life at TATS | The Aviator Training School',
   description: 'Real cadets. Real classrooms. Real results. See life at The Aviator Training School — batch dispatch ceremonies, classroom sessions, and the journey to Poland.',
+  alternates: { canonical: '/gallery' },
 };
 
 const VIDEOS = [
@@ -38,6 +41,7 @@ const VIDEOS = [
 export default function Gallery() {
   return (
     <InnerPageLayout>
+      <JsonLd data={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Gallery', path: '/gallery' }])} />
 
       {/* ── HERO ── */}
       <div className="page-hero">
