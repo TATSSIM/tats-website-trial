@@ -6,7 +6,7 @@ import JsonLd from '@/components/JsonLd';
 import YouTubeFacade from '@/components/YouTubeFacade';
 import { withBasePath } from '@/lib/basePath';
 import { breadcrumbSchema, SITE_URL } from '@/lib/seo';
-import { ShieldCheck, Radio, Plane } from 'lucide-react';
+import { ShieldCheck, Radio, Plane, Gauge, Award, Users, Snowflake, Wrench } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Goldwings Flight Academy & National Aviation Academy Vršac | TATS Flight Partners',
@@ -118,6 +118,57 @@ export default function FlightPartners() {
           </div>
         </div>
       </div>
+
+      {/* Fleet & Facilities */}
+      <section className="page-section" style={{ minHeight: 'auto', paddingTop: 0, flexDirection: 'column' }}>
+        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
+          <span className="eyebrow-pill rv">Fleet &amp; Facilities</span>
+          <h2 className="section-title rv d1" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 300, margin: '10px 0 28px' }}>
+            A 17-aircraft fleet. <strong>Real airline outcomes.</strong>
+          </h2>
+          <div className="diff-grid">
+            {[
+              {
+                Icon: Plane, title: '17 Training Aircraft',
+                desc: 'Cessna 152 (×3) and Cessna 172 (×4) for single-engine VFR/IFR, AT-3 (×4) and Diamond DA-20, Diamond DA-42, Piper Seneca III, Piper Arrow V for multi-engine and advanced training, plus a Pilatus PC-12 NG for turboprop type rating.',
+              },
+              {
+                Icon: Gauge, title: 'Three Simulators',
+                desc: 'A Diamond DA-42 FNPT II, a full-motion Cessna 182 FNPT II, and an Airbus A320 FNPT II for Multi-Crew Cooperation — the same JOC simulator training built into the TATS 120 syllabus.',
+              },
+              {
+                Icon: Snowflake, title: 'Cold-Weather Flying',
+                desc: 'Poland’s winters mean TATS cadets get real FIKI (Flight Into Known Icing) exposure as part of training — conditions a Kerala-based academy simply cannot offer.',
+              },
+              {
+                Icon: Wrench, title: 'In-House Maintenance',
+                desc: 'Goldwings holds its own EASA Part-145 maintenance and CAMO (Continuing Airworthiness Management) approvals — the fleet is maintained in-house, not outsourced.',
+              },
+              {
+                Icon: Award, title: 'AOC Holder',
+                desc: 'Goldwings also holds an Air Operator Certificate (AOC), placing it a tier above training-only schools in regulatory standing and operational maturity.',
+              },
+              {
+                Icon: Users, title: '1,000+ Graduates',
+                desc: 'Goldwings alumni now fly for Ryanair, LOT Polish Airlines, Wizz Air, Enter Air, and Turkish Airlines — the career outcome TATS cadets are training toward.',
+              },
+            ].map((item, i) => (
+              <div key={item.title} className={`diff-card tilt-card rv d${(i % 4) + 1}`}>
+                <div className="diff-card-inner">
+                  <div style={{ width: 38, height: 38, borderRadius: 9, background: 'rgba(212,175,55,.055)', border: '1px solid rgba(212,175,55,.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold)', marginBottom: 14 }}>
+                    <item.Icon size={18} strokeWidth={1.5} />
+                  </div>
+                  <h3 style={{ fontSize: '.86rem', fontWeight: 700, marginBottom: 8, color: 'rgba(255,255,255,.88)' }}>{item.title}</h3>
+                  <p style={{ fontSize: '.74rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.7 }}>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontSize: '.64rem', color: 'rgba(255,255,255,.3)', marginTop: 16 }}>
+            Fleet, simulator, and certification details sourced from Goldwings Flight Academy&apos;s official site, <a href="https://www.goldwings.pl/en/home" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,.45)' }}>goldwings.pl</a>.
+          </p>
+        </div>
+      </section>
 
       <div className="gold-divider" />
 
