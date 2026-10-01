@@ -40,13 +40,14 @@ export default function Nav() {
   const closeDropdown = () => { hoverTimer.current = setTimeout(() => setProgramsOpen(false), 140); };
 
   const navLinks = [
-    { href: '/',         label: 'Home'    },
-    { href: '/about',    label: 'About'   },
-    { href: '/why-tats', label: 'Why TATS'},
-    { href: '/journey',  label: 'Journey' },
-    { href: '/gallery',  label: 'Gallery' },
-    { href: '/blog',     label: 'Blog'    },
-    { href: '/contact',  label: 'Contact' },
+    { href: '/',                  label: 'Home'    },
+    { href: '/about',             label: 'About'   },
+    { href: '/why-tats',          label: 'Why TATS'},
+    { href: '/flight-partners',   label: 'Flight Partners' },
+    { href: '/journey',           label: 'Journey' },
+    { href: '/gallery',           label: 'Gallery' },
+    { href: '/blog',              label: 'Blog'    },
+    { href: '/contact',           label: 'Contact' },
   ];
 
   const programs = [
