@@ -845,15 +845,21 @@ details[open] > .accordion-summary::after { transform: translateY(-50%) rotate(4
   }
   .inner-bg-video { opacity: .22; }
   /* Landscape hero video into a tall portrait viewport: cover crops it
-     down to an unrecognisable sliver. Contain it instead, letterboxed
-     into the existing dark background, so the aircraft stays visible. */
+     down to an unrecognisable sliver. Contain it instead, letterboxed,
+     so the aircraft stays visible — but on a ~0.46-aspect phone screen,
+     "contain" is width-bound and the video ends up only ~55% of its
+     width tall (e.g. 211px on a 375px-wide screen), stranded with huge
+     empty margins above/below. A mask fading that element's own box
+     edges is a no-op (the real content band sits nowhere near those
+     edges), and #bg-overlay's gradient — tuned for a near-full-bleed
+     video — never gets dark enough that high up to hide the hard
+     letterbox edge. Scale the video up (cropping its sides moderately,
+     same trade-off as any phone-width cover) so its content band covers
+     much more of the frame and actually reaches the overlay's darker
+     lower region, where the fade already works. */
   #bg-video {
     object-fit: contain; object-position: center 30%;
-    /* #bg-overlay's gradient is tuned for a full-bleed (cover) video, so on
-       this letterboxed layout it leaves a hard edge where the video frame
-       meets the solid background instead of a smooth fade. Fade the video's
-       own top/bottom edges so it blends into the backdrop at any height. */
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 88%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 88%, transparent 100%);
+    transform: scale(1.55);
+    transform-origin: center 38%;
   }
 }
