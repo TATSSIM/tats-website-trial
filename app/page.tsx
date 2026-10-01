@@ -192,7 +192,7 @@ export default function Home() {
 
         {/* ── WHO WE ARE ── */}
         <section id="about" className="page-section" style={{ position: 'relative', overflow: 'hidden' }}>
-          <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center', position: 'relative', zIndex: 2 }}>
+          <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center', position: 'relative', zIndex: 2 }}>
             <div>
               <h2 className="section-title rv-left d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)' }}>
                 Most academies ask you to <strong>take their word for it.</strong>
@@ -436,7 +436,7 @@ export default function Home() {
             <p className="section-body rv d2" style={{ maxWidth: 480, marginBottom: 44 }}>
               Programme walkthroughs, our podcast, and interviews — everything to watch before the webinar.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14 }}>
+            <div className="md-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14 }}>
               {VIDEOS.map((video, i) => (
                 <div key={video.title} className={`rv-3d d${i + 1}`}>
                   <div className="video-card" style={{

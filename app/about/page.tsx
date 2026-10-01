@@ -28,7 +28,7 @@ export default function About() {
 
       {/* Story */}
       <section className="page-section" style={{ minHeight: 'auto', paddingTop: 56 }}>
-        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'start' }}>
+        <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'start' }}>
           <div>
             <span className="section-label rv">The Beginning</span>
             <h2 className="section-title rv d1">November 2023.<br /><strong>Trivandrum.</strong></h2>
@@ -143,7 +143,7 @@ export default function About() {
 
       {/* Facility */}
       <section className="page-section" style={{ minHeight: 'auto' }}>
-        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'center' }}>
+        <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'center' }}>
           <div>
             <span className="section-label rv">Our Facility</span>
             <h2 className="section-title rv d1">Opposite the<br /><strong>Airport. By Design.</strong></h2>

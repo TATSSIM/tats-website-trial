@@ -71,7 +71,7 @@ export default function FlyDirect() {
       </div>
 
       <section className="page-section" style={{ minHeight: 'auto', paddingTop: 0 }}>
-        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
+        <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
           <div>
             <span className="section-label rv">Who This Is For</span>
             <h2 className="section-title rv d1">Already Cleared<br /><strong>DGCA Ground?</strong></h2>

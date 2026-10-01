@@ -53,7 +53,7 @@ export default function Journey() {
         <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
           <span className="section-label rv">Batch Status</span>
           <h2 className="section-title rv d1">Where Our<br /><strong>Cadets Are Now.</strong></h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginTop: 32 }}>
+          <div className="md-grid-1" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginTop: 32 }}>
             {[
               {
                 batch: 'Batch 1',
@@ -155,7 +155,7 @@ export default function Journey() {
             The classroom in Trivandrum, the dispatch ceremonies, the flight line in Serbia — moments from the cadets living this journey.
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginTop: 32 }}>
+          <div className="md-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginTop: 32 }}>
             {studentLifePhotos.map((photo, i) => (
               <div key={photo.src} className={`rv d${i + 1}`} style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
                 <Image

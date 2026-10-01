@@ -796,6 +796,16 @@ details[open] > .accordion-summary::after { transform: translateY(-50%) rotate(4
   .nav-dots { display: none; }
   .page-section { padding: 72px 5.5%; }
   #hero { padding: 0 7% !important; }
+
+  /* Hardcoded multi-column inline grids (text+card layouts, program cards,
+     stat rows) have no built-in mobile fallback — without this they overlap
+     or bleed off-screen below 768px. Opt in with className="md-grid-1" /
+     "md-grid-2" alongside the inline gridTemplateColumns. */
+  .md-grid-1 { grid-template-columns: 1fr !important; }
+  .md-grid-2 { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 480px) {
+  .md-grid-2 { grid-template-columns: 1fr !important; }
 }
 @media (max-width: 520px) {
   /* Only go single-column on true mobile */

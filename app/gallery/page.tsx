@@ -81,7 +81,7 @@ export default function Gallery() {
           </p>
 
           {/* 3-grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+          <div className="md-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
             {[
               { src: '/images/batch2-dispatch.jpg', caption: 'Batch with Capt. Sujith Subhash' },
               { src: '/images/batch3-dispatch.jpg', caption: 'Aileron, Rudder Epaulette Ceremony' },
@@ -115,7 +115,7 @@ export default function Gallery() {
             Our campus at Mall of Travancore is directly opposite Trivandrum International Airport. Cadets see real aircraft movements while studying — a constant reminder of what they are training for.
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 32 }}>
+          <div className="md-grid-1" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 32 }}>
             <div className="rv d2" style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
               <Image
                 src={withBasePath("/images/classroom-session.jpg")}
@@ -173,7 +173,7 @@ export default function Gallery() {
           <p className="section-body rv d2" style={{ maxWidth: 480, marginBottom: 36 }}>
             Programme explainers, podcast interviews, and campus tours — all in one place.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14 }}>
+          <div className="md-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14 }}>
             {VIDEOS.map((video, i) => (
               <div key={video.title} className={`rv d${i + 1}`}>
                 <div style={{
@@ -254,7 +254,7 @@ export default function Gallery() {
           </p>
 
           {/* Flight training photos */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 36 }}>
+          <div className="md-grid-1" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 36 }}>
             <div className="rv d1" style={{ borderRadius: 9, overflow: 'hidden', border: '1px solid rgba(255,255,255,.04)' }}>
               <Image
                 src={withBasePath("/images/ft-grp.jpg")}

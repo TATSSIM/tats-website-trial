@@ -24,7 +24,7 @@ export default function Contact() {
       </div>
 
       <section className="page-section" style={{ minHeight: 'auto', paddingTop: 40 }}>
-        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'start' }}>
+        <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'start' }}>
           {/* Left: Webinar register */}
           <div>
             <span className="section-label rv">Free Weekly Webinar</span>

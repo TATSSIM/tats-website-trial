@@ -88,7 +88,7 @@ export default function AC48() {
       </div>
 
       <section className="page-section" style={{ minHeight: 'auto', paddingTop: 0 }}>
-        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
+        <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
           <div>
             <span className="section-label rv">Eligibility</span>
             <h2 className="section-title rv d1">Who Can<br /><strong>Apply.</strong></h2>
@@ -157,7 +157,7 @@ export default function AC48() {
       <div className="gold-divider" />
 
       <section className="page-section" style={{ minHeight: 'auto' }}>
-        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
+        <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
           <div>
             <span className="section-label rv">Timeline</span>
             <h2 className="section-title rv d1">When Training<br /><strong>Happens.</strong></h2>

@@ -62,7 +62,7 @@ export default function TATS120() {
 
       {/* Overview */}
       <section className="page-section" style={{ minHeight: 'auto', paddingTop: 0 }}>
-        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
+        <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
           <div>
             <span className="section-label rv">Programme Overview</span>
             <h2 className="section-title rv d1">From Zero to<br /><strong>EASA CPL.</strong></h2>
@@ -136,7 +136,7 @@ export default function TATS120() {
 
       {/* Poland Phase */}
       <section className="page-section" style={{ minHeight: 'auto' }}>
-        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
+        <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56 }}>
           <div>
             <span className="section-label rv">Phase 2 — Poland</span>
             <h2 className="section-title rv d1">Goldwings Flight Academy.<br /><strong>Direct Partnership.</strong></h2>

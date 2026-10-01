@@ -78,7 +78,7 @@ export default function ATPLIntegrated() {
 
       {/* Overview */}
       <section className="page-section" style={{ minHeight: 'auto', paddingTop: 0 }}>
-        <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'start' }}>
+        <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'start' }}>
           <div>
             <span className="section-label rv">What's Different</span>
             <h2 className="section-title rv d1">All 14 Subjects.<br /><strong>Completed in India.</strong></h2>
@@ -123,7 +123,7 @@ export default function ATPLIntegrated() {
         <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
           <span className="section-label rv">Three Phases</span>
           <h2 className="section-title rv d1" style={{ marginBottom: 32 }}>Structured.<br /><strong>Sequential.</strong></h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+          <div className="md-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
             {[
               {
                 phase: 'Phase 1',

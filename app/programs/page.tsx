@@ -106,7 +106,7 @@ export default function ProgramsIndex() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             {programs.map((prog, i) => (
-              <div key={prog.id} className={`rv d${(i % 3) + 1}`} style={{
+              <div key={prog.id} className={`rv d${(i % 3) + 1} md-grid-1`} style={{
                 display: 'grid', gridTemplateColumns: '280px 1fr',
                 background: 'rgba(10,14,20,.85)',
                 backdropFilter: 'blur(16px)',
@@ -166,7 +166,7 @@ export default function ProgramsIndex() {
           <h2 className="section-title rv" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 300, margin: '10px 0 28px' }}>
             Every pathway ends the same way — <strong>in the air.</strong>
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+          <div className="md-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
             {[
               { img: '/images/staff-team.jpg', caption: 'Ground school, taught by airline-experienced faculty' },
               { img: '/images/batch3-dispatch.jpg', caption: 'Every batch sent off as a cohort, not a headcount' },
