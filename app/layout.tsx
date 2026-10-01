@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Space_Grotesk, Share_Tech_Mono } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
 import JsonLd from "@/components/JsonLd";
@@ -84,6 +84,12 @@ export const metadata: Metadata = {
       "Evidence-first aviation training. Verified DGCA results every attempt. EASA CPL via Poland. Trivandrum, Kerala.",
     images: ["/images/og-image.jpg"],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#05080f",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
