@@ -51,7 +51,7 @@ export default function FlightPartners() {
             <strong>Partners.</strong>
           </h1>
           <p style={{ fontSize: '.82rem', color: 'rgba(255,255,255,.55)', marginTop: 8, maxWidth: 560, lineHeight: 1.8 }}>
-            TATS is a direct flight-training partner — not an agent, broker, or commission-based intermediary — with both academies below. Every partnership comes with weekly oversight via Flight Logger, from the first flight hour to the last.
+            TATS partners directly with both academies below — building and overseeing every relationship ourselves, with no agents or sub-contractors in between. That means weekly oversight via Flight Logger, from the first flight hour to the last.
           </p>
         </div>
       </div>
