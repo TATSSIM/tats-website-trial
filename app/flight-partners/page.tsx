@@ -3,20 +3,45 @@ import Link from 'next/link';
 import Image from 'next/image';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import JsonLd from '@/components/JsonLd';
+import YouTubeFacade from '@/components/YouTubeFacade';
 import { withBasePath } from '@/lib/basePath';
-import { breadcrumbSchema } from '@/lib/seo';
+import { breadcrumbSchema, SITE_URL } from '@/lib/seo';
 import { ShieldCheck, Radio, Plane } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Flight Training Partners | The Aviator Training School',
-  description: 'TATS cadets fly at Goldwings Flight Academy, Poland — our primary EASA training partner — and the National Aviation Academy, Vršac, Serbia, where Batch 1 trained. Direct partnerships, no intermediary.',
+  title: 'Goldwings Flight Academy & National Aviation Academy Vršac | TATS Flight Partners',
+  description: 'TATS is a direct flight-training partner — not an agent or commission-based intermediary — with Goldwings Flight Academy, Poland (primary) and the National Aviation Academy, Vršac, Serbia (Batch 1). No sub-agent, no intermediary, full oversight every week.',
   alternates: { canonical: '/flight-partners' },
 };
+
+const VIDEOS = {
+  poland: { ytId: 'Ry0SDEny5lY', title: 'The ATPL Integrated Program — Why TATS120 Trains in Poland' },
+  vrsac:  { ytId: 'Oj56YDQKrUs', title: 'How TATS Choose the Best Global Pathways for Our Pilot Cadets | Serbia Visit' },
+};
+
+function videoSchema(v: { ytId: string; title: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: v.title,
+    description: v.title,
+    thumbnailUrl: `https://i.ytimg.com/vi/${v.ytId}/hqdefault.jpg`,
+    embedUrl: `https://www.youtube.com/embed/${v.ytId}`,
+    contentUrl: `https://www.youtube.com/watch?v=${v.ytId}`,
+    publisher: { '@type': 'EducationalOrganization', name: 'The Aviator Training School', url: SITE_URL },
+  };
+}
 
 export default function FlightPartners() {
   return (
     <InnerPageLayout>
-      <JsonLd data={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Flight Partners', path: '/flight-partners' }])} />
+      <JsonLd
+        data={[
+          breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Flight Partners', path: '/flight-partners' }]),
+          videoSchema(VIDEOS.poland),
+          videoSchema(VIDEOS.vrsac),
+        ]}
+      />
 
       <div className="page-hero">
         <div>
@@ -26,7 +51,7 @@ export default function FlightPartners() {
             <strong>Partners.</strong>
           </h1>
           <p style={{ fontSize: '.82rem', color: 'rgba(255,255,255,.55)', marginTop: 8, maxWidth: 560, lineHeight: 1.8 }}>
-            Every TATS flight-training partnership is direct — no intermediary, no sub-agent — with weekly oversight via Flight Logger from the first flight hour to the last.
+            TATS is a direct flight-training partner — not an agent, broker, or commission-based intermediary — with both academies below. Every partnership comes with weekly oversight via Flight Logger, from the first flight hour to the last.
           </p>
         </div>
       </div>
@@ -51,17 +76,32 @@ export default function FlightPartners() {
             </div>
           </div>
           <div className="rv d2">
-            <div style={{ borderRadius: 11, overflow: 'hidden', border: '1px solid rgba(255,255,255,.045)' }}>
+            <div style={{ borderRadius: 11, overflow: 'hidden', border: '1px solid rgba(255,255,255,.045)', marginBottom: 14 }}>
               <Image
                 src={withBasePath('/images/ft-grp.jpg')}
                 alt="TATS cadets on the flight line at Goldwings Flight Academy, Poland"
                 width={700}
                 height={360}
-                style={{ width: '100%', height: 340, objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: 300, objectFit: 'cover', display: 'block' }}
               />
+              <div style={{ padding: '10px 16px 14px', background: 'rgba(10,14,20,.9)', display: 'flex', alignItems: 'center', gap: 12 }}>
+                <Image
+                  src={withBasePath('/images/goldwings-logo.jpg')}
+                  alt="Goldwings Flight Academy official logo"
+                  width={36}
+                  height={36}
+                  style={{ borderRadius: 7, flexShrink: 0 }}
+                />
+                <div>
+                  <p style={{ fontSize: '.72rem', fontWeight: 600, marginBottom: 3 }}>Goldwings Flight Academy</p>
+                  <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>EASA ATO · Warsaw &amp; Kraków, Poland</p>
+                </div>
+              </div>
+            </div>
+            <div style={{ borderRadius: 11, overflow: 'hidden', border: '1px solid rgba(255,255,255,.045)' }}>
+              <YouTubeFacade ytId={VIDEOS.poland.ytId} title={VIDEOS.poland.title} />
               <div style={{ padding: '10px 16px 14px', background: 'rgba(10,14,20,.9)' }}>
-                <p style={{ fontSize: '.72rem', fontWeight: 600, marginBottom: 3 }}>Goldwings Flight Academy</p>
-                <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>EASA ATO · Warsaw &amp; Kraków, Poland</p>
+                <p style={{ fontSize: '.72rem', fontWeight: 600 }}>{VIDEOS.poland.title}</p>
               </div>
             </div>
           </div>
@@ -92,17 +132,23 @@ export default function FlightPartners() {
       <section className="page-section" style={{ minHeight: 'auto' }}>
         <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'center' }}>
           <div className="rv d1" style={{ order: 2 }}>
-            <div style={{ borderRadius: 11, overflow: 'hidden', border: '1px solid rgba(255,255,255,.045)' }}>
+            <div style={{ borderRadius: 11, overflow: 'hidden', border: '1px solid rgba(255,255,255,.045)', marginBottom: 14 }}>
               <Image
                 src={withBasePath('/images/serbia-grp.jpg')}
                 alt="TATS Batch 1 cadets at the National Aviation Academy, Vršac, Serbia"
                 width={700}
                 height={360}
-                style={{ width: '100%', height: 340, objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: 300, objectFit: 'cover', display: 'block' }}
               />
               <div style={{ padding: '10px 16px 14px', background: 'rgba(10,14,20,.9)' }}>
                 <p style={{ fontSize: '.72rem', fontWeight: 600, marginBottom: 3 }}>National Aviation Academy</p>
                 <p style={{ fontSize: '.63rem', color: 'rgba(255,255,255,.55)' }}>Vršac, Serbia</p>
+              </div>
+            </div>
+            <div style={{ borderRadius: 11, overflow: 'hidden', border: '1px solid rgba(255,255,255,.045)' }}>
+              <YouTubeFacade ytId={VIDEOS.vrsac.ytId} title={VIDEOS.vrsac.title} />
+              <div style={{ padding: '10px 16px 14px', background: 'rgba(10,14,20,.9)' }}>
+                <p style={{ fontSize: '.72rem', fontWeight: 600 }}>{VIDEOS.vrsac.title}</p>
               </div>
             </div>
           </div>
