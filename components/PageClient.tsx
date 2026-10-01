@@ -233,7 +233,7 @@ export function MagneticButtons() {
 export function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/916282995979?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
+      href="https://wa.me/916282585548?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-float"

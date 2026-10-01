@@ -195,7 +195,7 @@ export default function TATS120() {
               </p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book Webinar ↗
               </a>
               <Link href="/programs" className="btn-ghost" style={{ textAlign: 'center' }}>

@@ -140,7 +140,7 @@ export default function WhyTATS() {
                 Attend our Friday webinar. Bring your questions. We&apos;ll back every claim above with documentation.
               </p>
             </div>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Free Webinar ↗
             </a>
           </div>

@@ -17,7 +17,7 @@ const milestones = [
   { date: 'Jan 2024', event: 'First Batch Enrolled', desc: 'Batch 1 cadets selected through our 3-layer aptitude and psychological screening. ~32% selection rate established.' },
   { date: '2024', event: 'DGCA Results — First Attempt', desc: 'Batch 1 cadets delivered strong results in their DGCA ground examinations. Mark sheets on file at campus.' },
   { date: '2024–25', event: 'Continued DGCA Performance', desc: 'Strong results maintained across all subsequent DGCA examination attempts. Every attempt on record.' },
-  { date: 'Early 2025', event: 'Batch 1 Departs for Flight Training', desc: 'First cohort deployed to Vršac, Serbia. Direct partnership operational.' },
+  { date: 'Early 2025', event: 'Batch 1 Departs for Flight Training', desc: 'First cohort deployed to Vršac, Serbia. Partnership with National Aviation Academy.' },
   { date: '2025', event: 'Batch 1 — Solo Under 15 Hours', desc: 'All Batch 1 cadets completed their Solo in under 15 hours and are currently in flight training at Vršac, Serbia.' },
   { date: 'Q2 2026', event: 'Batch 2 Deploys — June 2026', desc: 'Second cohort prepared and deploying for flight training. ATPL Integrated pathway launching.' },
 ];
@@ -192,7 +192,7 @@ export default function Journey() {
                 Mark sheets from every DGCA attempt are available for inspection at our campus. Attend the Friday webinar and see it for yourself.
               </p>
             </div>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Free Webinar ↗
             </a>
           </div>

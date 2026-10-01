@@ -279,7 +279,7 @@ export default function FlightPartners() {
                 Attend our Friday webinar to see exactly how TATS oversees training quality at both academies, every single week.
               </p>
             </div>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Webinar ↗
             </a>
           </div>

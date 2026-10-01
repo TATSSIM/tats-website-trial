@@ -151,7 +151,7 @@ export default function FlyDirect() {
                 Book our Friday webinar. Bring your DGCA clearance details. We'll map your exact pathway to EASA CPL.
               </p>
             </div>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Webinar ↗
             </a>
           </div>

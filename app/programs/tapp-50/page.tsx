@@ -34,6 +34,9 @@ export default function TAPP50() {
             TAPP 50<br />
             <strong>Flight Instructor Pathway.</strong>
           </h1>
+          <p style={{ fontSize: '.74rem', color: 'var(--sky)', marginTop: 10, fontWeight: 600 }}>
+            Only open when announced by our partner school.
+          </p>
         </div>
       </div>
 
@@ -118,7 +121,7 @@ export default function TAPP50() {
                 Discuss your hours, ratings, and career goals at our webinar. We'll tell you exactly how TAPP 50 can accelerate your path.
               </p>
             </div>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Webinar ↗
             </a>
           </div>

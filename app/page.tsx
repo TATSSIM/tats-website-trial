@@ -148,12 +148,12 @@ export default function Home() {
           </p>
 
           <div className="hero-el d6" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Free Webinar
               <span className="btn-icon">↗</span>
             </a>
             <a
-              href="https://wa.me/916282995979?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
+              href="https://wa.me/916282585548?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
               target="_blank" rel="noopener noreferrer"
               className="btn-ghost"
               style={{ borderColor: 'rgba(37,211,102,.35)', color: 'rgba(37,211,102,.82)' }}
@@ -334,11 +334,11 @@ export default function Home() {
               {[
                 { Icon: TestTube,      title: 'Tailored Assessment',       desc: '~32% acceptance. Psychologist-designed 3-layer aptitude screening.' },
                 { Icon: BookOpen,      title: '3–4 hrs Daily Offline',     desc: 'In-person, every day at our campus. Never outsourced, never online-only.' },
-                { Icon: PlaneTakeoff,  title: 'Cessna 172 FBS',            desc: '20 hrs procedure training before Poland. Cadets arrive genuinely ready.' },
+                { Icon: PlaneTakeoff,  title: 'Cessna 172 FBS + Visual Training', desc: '20 hrs procedure training before Poland. Cadets arrive genuinely ready.' },
                 { Icon: Handshake,     title: 'Direct Poland Partnership', desc: 'Goldwings Flight Academy. No intermediary. Weekly oversight via Flight Logger.' },
-                { Icon: Brain,         title: 'Monthly MBCT',              desc: 'Wing Cdr Dhanasree P V (Retd IAF). Unique in Kerala aviation training.' },
+                { Icon: Brain,         title: 'Monthly MBCT',              desc: 'Mindfulness-Based Cognitive Training with Wing Cdr Dhanasree P V (Retd IAF). Unique in Kerala aviation training.' },
                 { Icon: Smartphone,    title: 'Flight Logger Access',      desc: 'Families receive regular updates on cadet training progress from Poland.' },
-                { Icon: GraduationCap, title: 'Conversion Support',        desc: 'Airline Crew Orientation + post-training pathway guidance included.' },
+                { Icon: GraduationCap, title: 'CPL Conversion Support',    desc: 'Airline Crew Orientation + post-training pathway guidance included.' },
                 { Icon: MessagesSquare,title: 'Aviation English',          desc: 'Twice-monthly ICAO Level 4 sessions. Communication is a license requirement.' },
               ].map((item, i) => (
                 <div key={item.title} className={`diff-card tilt-card rv d${(i % 4) + 1}`}>
@@ -519,12 +519,12 @@ export default function Home() {
               ))}
             </div>
             <div className="rv d4" style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 32 }}>
-              <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Register Free
                 <span className="btn-icon">↗</span>
               </a>
               <a
-                href="https://wa.me/916282995979?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
+                href="https://wa.me/916282585548?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
                 target="_blank" rel="noopener noreferrer"
                 className="btn-ghost"
                 style={{ borderColor: 'rgba(37,211,102,.35)', color: 'rgba(37,211,102,.82)' }}

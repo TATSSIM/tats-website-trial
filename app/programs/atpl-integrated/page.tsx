@@ -182,7 +182,7 @@ export default function ATPLIntegrated() {
                 Limited seats. Attend our Friday webinar to understand the full programme, fees, and selection process.
               </p>
             </div>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Webinar ↗
             </a>
           </div>

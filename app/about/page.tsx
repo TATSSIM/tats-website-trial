@@ -207,7 +207,7 @@ export default function About() {
                 Every Friday 7 PM IST. No pressure. No follow-up calls. Just complete, evidence-backed answers.
               </p>
             </div>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Register Free ↗
             </a>
           </div>

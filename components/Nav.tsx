@@ -180,7 +180,7 @@ export default function Nav() {
           {/* CTA */}
           <div className="hidden md:flex items-center ml-2">
             <a
-              href="https://forms.gle/sNmtSNYHzvG5PXxu7"
+              href="https://webinar.theaviatortraining.com/screening"
               target="_blank" rel="noopener noreferrer"
               className="btn-primary"
               style={{ fontSize: '.64rem', padding: '7px 7px 7px 14px' }}
@@ -267,12 +267,12 @@ export default function Nav() {
           opacity: mobileOpen ? 1 : 0,
           transition: 'transform 550ms cubic-bezier(0.32,0.72,0,1) 500ms, opacity 550ms cubic-bezier(0.32,0.72,0,1) 500ms',
         }}>
-          <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+          <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Book Free Webinar
             <span className="btn-icon">↗</span>
           </a>
           <a
-            href="https://wa.me/916282995979?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
+            href="https://wa.me/916282585548?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
             target="_blank" rel="noopener noreferrer"
             className="btn-ghost"
             style={{ borderColor: 'rgba(37,211,102,.35)', color: 'rgba(37,211,102,.82)' }}
@@ -290,7 +290,7 @@ export default function Nav() {
           opacity: mobileOpen ? 1 : 0,
           transition: 'transform 550ms cubic-bezier(0.32,0.72,0,1) 600ms, opacity 550ms cubic-bezier(0.32,0.72,0,1) 600ms',
         }}>
-          +91 62829 95979
+          +91 62825 85548
         </p>
       </div>
     </>

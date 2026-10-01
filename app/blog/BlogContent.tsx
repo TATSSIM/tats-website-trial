@@ -220,7 +220,7 @@ export default function BlogContent() {
                 Every Friday 7 PM IST — attend our free webinar and ask anything, live.
               </p>
             </div>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Free Webinar ↗
             </a>
           </div>

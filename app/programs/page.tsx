@@ -63,6 +63,7 @@ const programs = [
     outcomes: ['240 total flight hours (2026)', 'Flight Instructor Rating', 'Airline Interview Preparation', 'Structured mentorship programme', 'Career pathway guidance'],
     img: withBasePath('/images/ft-grp.jpg'),
     desc: 'For commercial pilot licence holders seeking a Flight Instructor rating or structured pathway to airline employment. Includes mentorship and airline interview preparation.',
+    note: 'Only open when announced by our partner school.',
   },
   {
     id: 'ac-48',
@@ -137,6 +138,11 @@ export default function ProgramsIndex() {
                   <p style={{ fontSize: '.78rem', color: 'rgba(255,255,255,.5)', lineHeight: 1.7, marginBottom: 14 }}>
                     {prog.desc}
                   </p>
+                  {'note' in prog && prog.note && (
+                    <p style={{ fontSize: '.68rem', color: 'var(--sky)', fontWeight: 600, marginBottom: 14, marginTop: -8 }}>
+                      {prog.note}
+                    </p>
+                  )}
                   <div style={{ marginBottom: 18 }}>
                     <div style={{ fontSize: '.54rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 8 }}>
                       Outcomes
@@ -196,7 +202,7 @@ export default function ProgramsIndex() {
                 Attend our free webinar — every Friday 7 PM IST. We'll walk through all pathways, answer every question, and help you decide based on your specific situation.
               </p>
             </div>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Webinar ↗
             </a>
           </div>

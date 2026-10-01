@@ -45,7 +45,7 @@ export default function Contact() {
             </div>
             <div className="rv d4">
               <a
-                href="https://forms.gle/sNmtSNYHzvG5PXxu7"
+                href="https://webinar.theaviatortraining.com/screening"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
@@ -168,7 +168,7 @@ export default function Contact() {
                 Join us online. Bring your questions. We'll answer all of them — with evidence.
               </p>
             </div>
-            <a href="https://forms.gle/sNmtSNYHzvG5PXxu7" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Register Free ↗
             </a>
           </div>
