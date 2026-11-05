@@ -20,7 +20,7 @@ const VIDEOS = [
     ytId: 'oYdIgpba-44',
   },
   {
-    title: 'TATS 120 Programme',
+    title: 'TATS 120 ATPL Integrated Programme',
     desc: 'Deep dive into the EASA CPL pathway — Poland, fees, timeline explained.',
     platform: 'instagram' as const,
     igUrl: 'https://www.instagram.com/reel/DSUE8OPATzD/',

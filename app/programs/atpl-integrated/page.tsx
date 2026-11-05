@@ -40,6 +40,11 @@ export default function ATPLIntegrated() {
             TATS 120 ATPL Integrated<br />
             <strong>Theory Here. Flying There.</strong>
           </h1>
+          <div style={{ marginTop: 20 }}>
+            <a href={withBasePath('/brochures/TATS-120-ATPL-Integrated-Brochure.pdf')} download className="btn-ghost">
+              Download Brochure (PDF) ↓
+            </a>
+          </div>
         </div>
       </div>
 
@@ -83,7 +88,7 @@ export default function ATPLIntegrated() {
             <span className="section-label rv">What's Different</span>
             <h2 className="section-title rv d1">All 14 Subjects.<br /><strong>Completed in India.</strong></h2>
             <p className="section-body rv d2">
-              In the standard TATS 120 pathway, ATPL theory is completed alongside flight training in Poland. In this integrated variant, <strong>the entire 960-hour EASA ATPL theory is completed in India</strong> while your visa is processed.
+              TATS 120 ATPL Integrated is built around an Integrated ATPL structure: <strong>the entire 960-hour EASA ATPL theory is completed in India</strong> while your visa is processed.
             </p>
             <p className="section-body rv d3">
               Cadets then depart for Poland with all 14 subjects done — ready to fly immediately upon arrival, with no theory sitting alongside flight training.

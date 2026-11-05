@@ -31,7 +31,7 @@ The distinction matters: aviation theory is complex, and the depth required for 
     n: '03', Icon: PlaneTakeoff,
     title: 'Cessna 172 FBS — 20 Hours Procedure Training',
     summary: 'Cadets fly a simulator before they fly a real aircraft. By design.',
-    body: `TATS operates a Cessna 172 Fixed-Base Simulator (FBS) on-site. Every cadet in the TATS 120 and Fly Direct programmes completes 20 hours of procedure training before departing for Poland.
+    body: `TATS operates a Cessna 172 Fixed-Base Simulator (FBS) on-site. Every cadet in the TATS 120 ATPL Integrated and Fly Direct programmes completes 20 hours of procedure training before departing for Poland.
 
 This is not a familiarisation exercise. It is structured procedure training — cockpit flows, radio calls, circuit work, emergency procedures. Cadets who arrive in Poland having already built this muscle memory progress significantly faster than those who haven't.`,
   },

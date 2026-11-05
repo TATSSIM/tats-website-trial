@@ -61,7 +61,7 @@ const VIDEOS = [
     thumb: 'https://img.youtube.com/vi/oYdIgpba-44/maxresdefault.jpg',
   },
   {
-    title: 'TATS 120 Programme',
+    title: 'TATS 120 ATPL Integrated Programme',
     desc: 'Deep dive into the EASA CPL pathway — Poland, fees, and timeline.',
     platform: 'instagram' as const,
     igUrl: 'https://www.instagram.com/reel/DSUE8OPATzD/',
@@ -244,14 +244,6 @@ export default function Home() {
 
             <div className="program-grid">
               {[
-                {
-                  id: 'tats-120',
-                  badge: { text: 'Beginners', sky: false },
-                  name: 'TATS 120',
-                  tag: '23 months · From zero to CPL',
-                  bullets: ['EASA CPL(A) + Multi-Engine IR', 'Frozen ATPL (14 subjects)', 'Goldwings Flight Academy, Poland', 'India ground + FBS simulator prep'],
-                  img: '/images/batch1-dispatch.jpg',
-                },
                 {
                   id: 'atpl-integrated',
                   badge: { text: 'NEW — June 2026', sky: true },

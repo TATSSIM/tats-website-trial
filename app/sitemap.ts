@@ -10,7 +10,6 @@ const routes = [
   { path: '/flight-partners', priority: 0.7, changeFrequency: 'monthly' as const },
   { path: '/journey', priority: 0.7, changeFrequency: 'monthly' as const },
   { path: '/programs', priority: 0.9, changeFrequency: 'weekly' as const },
-  { path: '/programs/tats-120', priority: 0.9, changeFrequency: 'weekly' as const },
   { path: '/programs/atpl-integrated', priority: 0.9, changeFrequency: 'weekly' as const },
   { path: '/programs/fly-direct', priority: 0.9, changeFrequency: 'weekly' as const },
   { path: '/programs/tapp-50', priority: 0.9, changeFrequency: 'weekly' as const },

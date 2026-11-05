@@ -35,6 +35,11 @@ export default function FlyDirect() {
             Fly Direct<br />
             <strong>For DGCA-Cleared Candidates.</strong>
           </h1>
+          <div style={{ marginTop: 20 }}>
+            <a href={withBasePath('/brochures/Fly-Direct-Brochure.pdf')} download className="btn-ghost">
+              Download Brochure (PDF) ↓
+            </a>
+          </div>
         </div>
       </div>
 

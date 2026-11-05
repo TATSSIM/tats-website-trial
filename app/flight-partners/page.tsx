@@ -65,13 +65,13 @@ export default function FlightPartners() {
             </span>
             <h2 className="section-title rv d1">Goldwings Flight Academy.<br /><strong>Poland.</strong></h2>
             <p className="section-body rv d2">
-              Goldwings Flight Academy is an <strong>EASA Approved Training Organisation (ATO)</strong> operating from Warsaw and Kraków. It is where TATS 120, TATS 120 ATPL Integrated, and Fly Direct cadets complete their flight training — the main pathway for most TATS cadets.
+              Goldwings Flight Academy is an <strong>EASA Approved Training Organisation (ATO)</strong> operating from Warsaw and Kraków. It is where TATS 120 ATPL Integrated and Fly Direct cadets complete their flight training — the main pathway for most TATS cadets.
             </p>
             <p className="section-body rv d3">
               The partnership is direct: no intermediary, no sub-agent, no third party between TATS and the flying school. Capt. Dragan Ivanovich — TATS&apos;s Board Advisor, an EASA Certified Flight Instructor and Class Rating Examiner — provides ongoing training quality oversight, with weekly visibility into every cadet&apos;s progress via Flight Logger.
             </p>
             <div className="rv d4" style={{ marginTop: 28, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <Link href="/programs/tats-120" className="btn-ghost">TATS 120 →</Link>
+              <Link href="/programs/atpl-integrated" className="btn-ghost">TATS 120 ATPL Integrated →</Link>
               <Link href="/programs/fly-direct" className="btn-ghost">Fly Direct →</Link>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function FlightPartners() {
               },
               {
                 Icon: Gauge, title: 'Three Simulators',
-                desc: 'A Diamond DA-42 FNPT II, a full-motion Cessna 182 FNPT II, and an Airbus A320 FNPT II for Multi-Crew Cooperation — the same JOC simulator training built into the TATS 120 syllabus.',
+                desc: 'A Diamond DA-42 FNPT II, a full-motion Cessna 182 FNPT II, and an Airbus A320 FNPT II for Multi-Crew Cooperation — the same JOC simulator training built into the TATS 120 ATPL Integrated syllabus.',
               },
               {
                 Icon: Snowflake, title: 'Cold-Weather Flying',

@@ -101,8 +101,7 @@ export default function Footer() {
           </h4>
           <ul className="list-none flex flex-col gap-2">
             {[
-              { href: '/programs/tats-120',        label: 'TATS 120' },
-              { href: '/programs/atpl-integrated',  label: 'ATPL Integrated' },
+              { href: '/programs/atpl-integrated',  label: 'TATS 120 ATPL Integrated' },
               { href: '/programs/fly-direct',       label: 'Fly Direct' },
               { href: '/programs/tapp-50',          label: 'TAPP 50' },
               { href: '/programs/ac-48',            label: 'AC 48 (PPL Serbia)' },

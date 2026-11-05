@@ -7,24 +7,11 @@ import { breadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Programmes | The Aviator Training School',
-  description: 'Five pathways — TATS 120, ATPL Integrated, Fly Direct, TAPP 50, and AC 48, a PPL pathway in Serbia.',
+  description: 'Four pathways — TATS 120 ATPL Integrated, Fly Direct, TAPP 50, and AC 48, a PPL pathway in Serbia.',
   alternates: { canonical: '/programs' },
 };
 
 const programs = [
-  {
-    id: 'tats-120',
-    icon: '🛩',
-    badge: 'Beginners',
-    badgeStyle: { background: 'rgba(212,175,55,.08)', color: 'var(--gold)' },
-    name: 'TATS 120',
-    subtitle: '23 months · Ground up',
-    duration: '23 months',
-    target: 'Students with no prior aviation training',
-    outcomes: ['EASA CPL(A) + Multi-Engine Instrument Rating', 'Frozen ATPL (14 subjects)', 'MCC Certificate', 'JOC on a fixed-base Airbus A320 simulator', 'UPRT, FIKI, International cross-country'],
-    img: withBasePath('/images/batch1-dispatch.jpg'),
-    desc: 'Our flagship programme. Begin with zero aviation experience and graduate with an EASA CPL(A), Multi-Engine Instrument Rating, and a Frozen ATPL — ready for airline type rating.',
-  },
   {
     id: 'atpl-integrated',
     icon: '⭐',
@@ -37,6 +24,7 @@ const programs = [
     outcomes: ['Full EASA ATPL theory (960 hrs) completed in India', '14 ATPL subjects completed before Poland', 'Depart and fly immediately upon arrival', 'DGCA Conversion Support', 'MCC Certificate'],
     img: withBasePath('/images/classroom-session.jpg'),
     desc: 'New for 2026. Complete all 960 hours of EASA ATPL theory in India while your visa is processed, then depart for Poland ready to fly from day one.',
+    brochure: '/brochures/TATS-120-ATPL-Integrated-Brochure.pdf',
   },
   {
     id: 'fly-direct',
@@ -50,6 +38,7 @@ const programs = [
     outcomes: ['204 flight hrs + 41 simulator hrs', 'EASA CPL(A) + Multi-Engine IR', '100% EASA ATPL theory in India', '20 hrs simulator pre-training', 'EASA to DGCA licence conversion support'],
     img: withBasePath('/images/batch2-dispatch.jpg'),
     desc: 'For candidates who have already cleared Meteorology, Navigation and Regulation. Complete 100% of your EASA ATPL theory in India while your visa is processed, then fly in Poland — 204 flight hours and 41 simulator hours across six stages.',
+    brochure: '/brochures/Fly-Direct-Brochure.pdf',
   },
   {
     id: 'tapp-50',
@@ -93,7 +82,7 @@ export default function ProgramsIndex() {
         <div>
           <span className="section-label">Our Programmes</span>
           <h1 className="section-title" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4rem)', fontWeight: 300 }}>
-            Five Pathways.<br />
+            Four Pathways.<br />
             <strong>One Standard.</strong>
           </h1>
         </div>
@@ -102,7 +91,7 @@ export default function ProgramsIndex() {
       <section className="page-section" style={{ minHeight: 'auto', paddingTop: 56, flexDirection: 'column' }}>
         <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
           <p className="section-body rv" style={{ maxWidth: 600, marginBottom: 40 }}>
-            Whether you're starting from zero or already hold a commercial licence, TATS has a structured, evidence-backed pathway for you. Our Poland pathways — TATS 120, ATPL Integrated and Fly Direct — are delivered in partnership with <strong>Goldwings Flight Academy, Poland</strong>, directly and with no intermediary.
+            Whether you're starting from zero or already hold a commercial licence, TATS has a structured, evidence-backed pathway for you. Our Poland pathways — TATS 120 ATPL Integrated and Fly Direct — are delivered in partnership with <strong>Goldwings Flight Academy, Poland</strong>, directly and with no intermediary.
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
@@ -155,9 +144,16 @@ export default function ProgramsIndex() {
                       ))}
                     </ul>
                   </div>
-                  <Link href={`/programs/${prog.id}`} className="btn-primary" style={{ fontSize: '.64rem', padding: '10px 20px' }}>
-                    Full Programme Details →
-                  </Link>
+                  <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                    <Link href={`/programs/${prog.id}`} className="btn-primary" style={{ fontSize: '.64rem', padding: '10px 20px' }}>
+                      Full Programme Details →
+                    </Link>
+                    {'brochure' in prog && prog.brochure && (
+                      <a href={withBasePath(prog.brochure)} download className="btn-ghost" style={{ fontSize: '.64rem', padding: '10px 20px' }}>
+                        Download Brochure (PDF) ↓
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

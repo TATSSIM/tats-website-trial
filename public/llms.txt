@@ -6,7 +6,6 @@ TATS trains cadets from zero aviation experience through to an EASA Commercial P
 
 ## Programmes
 
-- [TATS 120](https://preview.theaviatortraining.com/programs/tats-120): 23-month flagship pathway for students with no prior aviation experience — EASA CPL(A) + Multi-Engine IR, Frozen ATPL (14 subjects), MCC Certificate, JOC on a fixed-base Airbus A320 simulator.
 - [TATS 120 ATPL Integrated](https://preview.theaviatortraining.com/programs/atpl-integrated): 23-month pathway completing all 960 hours of EASA ATPL theory in India before departing for Poland.
 - [Fly Direct](https://preview.theaviatortraining.com/programs/fly-direct): 15-month Integrated ATPL pathway for candidates who have already cleared Meteorology, Navigation and Regulation.
 - [TAPP 50](https://preview.theaviatortraining.com/programs/tapp-50): Flight Instructor Rating pathway for existing CPL holders, including airline interview preparation.

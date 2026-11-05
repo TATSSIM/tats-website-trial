@@ -51,7 +51,6 @@ export default function Nav() {
   ];
 
   const programs = [
-    { href: '/programs/tats-120',        label: 'TATS 120'                  },
     { href: '/programs/atpl-integrated', label: 'TATS 120 ATPL Integrated', badge: 'NEW' },
     { href: '/programs/fly-direct',      label: 'Fly Direct'                },
     { href: '/programs/tapp-50',         label: 'TAPP 50'                   },
