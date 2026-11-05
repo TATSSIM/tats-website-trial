@@ -70,10 +70,10 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-logo.jpg",
         width: 1200,
         height: 630,
-        alt: "TATS cadets and faculty — The Aviator Training School, Trivandrum",
+        alt: "The Aviator Training School logo",
       },
     ],
   },
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     title: "The Aviator Training School | Beyond Pilots. Shaping Aviators.",
     description:
       "Evidence-first aviation training. Verified DGCA results every attempt. EASA CPL via Poland. Trivandrum, Kerala.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-logo.jpg"],
   },
 };
 

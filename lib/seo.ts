@@ -108,7 +108,7 @@ export function organizationSchema() {
     alternateName: ORG_SHORT_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/images/logo-full.png`,
-    image: `${SITE_URL}/images/og-image.jpg`,
+    image: `${SITE_URL}/images/og-logo.jpg`,
     description:
       'Evidence-first aviation training institute in Trivandrum, Kerala, offering EASA CPL and ATPL pathways via Goldwings Flight Academy, Poland, and a PPL pathway in Serbia.',
     foundingDate: '2023-11',
@@ -137,7 +137,7 @@ export function localBusinessSchema() {
     '@id': `${SITE_URL}/#localbusiness`,
     name: ORG_NAME,
     url: SITE_URL,
-    image: `${SITE_URL}/images/og-image.jpg`,
+    image: `${SITE_URL}/images/og-logo.jpg`,
     telephone: NAP.phones[0],
     email: NAP.email,
     priceRange: '$$',
