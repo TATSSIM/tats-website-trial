@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
+import { JourneyTimeline } from '@/components/ScrollStory';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import JsonLd from '@/components/JsonLd';
 import { withBasePath } from '@/lib/basePath';
@@ -94,7 +96,7 @@ export default function ATPLIntegrated() {
               Cadets then depart for Poland with all 14 subjects done — ready to fly immediately upon arrival, with no theory sitting alongside flight training.
             </p>
             <p className="section-body rv d4">
-              The <strong>June 2026 intake</strong> completes 100% Evionica from India. Later intakes may complete 30% in India with the remainder alongside flight training.
+              There are <strong>two ways to start</strong>, and both lead to the same licence: <strong>Option A</strong> completes 100% of the EASA ATPL theory in India before you depart, arriving in Poland in January; <strong>Option B</strong> completes 30% in India while your visa is processed, with the remaining 70% alongside early flying in Poland.
             </p>
           </div>
           <div className="rv d2">
@@ -123,6 +125,59 @@ export default function ATPLIntegrated() {
 
       <div className="gold-divider" />
 
+      {/* Eligibility + how to apply */}
+      <section className="page-section" style={{ minHeight: 'auto' }}>
+        <div className="md-grid-1" style={{ width: '100%', maxWidth: 1040, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'start' }}>
+          <div>
+            <span className="section-label rv">Do You Qualify?</span>
+            <h2 className="section-title rv d1">No aviation experience needed.<br /><strong>Just the basics.</strong></h2>
+            <div className="glass-panel rv d2" style={{ padding: '24px 22px', marginTop: 24 }}>
+              {[
+                'Plus Two (12th) with Physics and Maths',
+                'Age between 18 and 60',
+                'Ready to train in Poland for around 15 months',
+              ].map(item => (
+                <div key={item} style={{ display: 'flex', gap: 10, padding: '9px 0', borderBottom: '1px solid rgba(255,255,255,.04)', fontSize: '.78rem', color: 'rgba(255,255,255,.65)' }}>
+                  <span style={{ color: 'var(--gold)', flexShrink: 0 }}>✓</span>{item}
+                </div>
+              ))}
+              <p style={{ fontSize: '.7rem', color: 'rgba(255,255,255,.42)', marginTop: 14, lineHeight: 1.7 }}>
+                On arrival in Poland you complete an EASA Class 1 medical, an English language proficiency test and a maths and physics skill test. TATS instructors prepare you for the skill test.
+              </p>
+            </div>
+          </div>
+          <div>
+            <span className="section-label rv">How To Apply</span>
+            <h2 className="section-title rv d1">Four steps from<br /><strong>here to the cockpit.</strong></h2>
+            <div className="rv d2" style={{ marginTop: 24 }}>
+              {[
+                { t: 'Check eligibility', d: 'Plus Two with Physics and Maths, and ready to train in Poland.' },
+                { t: 'Apply and get screened', d: 'Our Student Coordinator contacts you within 2–3 working days to schedule your screening.' },
+                { t: 'Ground training in India', d: 'EASA ATPL theory classes while your visa is processed.' },
+                { t: 'Fly in Poland', d: 'Medical, English test and skill test on arrival, then flight training at Goldwings.' },
+              ].map((st, i) => (
+                <div key={st.t} style={{ display: 'flex', gap: 14, padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,.05)' }}>
+                  <span style={{ fontFamily: 'var(--font-share-mono), monospace', fontSize: '.64rem', color: 'var(--gold)', opacity: .7, marginTop: 3 }}>0{i + 1}</span>
+                  <div>
+                    <div style={{ fontSize: '.84rem', fontWeight: 600, color: 'rgba(255,255,255,.88)' }}>{st.t}</div>
+                    <div style={{ fontSize: '.74rem', color: 'rgba(255,255,255,.52)', lineHeight: 1.7, marginTop: 2 }}>{st.d}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="gold-divider" />
+
+      {/* Training pathway timeline */}
+      <section className="page-section" style={{ minHeight: 'auto', flexDirection: 'column' }}>
+        <JourneyTimeline cta={null} />
+      </section>
+
+      <div className="gold-divider" />
+
       {/* Phases */}
       <section className="page-section" style={{ minHeight: 'auto' }}>
         <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
@@ -140,7 +195,7 @@ export default function ATPLIntegrated() {
                 phase: 'Phase 2',
                 title: 'EASA ATPL Theory',
                 duration: '960 hrs EASA ATPL theory — India',
-                items: ['All 14 ATPL subjects', 'Evidence-Based LMS', 'Progress tracking', '100% completed in India (June intake)', 'Tailored assessment + simulator prep alongside'],
+                items: ['All 14 ATPL subjects', 'Evidence-Based LMS', 'Progress tracking', '100% completed in India (Option A)', 'Tailored assessment + simulator prep alongside'],
               },
               {
                 phase: 'Phase 3',
@@ -181,15 +236,16 @@ export default function ATPLIntegrated() {
             <span style={{ fontSize: '2.4rem' }}>⭐</span>
             <div style={{ flex: 1 }}>
               <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '1.5rem', fontWeight: 600, color: 'var(--gold)', marginBottom: 5 }}>
-                June 2026 Intake — Now Open
+                Ready to start your pilot journey?
               </h3>
               <p style={{ fontSize: '.78rem', color: 'rgba(255,255,255,.43)', lineHeight: 1.7 }}>
-                Limited seats. Attend our Friday webinar to understand the full programme, fees, and selection process.
+                Attend our free Friday webinar to understand the full programme, or go straight to screening. Admission is selective: we accept around 32% of applicants.
               </p>
             </div>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Webinar ↗
             </a>
+<ApplyScreeningButton course="tats120" />
           </div>
         </div>
       </section>

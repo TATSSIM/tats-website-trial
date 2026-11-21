@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import JsonLd from '@/components/JsonLd';
 import { withBasePath } from '@/lib/basePath';
@@ -121,9 +122,10 @@ export default function TAPP50() {
                 Discuss your hours, ratings, and career goals at our webinar. We'll tell you exactly how TAPP 50 can accelerate your path.
               </p>
             </div>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Webinar ↗
             </a>
+<ApplyScreeningButton />
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import { withBasePath } from '@/lib/basePath';
@@ -198,9 +199,10 @@ export default function ProgramsIndex() {
                 Attend our free webinar — every Friday 7 PM IST. We'll walk through all pathways, answer every question, and help you decide based on your specific situation.
               </p>
             </div>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Webinar ↗
             </a>
+<ApplyScreeningButton />
           </div>
         </div>
       </section>

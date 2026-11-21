@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { WordReveal } from '@/components/ScrollStory';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbSchema } from '@/lib/seo';
@@ -93,9 +95,11 @@ export default function WhyTATS() {
 
       <section className="page-section" style={{ minHeight: 'auto', paddingTop: 40, flexDirection: 'column' }}>
         <div style={{ width: '100%', maxWidth: 800, margin: '0 auto' }}>
-          <p className="section-body rv" style={{ marginBottom: 48 }}>
-            We could write a list of claims. Every aviation school does. Instead, we&apos;ve documented each differentiator in full — what it means, why it matters, and why it&apos;s uncommon. Click any item to read the full context.
-          </p>
+          <WordReveal
+            className="section-body"
+            style={{ marginBottom: 48 }}
+            text="We could write a list of claims. Every aviation school does. Instead, we've documented each differentiator in full — what it means, why it matters, and why it's uncommon. Click any item to read the full context."
+          />
 
           <div className="diff-grid">
             {differentiators.map((d, i) => (
@@ -140,9 +144,10 @@ export default function WhyTATS() {
                 Attend our Friday webinar. Bring your questions. We&apos;ll back every claim above with documentation.
               </p>
             </div>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Free Webinar ↗
             </a>
+<ApplyScreeningButton />
           </div>
         </div>
       </section>

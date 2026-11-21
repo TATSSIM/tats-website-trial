@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import Image from 'next/image';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import { withBasePath } from '@/lib/basePath';
@@ -207,9 +208,10 @@ export default function About() {
                 Every Friday 7 PM IST. No pressure. No follow-up calls. Just complete, evidence-backed answers.
               </p>
             </div>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Register Free ↗
             </a>
+<ApplyScreeningButton />
           </div>
         </div>
       </section>

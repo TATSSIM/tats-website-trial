@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -92,7 +93,7 @@ export default function Nav() {
 
           {/* Desktop links */}
           <ul className="hidden md:flex items-center gap-0 list-none">
-            {navLinks.map(link => (
+            {navLinks.slice(0, 1).map(link => (
               <li key={link.href} className="relative">
                 <Link
                   href={link.href}
@@ -174,12 +175,27 @@ export default function Nav() {
                 </div>
               </div>
             </li>
+
+            {navLinks.slice(1).map(link => (
+              <li key={link.href} className="relative">
+                <Link
+                  href={link.href}
+                  className="px-[9px] py-[5px] text-[.66rem] font-medium tracking-[0.8px] uppercase no-underline transition-colors block rounded-full"
+                  style={{
+                    color: isActive(link.href) ? 'var(--gold)' : 'rgba(255,255,255,0.45)',
+                    transition: 'color 300ms cubic-bezier(0.32,0.72,0,1)',
+                  }}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
 
           {/* CTA */}
           <div className="hidden md:flex items-center ml-2">
             <a
-              href="https://webinar.theaviatortraining.com/screening"
+              href="https://webinar.theaviatortraining.com/#webinar-registration"
               target="_blank" rel="noopener noreferrer"
               className="btn-primary"
               style={{ fontSize: '.64rem', padding: '7px 7px 7px 14px' }}
@@ -187,6 +203,9 @@ export default function Nav() {
               Book Webinar
               <span className="btn-icon" style={{ width: 24, height: 24, fontSize: '.6rem' }}>↗</span>
             </a>
+            <span className="hidden xl:inline-flex ml-2">
+              <ApplyScreeningButton className="btn-ghost nav-apply" />
+            </span>
           </div>
 
           {/* Hamburger — morphs to × */}
@@ -242,7 +261,7 @@ export default function Nav() {
         }}
       >
         <nav className="flex flex-col items-center gap-1">
-          {[...navLinks, { href: '/programs', label: 'Programs' }].map((link, i) => (
+          {[navLinks[0], { href: '/programs', label: 'Programs' }, ...navLinks.slice(1)].map((link, i) => (
             <Link
               key={link.href} href={link.href}
               className="text-[1.6rem] font-light tracking-wider uppercase no-underline px-8 py-3 rounded-full"
@@ -266,10 +285,11 @@ export default function Nav() {
           opacity: mobileOpen ? 1 : 0,
           transition: 'transform 550ms cubic-bezier(0.32,0.72,0,1) 500ms, opacity 550ms cubic-bezier(0.32,0.72,0,1) 500ms',
         }}>
-          <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+          <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Book Free Webinar
             <span className="btn-icon">↗</span>
           </a>
+<ApplyScreeningButton />
           <a
             href="https://wa.me/916282585548?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
             target="_blank" rel="noopener noreferrer"

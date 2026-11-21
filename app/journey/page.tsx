@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import Image from 'next/image';
 import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
@@ -192,9 +193,10 @@ export default function Journey() {
                 Mark sheets from every DGCA attempt are available for inspection at our campus. Attend the Friday webinar and see it for yourself.
               </p>
             </div>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Free Webinar ↗
             </a>
+<ApplyScreeningButton />
           </div>
         </div>
       </section>

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { WordReveal } from '@/components/ScrollStory';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import Link from 'next/link';
 import Image from 'next/image';
 import InnerPageLayout from '@/components/InnerPageLayout';
@@ -50,9 +52,10 @@ export default function FlightPartners() {
             Flight Training<br />
             <strong>Partners.</strong>
           </h1>
-          <p style={{ fontSize: '.82rem', color: 'rgba(255,255,255,.55)', marginTop: 8, maxWidth: 560, lineHeight: 1.8 }}>
-            TATS partners directly with both academies below — building and overseeing every relationship ourselves, with no agents or sub-contractors in between. That means weekly oversight via Flight Logger, from the first flight hour to the last.
-          </p>
+          <WordReveal
+            style={{ fontSize: '.82rem', color: 'rgba(255,255,255,.55)', marginTop: 8, maxWidth: 560, lineHeight: 1.8 }}
+            text="TATS partners directly with both academies below — building and overseeing every relationship ourselves, with no agents or sub-contractors in between. That means weekly oversight via Flight Logger, from the first flight hour to the last."
+          />
         </div>
       </div>
 
@@ -279,9 +282,10 @@ export default function FlightPartners() {
                 Attend our Friday webinar to see exactly how TATS oversees training quality at both academies, every single week.
               </p>
             </div>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Webinar ↗
             </a>
+<ApplyScreeningButton />
           </div>
         </div>
       </section>

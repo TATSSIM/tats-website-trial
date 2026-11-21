@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import Link from 'next/link';
 import Image from 'next/image';
 import Nav from '@/components/Nav';
@@ -149,10 +150,11 @@ export default function Home() {
           </p>
 
           <div className="hero-el d6" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Free Webinar
               <span className="btn-icon">↗</span>
             </a>
+<ApplyScreeningButton />
             <a
               href="https://wa.me/916282585548?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
               target="_blank" rel="noopener noreferrer"
@@ -248,10 +250,10 @@ export default function Home() {
               {[
                 {
                   id: 'atpl-integrated',
-                  badge: { text: 'NEW — June 2026', sky: true },
+                  badge: { text: 'NEW — 2026', sky: true },
                   name: 'TATS 120 ATPL Integrated',
                   tag: '23 months · Full ATPL theory in India',
-                  bullets: ['Complete EASA ATPL theory in India', '960 hrs of ATPL theory', 'Arrive in Poland, fly immediately', 'June 2026 intake open'],
+                  bullets: ['Complete EASA ATPL theory in India', '960 hrs of ATPL theory', 'Arrive in Poland, fly immediately', 'Arrive in Poland in January'],
                   img: '/images/ft-grp.jpg',
                 },
                 {
@@ -321,24 +323,29 @@ export default function Home() {
             <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', marginBottom: 44, maxWidth: 620 }}>
               What actually happens differently, <strong>batch after batch.</strong>
             </h2>
-            <div className="diff-grid">
+            <div className="diff-grid diff-media">
               {[
-                { Icon: TestTube,      title: 'Tailored Assessment',       desc: '~32% acceptance. Psychologist-designed 3-layer aptitude screening.' },
-                { Icon: BookOpen,      title: '3–4 hrs Daily Offline',     desc: 'In-person, every day at our campus. Never outsourced, never online-only.' },
-                { Icon: PlaneTakeoff,  title: 'Cessna 172 FBS + Visual Training', desc: '20 hrs procedure training before Poland. Cadets arrive genuinely ready.' },
-                { Icon: Handshake,     title: 'Direct Poland Partnership', desc: 'Goldwings Flight Academy. No intermediary. Weekly oversight via Flight Logger.' },
-                { Icon: Brain,         title: 'Monthly MBCT',              desc: 'Mindfulness-Based Cognitive Training with Wing Cdr Dhanasree P V (Retd IAF). Unique in Kerala aviation training.' },
-                { Icon: Smartphone,    title: 'Flight Logger Access',      desc: 'Families receive regular updates on cadet training progress from Poland.' },
-                { Icon: GraduationCap, title: 'CPL Conversion Support',    desc: 'Airline Crew Orientation + post-training pathway guidance included.' },
-                { Icon: MessagesSquare,title: 'Aviation English',          desc: 'Twice-monthly ICAO Level 4 sessions. Communication is a license requirement.' },
+                { Icon: TestTube,      title: 'Tailored Assessment',       desc: '~32% acceptance. Psychologist-designed 3-layer aptitude screening.', img: '/images/students-campus.jpg' },
+                { Icon: BookOpen,      title: '3–4 hrs Daily Offline',     desc: 'In-person, every day at our campus. Never outsourced, never online-only.', img: '/images/staff-team.jpg' },
+                { Icon: PlaneTakeoff,  title: 'Cessna 172 FBS + Visual Training', desc: '20 hrs procedure training before Poland. Cadets arrive genuinely ready.', img: '/images/ft-grp.jpg' },
+                { Icon: Handshake,     title: 'Direct Poland Partnership', desc: 'Goldwings Flight Academy. No intermediary. Weekly oversight via Flight Logger.', img: '/images/goldwings-logo.jpg', logo: true },
+                { Icon: Brain,         title: 'Monthly MBCT',              desc: 'Mindfulness-Based Cognitive Training with Wing Cdr Dhanasree P V (Retd IAF). Unique in Kerala aviation training.', img: '/images/classroom-session.jpg' },
+                { Icon: Smartphone,    title: 'Flight Logger Access',      desc: 'Families receive regular updates on cadet training progress from Poland.', img: '/images/serbia.jpg' },
+                { Icon: GraduationCap, title: 'CPL Conversion Support',    desc: 'Airline Crew Orientation + post-training pathway guidance included.', img: '/images/batch3-dispatch.jpg' },
+                { Icon: MessagesSquare,title: 'Aviation English',          desc: 'Twice-monthly ICAO Level 4 sessions. Communication is a license requirement.', img: '/images/batch-rooftop.jpg' },
               ].map((item, i) => (
                 <div key={item.title} className={`diff-card tilt-card rv d${(i % 4) + 1}`}>
                   <div className="diff-card-inner">
-                    <div style={{ width: 38, height: 38, borderRadius: 9, background: 'rgba(212,175,55,.055)', border: '1px solid rgba(212,175,55,.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold)', marginBottom: 14 }}>
-                      <item.Icon size={18} strokeWidth={1.5} />
+                    <div className="dm-text">
+                      <div style={{ width: 38, height: 38, borderRadius: 9, background: 'rgba(212,175,55,.055)', border: '1px solid rgba(212,175,55,.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold)', marginBottom: 14 }}>
+                        <item.Icon size={18} strokeWidth={1.5} />
+                      </div>
+                      <h3 style={{ fontSize: '.86rem', fontWeight: 700, marginBottom: 8, color: 'rgba(255,255,255,.88)' }}>{item.title}</h3>
+                      <p style={{ fontSize: '.74rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.7 }}>{item.desc}</p>
                     </div>
-                    <h3 style={{ fontSize: '.86rem', fontWeight: 700, marginBottom: 8, color: 'rgba(255,255,255,.88)' }}>{item.title}</h3>
-                    <p style={{ fontSize: '.74rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.7 }}>{item.desc}</p>
+                    <div className="dm-img" aria-hidden="true">
+                      <div className={`dm-img-bg${item.logo ? ' dm-logo' : ''}`} style={{ backgroundImage: `url(${withBasePath(item.img)})` }} />
+                    </div>
                   </div>
                 </div>
               ))}
@@ -527,10 +534,11 @@ export default function Home() {
               ))}
             </div>
             <div className="rv d4" style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 32 }}>
-              <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Register Free
                 <span className="btn-icon">↗</span>
               </a>
+<ApplyScreeningButton />
               <a
                 href="https://wa.me/916282585548?text=Hi%2C%20I%27m%20interested%20in%20TATS%20programmes"
                 target="_blank" rel="noopener noreferrer"

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import Image from 'next/image';
 import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
@@ -327,9 +328,10 @@ export default function Gallery() {
               </p>
             </div>
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-              <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book Webinar ↗
               </a>
+<ApplyScreeningButton />
               <Link href="/journey" className="btn-ghost">View Our Journey →</Link>
             </div>
           </div>

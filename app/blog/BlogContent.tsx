@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 
 const POSTS = [
   {
@@ -220,9 +221,10 @@ export default function BlogContent() {
                 Every Friday 7 PM IST — attend our free webinar and ask anything, live.
               </p>
             </div>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Free Webinar ↗
             </a>
+<ApplyScreeningButton />
           </div>
         </div>
       </section>

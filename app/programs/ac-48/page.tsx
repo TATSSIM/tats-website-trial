@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import Link from 'next/link';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import { Plane } from 'lucide-react';
@@ -206,9 +207,10 @@ export default function AC48() {
               </p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book Webinar ↗
               </a>
+<ApplyScreeningButton course="ac48" />
               <Link href="/contact" className="btn-ghost" style={{ textAlign: 'center' }}>
                 Contact Us
               </Link>

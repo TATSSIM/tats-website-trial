@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbSchema } from '@/lib/seo';
@@ -45,7 +46,7 @@ export default function Contact() {
             </div>
             <div className="rv d4">
               <a
-                href="https://webinar.theaviatortraining.com/screening"
+                href="https://webinar.theaviatortraining.com/#webinar-registration"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
@@ -53,6 +54,7 @@ export default function Contact() {
               >
                 Register Free ↗
               </a>
+<ApplyScreeningButton />
               <p style={{ fontSize: '.66rem', color: 'rgba(255,255,255,.55)', letterSpacing: '1px' }}>
                 No follow-up calls. No pressure. One click to register.
               </p>
@@ -168,9 +170,10 @@ export default function Contact() {
                 Join us online. Bring your questions. We'll answer all of them — with evidence.
               </p>
             </div>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Register Free ↗
             </a>
+<ApplyScreeningButton />
           </div>
         </div>
       </section>

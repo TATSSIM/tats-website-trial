@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { ApplyScreeningButton } from '@/components/ScreeningModal';
+import { JourneyTimeline, FLY_DIRECT_PHASES } from '@/components/ScrollStory';
 import InnerPageLayout from '@/components/InnerPageLayout';
 import JsonLd from '@/components/JsonLd';
 import { withBasePath } from '@/lib/basePath';
@@ -144,6 +146,12 @@ export default function FlyDirect() {
 
       <div className="gold-divider" />
 
+      <section className="page-section" style={{ minHeight: 'auto', flexDirection: 'column' }}>
+        <JourneyTimeline phases={FLY_DIRECT_PHASES} cta={null} />
+      </section>
+
+      <div className="gold-divider" />
+
       <section className="page-section" style={{ minHeight: 'auto', paddingBottom: 80 }}>
         <div style={{ width: '100%', maxWidth: 1040, margin: '0 auto' }}>
           <div className="cta-banner rv">
@@ -156,9 +164,10 @@ export default function FlyDirect() {
                 Book our Friday webinar. Bring your DGCA clearance details. We'll map your exact pathway to EASA CPL.
               </p>
             </div>
-            <a href="https://webinar.theaviatortraining.com/screening" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://webinar.theaviatortraining.com/#webinar-registration" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Book Webinar ↗
             </a>
+<ApplyScreeningButton course="flydirect" />
           </div>
         </div>
       </section>
