@@ -48,7 +48,7 @@ export default function TAPP50() {
               { n: '240', suf: '', label: 'Total Flight Hours (2026)' },
               { n: '1', suf: ' Rating', label: 'FI Rating' },
               { n: '100', suf: '%', label: 'Mentorship-Led' },
-              { n: '0', suf: ' Commission', label: 'Taken by TATS' },
+              { n: '0', suf: '', label: 'Commission Taken by TATS' },
             ].map(s => (
               <div key={s.label} className="stat-item">
                 <span className="stat-number"><span data-count={s.n}>0</span>{s.suf}</span>

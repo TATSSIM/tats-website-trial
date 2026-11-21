@@ -253,8 +253,9 @@ export default function Home() {
                   badge: { text: 'NEW — 2026', sky: true },
                   name: 'TATS 120 ATPL Integrated',
                   tag: '23 months · Full ATPL theory in India',
-                  bullets: ['Complete EASA ATPL theory in India', '960 hrs of ATPL theory', 'Arrive in Poland, fly immediately', 'Arrive in Poland in January'],
-                  img: '/images/ft-grp.jpg',
+                  bullets: ['Complete EASA ATPL theory in India', '960 hrs of ATPL theory', 'Arrive in Poland in January, fly immediately', 'EASA CPL(A) + Multi-Engine IR'],
+                  img: '/images/classroom-session.jpg',
+                  imgPosition: 'center 30%',
                 },
                 {
                   id: 'fly-direct',
@@ -262,8 +263,8 @@ export default function Home() {
                   name: 'Fly Direct',
                   tag: '15 months · Integrated ATPL pathway',
                   bullets: ['For cadets who cleared Met, Nav & Regs', '20 hrs simulator pre-training', '204 flight hrs + 41 simulator hrs', 'EASA to DGCA licence conversion support'],
-                  img: '/images/students-campus.jpg',
-                  imgPosition: 'center 28%',
+                  img: '/images/batch2-dispatch.jpg',
+                  imgPosition: 'center 38%',
                 },
                 {
                   id: 'tapp-50',
@@ -271,15 +272,15 @@ export default function Home() {
                   name: 'TAPP 50',
                   tag: 'Flight Instructor rating pathway',
                   bullets: ['240 total flight hours (2026)', 'FI Rating pathway', 'Airline interview preparation', 'Structured mentorship'],
-                  img: '/images/batch2-dispatch.jpg',
-                  imgPosition: 'center 32%',
+                  img: '/images/ft-grp.jpg',
+                  imgPosition: 'center 52%',
                 },
               ].map((prog, i) => (
                 <div key={prog.id} className={`program-card-outer rv-3d d${i + 1}`}>
                   <div className={`program-card ${prog.id === 'atpl-integrated' ? 'featured' : ''}`}>
                     <div className="program-card-img">
                       <Image src={prog.img} alt={prog.name} fill style={{ objectFit: 'cover', objectPosition: 'imgPosition' in prog ? prog.imgPosition : 'center' }} sizes="(max-width: 1040px) 100vw, 500px" />
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 32%, rgba(5,8,15,.94) 96%)' }} />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 62%, rgba(5,8,15,.92) 100%)' }} />
                       <span style={{
                         position: 'absolute', top: 12, left: 14,
                         fontSize: '.5rem', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase',

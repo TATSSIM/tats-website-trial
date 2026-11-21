@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { withBasePath } from '@/lib/basePath';
 
 const clamp = (n: number, a = 0, b = 1) => Math.min(b, Math.max(a, n));
 const reduced = () =>
@@ -51,10 +52,10 @@ export function WordReveal({ text, className = '', style }: { text: string; clas
 
 /* ── Stacking stat cards with count-up ── */
 const STATS = [
-  { n: 204, pre: '', suf: '', label: 'Flight hours', note: 'Across six stages of flight training in Poland — from foundation VFR to multi-engine and cold-weather operations.' },
-  { n: 41, pre: '', suf: '', label: 'Simulator hours', note: 'Multi-engine FNPT II and Airbus A320 jet orientation, with loggable hours.' },
-  { n: 960, pre: '', suf: '', label: 'Hours of EASA ATPL theory', note: 'Delivered from India while your visa is processed, so you arrive in Poland ready to fly.' },
-  { n: 32, pre: '~', suf: '%', label: 'Selection rate', note: 'A 3-layer assessment — psychological, academic, and an interview with the MD.' },
+  { n: 204, pre: '', suf: '', label: 'Flight hours', note: 'Across six stages of flight training in Poland — from foundation VFR to multi-engine and cold-weather operations.', img: '/images/serbia.jpg', pos: 'center 55%' },
+  { n: 41, pre: '', suf: '', label: 'Simulator hours', note: 'Multi-engine FNPT II and Airbus A320 jet orientation, with loggable hours.', img: '/images/ft-grp.jpg', pos: 'center 50%' },
+  { n: 960, pre: '', suf: '', label: 'Hours of EASA ATPL theory', note: 'Delivered from India while your visa is processed, so you arrive in Poland ready to fly.', img: '/images/students-campus.jpg', pos: 'center 55%' },
+  { n: 32, pre: '~', suf: '%', label: 'Selection rate', note: 'A 3-layer assessment — psychological, academic, and an interview with the MD.', img: '/images/batch1-dispatch.jpg', pos: 'center 45%' },
 ];
 
 export function StatStack() {
@@ -86,6 +87,7 @@ export function StatStack() {
     <div className="ss-stack">
       {STATS.map((s, i) => (
         <div key={s.label} className={`ss-card ss-card-${i % 2 ? 'dark' : 'gold'}`} style={{ top: `calc(84px + ${i * 14}px)` }}>
+          <div className="ss-card-img" aria-hidden="true" style={{ backgroundImage: `url(${withBasePath(s.img)})`, backgroundPosition: s.pos }} />
           <span className="ss-card-eyebrow">0{i + 1} / 0{STATS.length}</span>
           <div className="ss-card-num">
             {s.pre}<span ref={el => { refs.current[i] = el; }} data-n={s.n}>{s.n}</span>{s.suf}
