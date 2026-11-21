@@ -10,6 +10,7 @@ import {
   TextScramble, ScrollProgressBar,
 } from '@/components/PageClient';
 import { withBasePath } from '@/lib/basePath';
+import { WordReveal, StatStack, JourneyTimeline } from '@/components/ScrollStory';
 import {
   Microscope, Ruler, Eye, Target, TestTube, BookOpen, PlaneTakeoff,
   Handshake, Brain, Smartphone, GraduationCap, MessagesSquare, Plane,
@@ -197,9 +198,10 @@ export default function Home() {
               <h2 className="section-title rv-left d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)' }}>
                 Most academies ask you to <strong>take their word for it.</strong>
               </h2>
-              <p className="section-body rv d3">
-                We were founded in November 2023, opposite Trivandrum International Airport, Kerala, on that one conviction. Kerala had no shortage of aviation coaching institutes — most competed on reputation, none disclosed their flying school upfront. We built TATS to be the opposite.
-              </p>
+              <WordReveal
+                className="section-body"
+                text="We were founded in November 2023, opposite Trivandrum International Airport, Kerala, on that one conviction. Kerala had no shortage of aviation coaching institutes — most competed on reputation, none disclosed their flying school upfront. We built TATS to be the opposite."
+              />
               <p className="section-body rv d4">
                 Our cadets clear DGCA theory with <strong>strong, consistent results</strong>, then proceed to flight training in Europe — Batch 1 at the National Aviation Academy, Vršac, Serbia, and upcoming batches at Goldwings Flight Academy, Poland (Warsaw &amp; Kraków bases) — where we maintain direct weekly oversight via Flight Logger.
               </p>
@@ -342,6 +344,26 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </section>
+
+        <div className="gold-divider" />
+
+        {/* ── IN NUMBERS ── */}
+        <section className="page-section" style={{ flexDirection: 'column', alignItems: 'flex-start', position: 'relative' }}>
+          <div className="ss-wrap">
+            <span className="section-label rv">TATS In Numbers</span>
+            <h2 className="section-title rv d1" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)', marginBottom: 40, maxWidth: 620 }}>
+              The training behind <strong>every cadet.</strong>
+            </h2>
+            <StatStack />
+          </div>
+        </section>
+
+        <div className="gold-divider" />
+
+        {/* ── TRAINING PATHWAY ── */}
+        <section id="pathway" className="page-section" style={{ flexDirection: 'column', alignItems: 'flex-start', position: 'relative' }}>
+          <JourneyTimeline />
         </section>
 
         <div className="gold-divider" />

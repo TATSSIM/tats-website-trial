@@ -252,10 +252,28 @@ export function FloatingWhatsApp() {
 export function BackToTop() {
   useEffect(() => {
     const btn = document.querySelector('.back-to-top') as HTMLElement | null;
+    const ring = btn?.querySelector('circle.btt-bar') as SVGCircleElement | null;
     if (!btn) return;
-    const toggle = () => btn.classList.toggle('visible', window.scrollY > 480);
-    window.addEventListener('scroll', toggle, { passive: true });
-    return () => window.removeEventListener('scroll', toggle);
+    const C = 2 * Math.PI * 19;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      btn.classList.toggle('visible', window.scrollY > 480);
+      if (ring) {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+        ring.style.strokeDashoffset = String(C * (1 - p));
+      }
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   return (
@@ -264,6 +282,10 @@ export function BackToTop() {
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Back to top"
     >
+      <svg className="btt-ring" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle className="btt-track" cx="20" cy="20" r="19" />
+        <circle className="btt-bar" cx="20" cy="20" r="19" strokeDasharray={2 * Math.PI * 19} strokeDashoffset={2 * Math.PI * 19} />
+      </svg>
       <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <polyline points="2,11 8,5 14,11" />
       </svg>

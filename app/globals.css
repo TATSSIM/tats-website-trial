@@ -882,3 +882,76 @@ details[open] > .accordion-summary::after { transform: translateY(-50%) rotate(4
         transparent 55%, rgba(5,15,40,.14) 100%);
   }
 }
+
+/* ═══════════════════════════════════════
+   SCROLL STORY — word reveal, stacking stats, journey timeline
+   transform/opacity only; no blur (mobile GPU safety)
+═══════════════════════════════════════ */
+.wr-js .wr-w { opacity: .16; transition: opacity .12s linear; }
+
+.ss-wrap { width: 100%; max-width: 1040px; margin: 0 auto; }
+.ss-stack { padding-bottom: 8px; }
+.ss-card {
+  position: sticky; min-height: 280px; margin-bottom: 18px;
+  border-radius: 20px; padding: 34px 38px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  box-shadow: 0 -14px 40px rgba(0,0,0,.45);
+}
+.ss-card-gold { background: linear-gradient(135deg, #e6c65a, #c9a43a 60%, #b38a22); color: #0a0e14; }
+.ss-card-dark { background: #0d121b; border: 1px solid rgba(212,175,55,.18); color: #fff; }
+.ss-card-eyebrow {
+  position: absolute; top: 28px; left: 38px;
+  font-family: var(--font-share-mono), monospace; font-size: .6rem; letter-spacing: 3px; opacity: .6;
+}
+.ss-card-num {
+  font-family: var(--font-cormorant), Georgia, serif; font-weight: 700;
+  font-size: clamp(4rem, 11vw, 7.5rem); line-height: .9; letter-spacing: -2px; font-variant-numeric: lining-nums;
+}
+.ss-card-gold .ss-card-num { color: #0a0e14; }
+.ss-card-dark .ss-card-num { color: var(--gold); }
+.ss-card-label { font-size: 1.05rem; font-weight: 700; margin-top: 10px; }
+.ss-card-note { font-size: .8rem; line-height: 1.7; margin-top: 6px; max-width: 520px; opacity: .72; }
+
+.jt { display: grid; grid-template-columns: 1fr 1.15fr; gap: 64px; width: 100%; max-width: 1040px; margin: 0 auto; align-items: start; }
+.jt-side { position: sticky; top: 110px; }
+.jt-count { font-variant-numeric: lining-nums; font-family: var(--font-cormorant), Georgia, serif; font-size: 2.2rem; color: rgba(255,255,255,.35); }
+.jt-count b { color: var(--gold); font-weight: 700; }
+.jt-now { font-size: .72rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,.55); margin-top: 4px; }
+.jt-track { position: relative; padding-left: 64px; --fill: 0px; }
+.jt-line { position: absolute; left: 21px; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,.08); border-radius: 2px; }
+.jt-fill { width: 100%; height: var(--fill); background: linear-gradient(to bottom, var(--gold), #f3d97a); border-radius: 2px; max-height: 100%; }
+.jt-step { position: relative; padding: 0 0 72px; opacity: .38; transition: opacity .4s; }
+.jt-step:last-child { padding-bottom: 8px; }
+.jt-step.on { opacity: 1; }
+.jt-dot {
+  position: absolute; left: -64px; top: 0; width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: #0a0e14; border: 2px solid rgba(255,255,255,.14);
+  font-family: var(--font-share-mono), monospace; font-size: .8rem; color: rgba(255,255,255,.5);
+  transition: border-color .4s, color .4s, background .4s, box-shadow .4s;
+}
+.jt-step.on .jt-dot { border-color: var(--gold); color: #0a0e14; background: var(--gold); box-shadow: 0 0 22px rgba(212,175,55,.35); }
+.jt-step h3 { font-family: var(--font-cormorant), Georgia, serif; font-size: 1.6rem; font-weight: 600; margin-bottom: 8px; }
+.jt-step p { font-size: .84rem; line-height: 1.8; color: rgba(255,255,255,.6); max-width: 440px; }
+
+@media (max-width: 768px) {
+  .ss-card { min-height: 230px; padding: 28px 24px; border-radius: 16px; }
+  .ss-card-eyebrow { left: 24px; top: 22px; }
+  .jt { grid-template-columns: 1fr; gap: 32px; }
+  .jt-side { position: static; }
+  .jt-track { padding-left: 56px; }
+  .jt-dot { left: -56px; width: 40px; height: 40px; }
+  .jt-line { left: 19px; }
+  .jt-step { padding-bottom: 52px; }
+}
+
+/* Back-to-top progress ring */
+.back-to-top .btt-ring { position: absolute; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px); transform: rotate(-90deg); pointer-events: none; }
+.back-to-top .btt-ring circle { fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round; }
+.back-to-top .btt-ring circle.btt-track { stroke: rgba(212,175,55,.14); }
+.back-to-top { position: fixed; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wr-js .wr-w { opacity: 1 !important; }
+  .jt-step { opacity: 1; }
+}
